@@ -9,7 +9,25 @@ export default defineConfig({
     VitePWA({ 
       injectRegister: 'auto',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,jsx,png,jpg,svg}']
+        globPatterns: ['**/*.{js,css,html,jsx,png,jpg,svg,ico}']
+      },
+      manifest: {
+        name: 'untitled',
+        short_name: 'untitled',
+        description: 'virtual art gallery',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
       },
       registerType: 'autoUpdate',
       devOptions: {
