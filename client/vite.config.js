@@ -7,6 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({ 
+      injectRegister: 'auto',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,jsx,png,jpg,svg}']
+      },
       registerType: 'autoUpdate',
       devOptions: {
         enabled: true
