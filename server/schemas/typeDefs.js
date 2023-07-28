@@ -4,7 +4,7 @@ const typeDefs = `
   type User {
     _id: ID
     userName: String
-    email: string
+    email: String
   }
   
   type Auth {
@@ -20,4 +20,5 @@ const typeDefs = `
     addUser(userName: String!, email: String!, password: String!): Auth
     login(userName: String!, password: String!): Auth
   }
-  `
+  `;
+module.exports = typeDefs;
