@@ -98,6 +98,13 @@ const Login = (props) => {
                   >
                     Submit
                   </button>
+                  <button
+                    className="ml-4 btn btn-block btn-primary bg-gray-600 hover:bg-slate-950 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    style={{ cursor: "pointer" }}
+                    type="signup"
+                  >
+                    <Link to="/signup">Signup</Link>
+                  </button>
                 </form>
               </div>
             )}
