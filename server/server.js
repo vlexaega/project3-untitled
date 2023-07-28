@@ -20,4 +20,27 @@ const startApolloServer = async () => {
 
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
-}
+    //line to serve up static assets from client/images folder
+    app.use('/images', express.static(path.join(__dirname, '../client/images')));
+
+    app.use('/graphql', expressMiddleware(server, {
+        context: authMiddleware
+    }));
+
+    if (process.env.NODE_ENV === 'production') {
+        app.use(express.static(path.join(__dirname, '../client/dist')));
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+        });
+    }
+
+    db.once('open', () => {
+        app.listen(PORT, () => {
+            console.log(`API server running on port ${PORT}!!`);
+            console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+        });
+    });
+};
+
+//call the function to start the server
+startApolloServer();
