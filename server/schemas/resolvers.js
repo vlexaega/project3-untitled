@@ -10,7 +10,11 @@ const resolvers = {
                 const user = await User.findById(context.user._id)
                 return user
             }
-        }
+        },
+        users: async () =>{
+            const users = await User.find();
+            return users;
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {
