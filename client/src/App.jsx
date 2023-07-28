@@ -33,7 +33,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {/* <StoreProvider> */}
-      <Navbar />
       <Outlet />
       {/* </StoreProvider> */}
     </ApolloProvider>
