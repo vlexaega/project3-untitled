@@ -7,7 +7,7 @@ import App from "./App.jsx";
 // import Detail from './pages/Detail';
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
-// import Signup from "./pages/Signup";
+import Signup from "./pages/Signup";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
@@ -22,10 +22,10 @@ const router = createBrowserRouter([
         element: <Login />,
       },
 
-      // {
-      //   path: "/signup",
-      //   element: <Signup />,
-      // },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
       // {
       //   path: "/success",
       //   element: <Success />,
