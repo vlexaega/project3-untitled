@@ -6,7 +6,11 @@ import { VitePWA } from "vite-plugin-pwa"
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA()
+    VitePWA({ 
+      registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true
+      } })
   ],
   server: {
     port: 3000,
