@@ -14,8 +14,8 @@ export default defineConfig({
       manifest: {
         name: 'untitled',
         short_name: 'untitled',
-        description: 'virtual art gallery',
-        theme_color: '#ffffff',
+        description: 'virtual art gallery and marketplace',
+        theme_color: '#fdb5a7',
         icons: [
           {
             src: 'pwa-192x192.png',
