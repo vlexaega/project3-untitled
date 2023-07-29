@@ -1,5 +1,5 @@
 // import Navbar from "../components/Navbar";
-import PlaceholderNav from "../components/PlaceholderNav";
+import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 // import { Carousel, initTE } from "tw-elements";
 // import { Carousel } from "@material-tailwind/react";
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="container">
       {/* <Navbar /> */}
-      <PlaceholderNav />
+      <Navbar />
       <h1 className="text-6xl text-center p-8">Welcome</h1>
       <div className="max-w-lg mx-auto">
         <Carousel>
