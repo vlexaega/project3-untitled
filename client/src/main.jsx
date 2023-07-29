@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 // import Detail from './pages/Detail';
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
-// import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
@@ -31,10 +31,10 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home />,
       },
-      // {
-      //   path: "/profile",
-      //   element: <Profile />,
-      // },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
       // {
       //   path: "/orderHistory",
       //   element: <OrderHistory />,
