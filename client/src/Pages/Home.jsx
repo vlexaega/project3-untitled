@@ -17,7 +17,7 @@ const Home = () => {
       {/* <Navbar /> */}
       <PlaceholderNav />
       <h1 className="text-6xl text-center p-8">Welcome</h1>
-      <div className="max-w-lg">
+      <div className="max-w-lg mx-auto">
         <Carousel>
           {slides.map((s) => (
             <img src={s} />
