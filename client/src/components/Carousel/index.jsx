@@ -19,7 +19,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel">
+    <div className="carousel flex justify-center">
       <img key={currentIndex} src={images[currentIndex]} />
       <div className="slide_direction">
         <div className="left" onClick={handlePrevious}>

@@ -2,6 +2,7 @@
 import PlaceholderNav from "../components/PlaceholderNav";
 import Carousel from "../components/Carousel";
 // import { Carousel, initTE } from "tw-elements";
+// import { Carousel } from "@material-tailwind/react";
 
 const images = [
   "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
