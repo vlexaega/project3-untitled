@@ -6,6 +6,7 @@ import { VitePWA } from "vite-plugin-pwa"
 export default defineConfig({
   plugins: [
     react(),
+    // The Vite PWA documentation was very helpful and provided example code for the plugin, please see the README for the link
     VitePWA({ 
       injectRegister: 'auto',
       workbox: {
