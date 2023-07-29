@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     // The Vite PWA documentation was very helpful and provided example code for the plugin, please see the README for the link
     VitePWA({ 
-      injectRegister: 'auto',
+      // injectRegister: 'auto',
       workbox: {
         globPatterns: ['**/*.{js,css,html,jsx,png,jpg,svg,ico}']
       },
@@ -39,7 +39,8 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: true
+        enabled: true,
+        navigateFallbackAllowlist: [/^index.html$/]
       } })
   ],
   server: {
