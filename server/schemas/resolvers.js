@@ -10,7 +10,11 @@ const resolvers = {
                 const user = await User.findById(context.user._id)
                 return user
             }
-        }
+        },
+        users: async () =>{
+            const users = await User.find();
+            return users;
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {
@@ -19,8 +23,8 @@ const resolvers = {
 
             return { token, user };
         },
-        login: async (parent, { userName, password }) => {
-            const user = await User.findOne({ userName });
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
 
             if (!user) {
                 throw AuthenticationError;
