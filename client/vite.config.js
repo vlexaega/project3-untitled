@@ -6,6 +6,7 @@ import { VitePWA } from "vite-plugin-pwa"
 export default defineConfig({
   plugins: [
     react(),
+    // The Vite PWA documentation was very helpful and provided example code for the plugin, please see the README for the link
     VitePWA({ 
       injectRegister: 'auto',
       workbox: {
@@ -13,19 +14,26 @@ export default defineConfig({
       },
       manifest: {
         name: 'untitled',
-        short_name: 'untitled',
-        description: 'virtual art gallery',
-        theme_color: '#ffffff',
+        short_name: 'untitledArt',
+        description: 'virtual art gallery and marketplace',
+        theme_color: '#fdb5a7',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: './public/images/android-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'pwa-512x512.png',
+            src: './public/images/android-chrome-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any'  
+          },
+          {
+            src: './public/images/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'  
           }
         ]
       },
