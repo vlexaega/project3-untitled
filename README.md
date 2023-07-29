@@ -42,6 +42,7 @@ If you followed tutorials, include links to those here as well.
 
 Thank you to the following tutorials which helped with our project:
 https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
+https://www.youtube.com/watch?v=XJSOgV4VELk&ab_channel=YourCodeLab
 
 ## License
 
