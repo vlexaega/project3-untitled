@@ -17,7 +17,7 @@ const Home = () => {
     <div className="container">
       {/* <Navbar /> */}
       <PlaceholderNav />
-      <h1 className="text-2xl">Welcome</h1>
+      <h1 className="text-6xl text-center p-8">Welcome</h1>
       <Carousel images={images} />
     </div>
   );
