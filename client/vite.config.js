@@ -13,29 +13,20 @@ export default defineConfig({
       },
       manifest: {
         name: 'untitled',
-        short_name: 'untitled',
+        short_name: 'untitledArt',
         description: 'virtual art gallery and marketplace',
         theme_color: '#fdb5a7',
         icons: [
           {
-            src: './public/images/logo_96x96',
-            sizes: '96x96',
-            type: 'image/png'
-          },
-          {
-            src: './public/images/logo_128x128',
-            sizes: '128x128',
-            type: 'image/png'
-          },
-          {
-            src: './public/images/logo_192x192',
+            src: './public/images/android-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: './public/images/logo_512x512',
+            src: './public/images/android-chrome-512x512.png',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any'  
           }
         ]
       },
