@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+import PlaceholderNav from "../components/PlaceholderNav";
 import Carousel from "../components/Carousel";
 // import { Carousel, initTE } from "tw-elements";
 
@@ -14,7 +15,8 @@ const images = [
 const Home = () => {
   return (
     <div className="container">
-      <Navbar />
+      {/* <Navbar /> */}
+      <PlaceholderNav />
       <h1 className="text-2xl">Welcome</h1>
       <Carousel images={images} />
     </div>
