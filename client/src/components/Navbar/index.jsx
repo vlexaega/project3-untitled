@@ -1,5 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import MainLogo from "../../assets/MainLogo.png";
 
 function Navbar() {
 
@@ -32,12 +33,12 @@ function Navbar() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div className="flex flex-shrink-0 items-center">
-                    <img className="h-8 w-auto" src="./images/mainlogo.png" alt="logo for untitled" />
+                    <img className="h-8 w-auto" src={MainLogo} alt="logo for untitled" />
                     </div>
                     <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
                         {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                        {Auth.loggedIn() ? (
+                        {!Auth.loggedIn() ? (
                             <>
                                 <Link href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</Link>
                                 <Link href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Profile</Link>
