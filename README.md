@@ -32,6 +32,8 @@ To add a screenshot, create an assets/images folder in your repository and uploa
 
 ## Credits
 
+- [Profile Page Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile)
+
 ### Vite PWA:
   The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
 
