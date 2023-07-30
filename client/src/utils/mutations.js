@@ -72,3 +72,23 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+export const ADD_ARTWORK = gql`
+  mutation addArtwork($userId: ID!, $artImage: String!) {
+    addArtwork(userId: $userId, artImage: $artImage) {
+      _id
+      userName
+      artworks {
+        _id
+        image
+        isOriginal
+        canCritique
+        medium
+        canDownload
+        downloadPrice
+        canPurchase
+        purchasePrice
+        title
+        description
+      }
+    }
+  }`

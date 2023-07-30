@@ -9,6 +9,7 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
+import Upload from "./pages/UploadArt"
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <Profile />,
       },
+      {
+        path: "/upload",
+        element: <Upload />,
+      }
       // {
       //   path: "/orderHistory",
       //   element: <OrderHistory />,
