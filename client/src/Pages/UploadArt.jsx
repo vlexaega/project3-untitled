@@ -1,12 +1,15 @@
 // This file is adapted from module 22 activity 18
 
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_ARTWORK } from '../utils/mutations';
 
 import { PhotoIcon } from '@heroicons/react/24/solid'
+
+import { Menu, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const UploadArt = () => {
   const [formState, setFormState] = useState({
