@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom"; //found option on 
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import MainLogo from "../assets/MainLogo.png";
@@ -48,6 +48,8 @@ const Login = (props) => {
         <div className="card block">
           {/* <h4 className="card-header bg-dark text-light p-2">Login:</h4> */}
           <div className="card-body">
+            {/* if user is loggedIn and authenticated, redirect them to Home Page*/}
+            {Auth.loggedIn() && <Navigate to="/home" />}
             {data ? (
               <p>
                 Success! You may now head{" "}

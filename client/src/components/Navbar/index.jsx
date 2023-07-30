@@ -68,7 +68,8 @@ function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                {!Auth.loggedIn() ? (
+                {/* if logged in is true */}
+                {Auth.loggedIn() ? ( 
                   <>
                     <Link
                       href="#"
@@ -110,10 +111,10 @@ function Navbar() {
                     <Link
                       href="#"
                       className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Logout
+                    ><a href="/" onClick={() => Auth.logout()}>Logout</a>
                     </Link>
                   </>
+                  // {*/ if loggedIn is false*/}
                 ) : (
                   <>
                     <Link
