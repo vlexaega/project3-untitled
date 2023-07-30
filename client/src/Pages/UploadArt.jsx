@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_ARTWORK } from '../utils/mutations';
 
-import Auth from '../utils/auth';
-
 const UploadArt = () => {
   const [formState, setFormState] = useState({
     image: '',
@@ -21,7 +19,7 @@ const UploadArt = () => {
     title: '',
     description: ''
   });
-  const [addUser, { error, data }] = useMutation(ADD_ARTWORK);
+  const [addArtwork, { error, data }] = useMutation(ADD_ARTWORK);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -37,11 +35,11 @@ const UploadArt = () => {
     console.log(formState);
 
     try {
-      const { data } = await addUser({
+      const { data } = await addArtwork({
         variables: { ...formState },
       });
 
-      Auth.login(data.addUser.token);
+      return data
     } catch (e) {
       console.error(e);
     }
