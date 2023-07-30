@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_ARTWORK } from '../utils/mutations';
 
+import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+
 const UploadArt = () => {
   const [formState, setFormState] = useState({
     image: '',
