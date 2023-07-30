@@ -16,6 +16,22 @@ function ImageUpload(){
             console.log("Error: ", error);
         };
     }
+
+    function uploadImage(){
+        fetch("http://localhost:3000/upload-image", {
+            method: "Post",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({
+                base64:image
+            })
+        }).then((res) => res.json()).then((data) => console.log(data))
+
+    }
     return (
         <div className="auth-wrapper" >
             <div className="auth-inner" style={{ width: "auto" }}>
@@ -26,7 +42,7 @@ function ImageUpload(){
                 onChange={convertToBase64}
                 />
                 {image=="" || image==null ? "" : <img width={100} height={100} src={image}/>}
-                
+                <button onClick={uploadImage}>Upload</button>
             </div>
         </div>
     )

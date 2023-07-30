@@ -1,3 +1,4 @@
 const User = require('./User');
+const Images = require('./ImageDetails')
 
-module.exports = { User };
+module.exports = { User, Images };

@@ -3,6 +3,7 @@ const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
+const { Images } = require('./models/ImageDetails');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -13,6 +14,16 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
 });
+
+// app.post("/upload-image", async(req,res) => {
+//     const{base64} = req.body;
+//     try {
+//         Images.create({image:base64});
+//         res.send({Status:"ok"})
+//     } catch (error){
+//         res.send({Status:"error", data:error});
+//     }
+// });
 
 //creating the new instance of an Apollo server with graphQL schema
 const startApolloServer = async () => {
