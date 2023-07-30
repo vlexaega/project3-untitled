@@ -1,6 +1,6 @@
 // This file is adapted from module 22 activity 24
 
-const { User } = require('../models');
+const { User, ImageDetails } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -14,6 +14,10 @@ const resolvers = {
         users: async () =>{
             const users = await User.find();
             return users;
+        },
+        images: async (parent, args) => {
+            const images = await ImageDetails.find();
+            return images;
         },
     },
     Mutation: {
@@ -39,7 +43,16 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user }
-        }
+        },
+        uploadImage: async (parent, { image }) => {
+            try {
+                const newImageDetails = await ImageDetails.create({ image });
+                return newImageDetails;
+
+            } catch (error) {
+                throw new Error("Failed to upload image");
+            }
+        },
     }
 };
 

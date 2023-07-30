@@ -14,6 +14,11 @@ const server = new ApolloServer({
     resolvers,
 });
 
+//need to increase the body-parser size limit
+//found this via link https://reactgo.com/request-entity-too-large-node/
+app.use(express.json({limit: '25mb'}));
+app.use(express.urlencoded({limit: '25mb'}));
+
 //creating the new instance of an Apollo server with graphQL schema
 const startApolloServer = async () => {
     await server.start();
