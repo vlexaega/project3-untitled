@@ -72,26 +72,26 @@ export const ADD_USER = gql`
 //     }
 //   }
 // `;
-// export const ADD_ARTWORK = gql`
-//   mutation addArtwork($userId: ID!, $artImage: String!) {
-//     addArtwork(userId: $userId, artImage: $artImage) {
-//       _id
-//       userName
-//       artworks {
-//         _id
-//         image
-//         isOriginal
-//         canCritique
-//         medium
-//         canDownload
-//         downloadPrice
-//         canPurchase
-//         purchasePrice
-//         title
-//         description
-//       }
-//     }
-//   }`;
+export const ADD_ARTWORK = gql`
+  mutation addArtwork($userId: ID!, $artImage: String!) {
+    addArtwork(userId: $userId, artImage: $artImage) {
+      _id
+      userName
+      artworks {
+        _id
+        image
+        isOriginal
+        canCritique
+        medium
+        canDownload
+        downloadPrice
+        canPurchase
+        purchasePrice
+        title
+        description
+      }
+    }
+  }`;
 
   export const UPLOAD_IMAGE = gql `
     mutation singleUpload($image: String!) {
