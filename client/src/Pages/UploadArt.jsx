@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useMutation  } from '@apollo/client';
+import { UPLOAD_IMAGE } from '../utils/mutations';
 
 function ImageUpload(){
 
-    const[image, setImage]=useState("");
+    const[image, setImage] = useState("");
+    const[uploadImageMutation] = useMutation(UPLOAD_IMAGE);
 
     function convertToBase64(e) {
         console.log(e);
@@ -16,20 +19,17 @@ function ImageUpload(){
             console.log("Error: ", error);
         };
     }
-
-    function uploadImage(){
-        fetch("http://localhost:3000/upload-image", {
-            method: "Post",
-            crossDomain: true,
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                "Access-Control-Allow-Origin": "*",
-            },
-            body: JSON.stringify({
-                base64:image
-            })
-        }).then((res) => res.json()).then((data) => console.log(data))
+    
+    async function handleUploadImage(){
+        try {
+            const { data } = await uploadImageMutation({
+                variables: { image },
+            });
+            const uploadedImage = data.singleUpload.image;
+            console.log('Image Uploaded: ', uploadedImage);
+        } catch (error) {
+            console.error('Error uploading image: ', error);
+        }
 
     }
     return (
@@ -42,7 +42,7 @@ function ImageUpload(){
                 onChange={convertToBase64}
                 />
                 {image=="" || image==null ? "" : <img width={100} height={100} src={image}/>}
-                <button onClick={uploadImage}>Upload</button>
+                <button onClick={handleUploadImage}>Upload</button>
             </div>
         </div>
     )

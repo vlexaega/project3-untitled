@@ -4,8 +4,9 @@ const { Schema } = mongoose;
 
 const ImageDetailsSchema = new Schema(
     {
-        image: String,
-        required: true,
+        image: {
+            type: String
+        },
     },
 );
 

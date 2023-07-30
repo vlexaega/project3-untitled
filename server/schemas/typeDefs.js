@@ -23,7 +23,7 @@ const typeDefs = `
   type Query {
     user: User
     users: [User]
-    uploads: [ImageDetails]
+    images: [ImageDetails]
   }
 
   type Mutation {

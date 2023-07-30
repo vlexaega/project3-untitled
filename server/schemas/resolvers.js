@@ -15,7 +15,10 @@ const resolvers = {
             const users = await User.find();
             return users;
         },
-        images: (parent, args) => {},
+        images: async (parent, args) => {
+            const images = await ImageDetails.find();
+            return images;
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {
@@ -45,6 +48,7 @@ const resolvers = {
             try {
                 const newImageDetails = await ImageDetails.create({ image });
                 return newImageDetails;
+
             } catch (error) {
                 throw new Error("Failed to upload image");
             }
