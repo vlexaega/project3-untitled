@@ -1,8 +1,5 @@
-// import Navbar from "../components/Navbar";
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
-// import { Carousel, initTE } from "tw-elements";
-// import { Carousel } from "@material-tailwind/react";
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -14,7 +11,6 @@ const slides = [
 const Home = () => {
   return (
     <div className="container">
-      {/* <Navbar /> */}
       <Navbar />
       <h1 className="text-6xl text-center p-8">Welcome</h1>
       <div className="max-w-lg mx-auto">
