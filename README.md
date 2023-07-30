@@ -35,15 +35,16 @@ To add a screenshot, create an assets/images folder in your repository and uploa
 - [Profile Page Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile)
 
 ### Vite PWA:
-  The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
 
-  I used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
+The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
 
-  I learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
+I used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
 
-  The following site helped me convert an image into a favicon with all the necessary files: https://favicon.io/favicon-converter/.
+I learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
 
-  I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
+The following site helped me convert an image into a favicon with all the necessary files: https://favicon.io/favicon-converter/.
+
+I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
 List your collaborators, if any, with links to their GitHub profiles.
 
@@ -54,7 +55,7 @@ https://www.npmjs.com/package/tw-elements
 If you followed tutorials, include links to those here as well.
 
 Thank you to the following tutorials which helped with our project:
-https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
+Image Carousel:
 https://www.youtube.com/watch?v=XJSOgV4VELk&ab_channel=YourCodeLab
 
 ## License
