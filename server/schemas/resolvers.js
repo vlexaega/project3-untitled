@@ -44,7 +44,7 @@ const resolvers = {
 
             return { token, user }
         },
-        uploadImage: async (parent, { userId, image }) => {
+        uploadImage: async (parent, { userId, image, title }) => {
             if (!userId) {
                 throw new AuthenticationError('Must be logged in to upload an image!')
             }
@@ -55,12 +55,14 @@ const resolvers = {
             try {
                 const newImageDetails = await Images.create({ 
                     image,
+                    title,
                     user: userId,
+                    title
                  });
                 return newImageDetails;
 
             } catch (error) {
-                throw new Error("Failed to upload image");
+                throw new Error("Failed to upload image: ", error.message);
             }
         },
     }

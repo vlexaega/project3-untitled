@@ -12,17 +12,8 @@ const typeDefs = `
   
   type ImageDetails{
     _id: ID
-    image: String!
-    user: User!
-    isOriginal: Boolean!
-    canCritique: Boolean
-    medium: String!
-    canDownload: Boolean
-    downloadPrice: Float
-    canPurchase: Boolean
-    purchasePrice: Float
+    image: String
     title: String!
-    description: String!
   }
 
   type Auth {
@@ -39,15 +30,10 @@ const typeDefs = `
   type Mutation {
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    uploadImage(userId: ID!, image: String, isOriginal: Boolean!,
-      canCritique: Boolean,
-      medium: String!,
-      canDownload: Boolean,
-      downloadPrice: Float,
-      canPurchase: Boolean,
-      purchasePrice: Float,
-      title: String!,
-      description: String!): ImageDetails!
+
+    uploadImage(userId: ID!, image: String,
+      title: String!): ImageDetails!
+
   }
   `;
 module.exports = typeDefs;
