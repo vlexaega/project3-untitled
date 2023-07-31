@@ -4,6 +4,8 @@ import Logo from "../assets/LogoBackdrop.png";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+// minor updates
 function Profile() {
   const [userName, setUserName] = useState("");
   const [bio, setUserBio] = useState("");
@@ -98,8 +100,14 @@ function Profile() {
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
                   <div className="mb-2 text-logo-black mt-10">
+                    <h3 className="mb-2 mt-10 text-center">Username:</h3>
                     <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i>
                     {userName}
+                  </div>
+                  <div className="mb-2 text-logo-black mt-10">
+                    <button className="bg-logo-pink hover:bg-red-300 text-white font-bold py-2 px-4 rounded-full">
+                      <Link to="/upload">Upload Your Art!</Link>
+                    </button>
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
