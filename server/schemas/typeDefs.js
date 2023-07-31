@@ -14,7 +14,8 @@ const typeDefs = `
     _id: ID
     image: String
     title: String!
-    description: String
+    description: String!
+    declaration: Boolean!
     user: User
   }
 
@@ -34,7 +35,7 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
 
     uploadImage(userId: ID!, image: String,
-      title: String!, description: String): ImageDetails!
+      title: String!, description: String!, declaration: Boolean!): ImageDetails!
 
   }
   `;
