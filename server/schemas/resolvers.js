@@ -55,13 +55,14 @@ const resolvers = {
             try {
                 const newImageDetails = await Images.create({ 
                     image,
+                    title,
                     user: userId,
                     title
                  });
                 return newImageDetails;
 
             } catch (error) {
-                throw new Error("Failed to upload image");
+                throw new Error("Failed to upload image: ", error.message);
             }
         },
     }

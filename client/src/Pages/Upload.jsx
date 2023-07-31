@@ -40,8 +40,14 @@ function ImageUpload() {
         return;
       }
 
+      const title = document.getElementById("title").value;
+
       const { data } = await uploadImageMutation({
-        variables: { userId: Auth.getProfile().data._id, image },
+        variables: { 
+            userId: Auth.getProfile().data._id, 
+            image,
+            title,
+        },
         context: {
           headers: {
             Authorization: `Bearer ${token}`,

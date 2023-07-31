@@ -5,12 +5,13 @@ const { Schema } = mongoose;
 const ImageDetailsSchema = new Schema({
     image: {
         type: String,
-        required: true,
+        required: false,
     },
     title: {
         type: String,
         required: true,
     },
+
     // description: {
     //     type: String,
     //     required: false,
@@ -43,6 +44,7 @@ const ImageDetailsSchema = new Schema({
     //     type: Number,
     //     required: false,
     // },
+
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
