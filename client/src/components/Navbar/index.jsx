@@ -5,7 +5,7 @@ import MainLogo from "../../assets/MainLogo.png";
 function Navbar() {
   return (
     <nav className="bg-white-200 shadow-lg py-12">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-inherit max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
@@ -69,7 +69,7 @@ function Navbar() {
               <div className="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 {/* if logged in is true */}
-                {Auth.loggedIn() ? (
+                {!Auth.loggedIn() ? (
                   <>
                     <Link
                       to="/home"
@@ -142,8 +142,7 @@ function Navbar() {
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
-              <span className="absolute -inset-1.5"></span>
-              <span className="sr-only">View notifications</span>
+          
               <svg
                 className="h-6 w-6"
                 fill="none"
@@ -170,7 +169,7 @@ function Navbar() {
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
-                  <span className="absolute -inset-1.5"></span>
+
                   <span className="sr-only">Open user menu</span>
                   <img
                     className="h-8 w-8 rounded-full"
