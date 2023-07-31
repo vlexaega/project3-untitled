@@ -44,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/upload",
         element: <Upload />,
+      },
+      {
+        path: "/workofart",
+        element: <WorkofArt />,
       }
       // {
       //   path: "/orderHistory",
