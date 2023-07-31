@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const ImageDetailsSchema = new Schema({
     image: {
         type: String,
-        required: true,
+        required: false,
     },
     title: {
         type: String,
@@ -17,11 +17,11 @@ const ImageDetailsSchema = new Schema({
     },
     isOriginal: {
         type: Boolean,
-        required: true,
+        required: false,
     },
     medium: {
         type: String,
-        required: true,
+        required: false,
     },
     canCritique: {
         type: Boolean,
