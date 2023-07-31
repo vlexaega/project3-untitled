@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation  } from '@apollo/client';
 import { UPLOAD_IMAGE } from '../utils/mutations';
 import Auth from "../utils/auth";
+import Navbar from "../components/Navbar";
 
 function ImageUpload(){
 
@@ -49,6 +50,7 @@ function ImageUpload(){
     }
     return (
         <div className="auth-wrapper">
+          <Navbar />
           <div className="auth-inner" style={{ width: 'auto' }}>
             Upload your artwork<br />
             <input accept="image/*" type="file" onChange={convertToBase64} />

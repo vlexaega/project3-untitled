@@ -1,4 +1,5 @@
 // This file is adapted from module 22 activity 18
+import Navbar from "../components/Navbar";
 
 import { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
@@ -56,6 +57,7 @@ const UploadArt = () => {
 
   return (
     <div>
+        <Navbar />
         <h2>Add New Artwork</h2>
         <form>   
         <div className="mt-10 space-y-10">
