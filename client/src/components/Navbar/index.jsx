@@ -69,7 +69,7 @@ function Navbar() {
               <div className="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 {/* if logged in is true */}
-                {Auth.loggedIn() ? ( 
+                {Auth.loggedIn() ? (
                   <>
                     <Link
                       href="#"
@@ -111,11 +111,14 @@ function Navbar() {
                     <Link
                       href="#"
                       className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    ><a href="/" onClick={() => Auth.logout()}>Logout</a>
+                    >
+                      <a href="/" onClick={() => Auth.logout()}>
+                        Logout
+                      </a>
                     </Link>
                   </>
-                  // {*/ if loggedIn is false*/}
                 ) : (
+                  // {*/ if loggedIn is false*/}
                   <>
                     <Link
                       href="#"

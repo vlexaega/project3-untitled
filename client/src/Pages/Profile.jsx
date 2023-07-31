@@ -1,8 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Logo from "../assets/LogoBackdrop.png";
+import { useState } from "react";
+import { useEffect } from "react";
 function Profile() {
-  // const userName = localStorage.getItem("userName");
+  const [userName, setUserName] = useState("");
+  const [userBio, setUserBio] = useState("");
+  useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+    }
+  }, []);
   return (
     <>
       <main className="profile-page">
@@ -84,7 +93,7 @@ function Profile() {
                   </div> */}
                   <div className="mb-2 text-logo-black mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i>
-                    USERNAME DISPLAY HERE
+                    {userName}
                   </div>
                   {/* <div className="mb-2 text-logo-black">
                     <i className="fas fa-university mr-2 text-lg text-logo-black"></i>
@@ -95,7 +104,7 @@ function Profile() {
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-lg leading-relaxed text-logo-black">
-                        THIS CONTENT SHOULD BE THE BIO???
+                        {bio}
                       </p>
                     </div>
                   </div>
