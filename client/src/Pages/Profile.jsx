@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Logo from "../assets/LogoBackdrop.png";
+import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
 function Profile() {
@@ -23,6 +24,7 @@ function Profile() {
   return (
     <>
       <main className="profile-page">
+        <Navbar />
         <section className="relative block" style={{ height: "500px" }}>
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
