@@ -1,6 +1,6 @@
 // This file is adapted from module 22 activity 24
 
-const { User, ImageDetails } = require('../models');
+const { User, Images } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -16,7 +16,7 @@ const resolvers = {
             return users;
         },
         images: async (parent, args) => {
-            const images = await ImageDetails.find();
+            const images = await Images.find();
             return images;
         },
     },
@@ -46,7 +46,7 @@ const resolvers = {
         },
         uploadImage: async (parent, { image }) => {
             try {
-                const newImageDetails = await ImageDetails.create({ image });
+                const newImageDetails = await Images.create({ image });
                 return newImageDetails;
 
             } catch (error) {
