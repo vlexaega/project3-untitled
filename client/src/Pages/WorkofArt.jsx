@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
-import cartIcon from "../assets/icon-cart-white.svg";
-import closeIcon from "../assets/icon-close-white.svg";
+import cartIcon from "../assets/icon-cart.svg";
+import closeIcon from "../assets/icon-close.svg";
 import prevIcon from "../assets/icon-previous.svg";
 import nextIcon from "../assets/icon-next.svg";
 
@@ -214,7 +214,7 @@ const WorkofArt = () => {
                   +
                 </button>
               </div>
-              <button className="add-btn border-none bg-orange rounded-lg text-white font-[700] px-[70px] py-[18px] mt-4 md:mt-0 md:py-0 md:text-[14px] transition-all btn-shadow hover:opacity-50">
+              <button className="add-btn border-none bg-orange rounded-lg text-black font-[700] px-[70px] py-[18px] mt-4 md:mt-0 md:py-0 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                 <img
                   className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
                   src={cartIcon}
