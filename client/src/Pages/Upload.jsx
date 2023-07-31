@@ -34,6 +34,7 @@ function ImageUpload() {
   async function handleUploadImage(event) {
     event.preventDefault();
     const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
     console.log(typeof image );
     try {
       const token = Auth.getToken();
@@ -49,6 +50,7 @@ function ImageUpload() {
             userId: Auth.getProfile().data._id,
             image,
             title,
+            description,
         },
         context: {
           headers: {

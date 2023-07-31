@@ -99,6 +99,7 @@ export const ADD_USER = gql`
         _id
         image
         title
+        description
         user {
           _id
           userName
