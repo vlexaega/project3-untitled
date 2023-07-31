@@ -46,10 +46,12 @@ const WorkofArt = ({ price, qty, setQty }) => {
 
   const largeImage = products[value].largeImg;
 
-  const fixedPrice = price.toFixed(2);
+  const fixedPrice = 99.99;
+  //   const fixedPrice = price.toFixed(2);
 
   const totalPrice = fixedPrice * qty;
-  const totalPriceFixed = totalPrice.toFixed(2);
+  //   const totalPriceFixed = totalPrice.toFixed(2);
+  const totalPriceFixed = 89.99;
 
   const decrease = () => {
     if (qty === 0) {
