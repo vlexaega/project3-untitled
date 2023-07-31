@@ -1,8 +1,10 @@
 import Jumbotron from "../components/Jumbotron";
+import Navbar from "../components/Navbar";
 
 const NoMatch = () => {
   return (
     <div>
+        <Navbar />
         <Jumbotron>
           <h1>404 Page Not Found</h1>
           <h1>

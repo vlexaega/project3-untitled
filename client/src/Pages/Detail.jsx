@@ -14,6 +14,8 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
+import Navbar from "../components/Navbar";
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -85,6 +87,7 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
+          <Navbar />
           <Link to="/">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>

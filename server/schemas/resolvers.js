@@ -44,9 +44,19 @@ const resolvers = {
 
             return { token, user }
         },
-        uploadImage: async (parent, { image }) => {
+        uploadImage: async (parent, { userId, image }) => {
+            if (!userId) {
+                throw new AuthenticationError('Must be logged in to upload an image!')
+            }
+            const user = await User.findById(userId);
+            if (!user) {
+                throw new Error ('User does not exist');
+            }
             try {
-                const newImageDetails = await Images.create({ image });
+                const newImageDetails = await Images.create({ 
+                    image,
+                    user: userId,
+                 });
                 return newImageDetails;
 
             } catch (error) {

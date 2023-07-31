@@ -21,6 +21,10 @@ const userSchema = new Schema({
         required: true, 
         minlength: 8,
     },
+    bio: {
+        type: String,
+        required: false,
+    }
 });
 
 //set up a pre-save middleware to create a password
