@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
+// eslint-disable-next-line no-unused-vars
 function Signup(props) {
   const [formState, setFormState] = useState({
     email: "",
