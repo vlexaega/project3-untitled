@@ -5,11 +5,19 @@ import { useState } from "react";
 import { useEffect } from "react";
 function Profile() {
   const [userName, setUserName] = useState("");
-  const [userBio, setUserBio] = useState("");
+  const [bio, setUserBio] = useState("");
+  // retrieve username from local storage and set it
   useEffect(() => {
     const storedUserName = localStorage.getItem("userName");
     if (storedUserName) {
       setUserName(storedUserName);
+    }
+  }, []);
+  // retrieve bio form localstorage and set it
+  useEffect(() => {
+    const storedBio = localStorage.getItem("bio");
+    if (storedBio) {
+      setUserBio(storedBio);
     }
   }, []);
   return (
@@ -87,18 +95,10 @@ function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
-                  {/* <div className="text-sm leading-normal mt-0 mb-2 text-logo-black font-bold uppercase">
-                    <i className="fas fa-map-marker-alt mr-2 text-lg text-logo-black"></i>{" "}
-                    Los Angeles, California
-                  </div> */}
                   <div className="mb-2 text-logo-black mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i>
                     {userName}
                   </div>
-                  {/* <div className="mb-2 text-logo-black">
-                    <i className="fas fa-university mr-2 text-lg text-logo-black"></i>
-                    PRIMARY ART MEDIUM
-                  </div> */}
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
