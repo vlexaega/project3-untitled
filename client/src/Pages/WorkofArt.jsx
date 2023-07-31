@@ -196,16 +196,7 @@ const WorkofArt = () => {
 
             <div className="price flex items-center">
               <span className="text-3xl font-[700] mr-4">${fixedPrice}</span>
-              <span className="bg-paleOrange text-orange font-[700] py-1 px-2 rounded-lg">
-                50%
-              </span>
-              <p className="md:hidden line-through text-grayishBlue font-[700] translate-x-[100px] mb-2">
-                $250.00
-              </p>
             </div>
-            <p className="hidden md:block line-through text-grayishBlue font-[700] mt-2">
-              $250.00
-            </p>
 
             <div className="buttons-container flex flex-col md:flex-row mt-8">
               <div className="state w-[100%] flex justify-around md:justify-center items-center space-x-10 bg-lightGrayishBlue rounded-lg p-3 md:p-2 md:mr-4 md:w-[150px]">
