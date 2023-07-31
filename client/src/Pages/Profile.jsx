@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+// minor updates
 function Profile() {
   const [userName, setUserName] = useState("");
   const [bio, setUserBio] = useState("");
