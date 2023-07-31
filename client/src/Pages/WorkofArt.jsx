@@ -88,7 +88,7 @@ const WorkofArt = () => {
               </div>
 
               <div className="buttons-container flex flex-col md:flex-row mt-8">
-                <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 md:text-[14px] transition-all btn-shadow hover:opacity-50">
+                <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                   <img
                     className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
                     src={cartIcon}
