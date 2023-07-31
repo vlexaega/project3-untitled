@@ -4,8 +4,13 @@ import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
+// eslint-disable-next-line no-unused-vars
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({
+    email: "",
+    password: "",
+    bio: "",
+  });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -20,6 +25,8 @@ function Signup(props) {
     });
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem("userName", formState.userName);
+    localStorage.setItem("bio", formState.bio);
   };
 
   const handleChange = (event) => {

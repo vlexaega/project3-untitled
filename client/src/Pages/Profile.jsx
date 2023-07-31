@@ -1,8 +1,25 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Logo from "../assets/LogoBackdrop.png";
+import { useState } from "react";
+import { useEffect } from "react";
 function Profile() {
-  // const userName = localStorage.getItem("userName");
+  const [userName, setUserName] = useState("");
+  const [bio, setUserBio] = useState("");
+  // retrieve username from local storage and set it
+  useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+    }
+  }, []);
+  // retrieve bio form localstorage and set it
+  useEffect(() => {
+    const storedBio = localStorage.getItem("bio");
+    if (storedBio) {
+      setUserBio(storedBio);
+    }
+  }, []);
   return (
     <>
       <main className="profile-page">
@@ -78,24 +95,16 @@ function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
-                  {/* <div className="text-sm leading-normal mt-0 mb-2 text-logo-black font-bold uppercase">
-                    <i className="fas fa-map-marker-alt mr-2 text-lg text-logo-black"></i>{" "}
-                    Los Angeles, California
-                  </div> */}
                   <div className="mb-2 text-logo-black mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i>
-                    USERNAME DISPLAY HERE
+                    {userName}
                   </div>
-                  {/* <div className="mb-2 text-logo-black">
-                    <i className="fas fa-university mr-2 text-lg text-logo-black"></i>
-                    PRIMARY ART MEDIUM
-                  </div> */}
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-lg leading-relaxed text-logo-black">
-                        THIS CONTENT SHOULD BE THE BIO???
+                        {bio}
                       </p>
                     </div>
                   </div>
