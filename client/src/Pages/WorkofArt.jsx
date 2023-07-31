@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
-import cartIcon from "../assets/icon-cart-white.svg";
-import closeIcon from "../assets/icon-close-white.svg";
+import cartIcon from "../assets/icon-cart.svg";
+import closeIcon from "../assets/icon-close.svg";
 import prevIcon from "../assets/icon-previous.svg";
 import nextIcon from "../assets/icon-next.svg";
 
@@ -38,7 +38,9 @@ const data = [
   },
 ];
 
-const WorkofArt = ({ price, qty, setQty }) => {
+const WorkofArt = () => {
+  const [price, setPrice] = useState(125.0);
+  const [qty, setQty] = useState(0);
   const products = [...data];
   const [value, setValue] = useState(0);
 
@@ -46,12 +48,12 @@ const WorkofArt = ({ price, qty, setQty }) => {
 
   const largeImage = products[value].largeImg;
 
-  const fixedPrice = 99.99;
-  //   const fixedPrice = price.toFixed(2);
+  //   const fixedPrice = 99.99;
+  const fixedPrice = price.toFixed(2);
 
   const totalPrice = fixedPrice * qty;
-  //   const totalPriceFixed = totalPrice.toFixed(2);
-  const totalPriceFixed = 89.99;
+  const totalPriceFixed = totalPrice.toFixed(2);
+  //   const totalPriceFixed = 89.99;
 
   const decrease = () => {
     if (qty === 0) {
@@ -180,52 +182,24 @@ const WorkofArt = ({ price, qty, setQty }) => {
 
           <div className="description p-6 md:basis-1/2 md:py-[40px]">
             <p className="text-orange text-[14px] tracking-widest uppercase font-[700] mb-6">
-              Sneaker company
+              Artist Name
             </p>
             <h1 className="text-3xl md:text-4xl capitalize font-[700]">
-              Fall limited edition <br /> sneakers
+              Name of art piece
             </h1>
             <p className="hidden md:block text-darkGrayishBlue my-10 leading-7">
-              These low-profile sneakers are your perfect casual wear <br />
-              companion. Featuring a durable rubber outer sole, they'll <br />
-              withstand everything the weather can offer.
+              Description of piece goes here.
             </p>
             <p className="md:hidden text-darkGrayishBlue my-6 leading-7">
-              These low-profile sneakers are your perfect <br /> casual wear
-              companion. Featuring a durable <br /> rubber outer sole, they'll
-              withstand every - thing the br weather can offer.
+              Description of piece goes here.
             </p>
 
             <div className="price flex items-center">
               <span className="text-3xl font-[700] mr-4">${fixedPrice}</span>
-              <span className="bg-paleOrange text-orange font-[700] py-1 px-2 rounded-lg">
-                50%
-              </span>
-              <p className="md:hidden line-through text-grayishBlue font-[700] translate-x-[100px] mb-2">
-                $250.00
-              </p>
             </div>
-            <p className="hidden md:block line-through text-grayishBlue font-[700] mt-2">
-              $250.00
-            </p>
 
             <div className="buttons-container flex flex-col md:flex-row mt-8">
-              <div className="state w-[100%] flex justify-around md:justify-center items-center space-x-10 bg-lightGrayishBlue rounded-lg p-3 md:p-2 md:mr-4 md:w-[150px]">
-                <button
-                  onClick={decrease}
-                  className="minus text-[24px] md:text-[20px] font-[700] text-orange transition-all hover:opacity-50"
-                >
-                  -
-                </button>
-                <p className="md:text-[14px] font-bold">{qty}</p>
-                <button
-                  onClick={() => setQty((prev) => prev + 1)}
-                  className="plus text-[24px] md:text-[20px] font-[700] text-orange transition-all hover:opacity-50"
-                >
-                  +
-                </button>
-              </div>
-              <button className="add-btn border-none bg-orange rounded-lg text-white font-[700] px-[70px] py-[18px] mt-4 md:mt-0 md:py-0 md:text-[14px] transition-all btn-shadow hover:opacity-50">
+              <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                 <img
                   className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
                   src={cartIcon}
