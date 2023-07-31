@@ -36,9 +36,11 @@ function ImageUpload() {
     const title = document.getElementById("title").value;
     const description = document.getElementById("description").value;
     const declaration = document.getElementById("declaration").checked;
+    const critique = document.getElementById("critique").checked;
     console.log(typeof image );
     console.log(description);
     console.log(declaration);
+    console.log(critique);
     try {
       const token = Auth.getToken();
 
@@ -55,6 +57,7 @@ function ImageUpload() {
             title,
             description,
             declaration: declaration,
+            critique: critique,
         },
         context: {
           headers: {
@@ -262,8 +265,8 @@ return (
             <div className="relative flex gap-x-3">
                   <div className="flex h-6 items-center">
                     <input
-                      id="comments"
-                      name="comments"
+                      id="critique"
+                      name="critique"
                       type="checkbox"
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />

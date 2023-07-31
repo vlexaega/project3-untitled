@@ -16,6 +16,7 @@ const typeDefs = `
     title: String!
     description: String!
     declaration: Boolean!
+    critique: Boolean
     user: User
   }
 
@@ -34,8 +35,7 @@ const typeDefs = `
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    uploadImage(userId: ID!, image: String,
-      title: String!, description: String!, declaration: Boolean!): ImageDetails!
+    uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean): ImageDetails!
 
   }
   `;

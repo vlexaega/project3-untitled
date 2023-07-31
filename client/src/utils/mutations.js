@@ -94,13 +94,14 @@ export const ADD_USER = gql`
 //   }`;
 
   export const UPLOAD_IMAGE = gql `
-  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!) {
-      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration) {
+  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!, $critique: Boolean!) {
+      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration, critique: $critique) {
         _id
         image
         title
         description
         declaration
+        critique
         user {
           _id
           userName

@@ -19,6 +19,10 @@ const ImageDetailsSchema = new Schema({
         type: Boolean,
         required: true,
     },
+    critique: {
+        type: Boolean,
+        required: true,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
