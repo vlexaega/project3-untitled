@@ -11,6 +11,10 @@ const ImageDetailsSchema = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String, 
+        required: false,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
