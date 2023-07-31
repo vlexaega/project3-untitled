@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+// import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
 import cartIcon from "../assets/icon-cart.svg";
 import closeIcon from "../assets/icon-close.svg";
@@ -58,9 +59,9 @@ const WorkofArt = () => {
       <main>
         <div className="main-wrapper flex flex-col md:flex-row md:px-[200px] md:py-[100px] relative">
           <div className="image md:basis-1/2 md:flex md:flex-col md:justify-between">
-            <div className="hidden md:block large-image">
+            <div className="md:block large-image">
               <img
-                className="object-cover rounded-xl w-[400px] h-[400px]"
+                className="object-cover mx-auto rounded-xl w-[400px] h-[400px]"
                 src={largeImage}
                 alt="snekers-photo"
               />
@@ -94,6 +95,7 @@ const WorkofArt = () => {
                 />
                 &nbsp;Add to cart
               </button>
+              {/* <CommentForm /> */}
             </div>
           </div>
         </div>
