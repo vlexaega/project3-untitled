@@ -94,10 +94,15 @@ export const ADD_ARTWORK = gql`
   }`;
 
   export const UPLOAD_IMAGE = gql `
-    mutation singleUpload($image: String!) {
-      singleUpload(image: $image) {
+    mutation uploadImage($userId: ID!, $image: String!) {
+      uploadImage(userId: $userId, image: $image) {
         _id
         image
+        user {
+          _id
+          userName
+          email
+        }
       }
     }
   `;

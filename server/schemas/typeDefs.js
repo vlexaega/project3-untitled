@@ -13,6 +13,7 @@ const typeDefs = `
   type ImageDetails{
     _id: ID
     image: String!
+    user: User
   }
 
   type Auth {
@@ -29,7 +30,7 @@ const typeDefs = `
   type Mutation {
     addUser(userName: String!, email: String!, password: String!, bio: String): Auth
     login(email: String!, password: String!): Auth
-    uploadImage(image: String!): ImageDetails!
+    uploadImage(userId: ID!, image: String!): ImageDetails!
   }
   `;
 module.exports = typeDefs;
