@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { useMutation } from "@apollo/client";
 import { UPLOAD_IMAGE } from "../utils/mutations";
 import Auth from "../utils/auth";
+import Navbar from "../components/Navbar";
+
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 function ImageUpload() {
   const [image, setImage] = useState("");
@@ -47,6 +55,7 @@ function ImageUpload() {
   }
   return (
     <div className="auth-wrapper">
+      <Navbar />
       <div className="auth-inner" style={{ width: "auto" }}>
         Upload your artwork
         <br />
@@ -61,5 +70,4 @@ function ImageUpload() {
     </div>
   );
 }
-
 export default ImageUpload;

@@ -1,10 +1,14 @@
 // This file is adapted from module 22 activity 18
+import Navbar from "../components/Navbar";
+import Auth from "../utils/auth";
+
 
 import { useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
-import { ADD_ARTWORK } from '../utils/mutations';
+import { UPLOAD_IMAGE } from "../utils/mutations";
+// import { ADD_ARTWORK } from '../utils/mutations';
 
 import { PhotoIcon } from '@heroicons/react/24/solid'
 
@@ -15,47 +19,93 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
 
-const UploadArt = () => {
-  const [formState, setFormState] = useState({
-    image: '',
-    isOriginal: false,
-    canCritique: false,
-    medium: '',
-    canDownload: false,
-    downloadPrice: 0,
-    canPurchase: false,
-    purchasePrice: 0,
-    title: '',
-    description: ''
-  });
-  const [addArtwork, { error, data }] = useMutation(ADD_ARTWORK);
+  function ImageUpload(){
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+    const[image, setImage] = useState("");
+    const[uploadImageMutation] = useMutation(UPLOAD_IMAGE);
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+    const isLoggedIn = Auth.loggedIn();
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formState);
-
-    try {
-      const { data } = await addArtwork({
-        variables: { ...formState },
-      });
-
-      return data
-    } catch (e) {
-      console.error(e);
+    function convertToBase64(e) {
+        console.log(e);
+        var reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = () => {
+            console.log(reader.result); //this returns the base64encoded string
+            setImage(reader.result);
+        };
+        reader.onerror = error => {
+            console.log("Error: ", error);
+        };
     }
-  };
+    
+    async function handleUploadImage(){
+        try {
+            const token = Auth.getToken();
+
+            if (!isLoggedIn || !token) {
+                console.error('Must be logged in!');
+                return;
+            }
+
+            const { data } = await uploadImageMutation({
+                variables: { userId: Auth.getProfile().data._id, image },
+                context: {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                },
+            });
+            const uploadedImage = data.uploadImage.image;
+            console.log('Image Uploaded: ', uploadedImage);
+        } catch (error) {
+            console.error('Error uploading image: ', error.message);
+        }
+
+
+
+// const UploadArt = () => {
+//   const [formState, setFormState] = useState({
+//     image: '',
+//     isOriginal: false,
+//     canCritique: false,
+//     medium: '',
+//     canDownload: false,
+//     downloadPrice: 0,
+//     canPurchase: false,
+//     purchasePrice: 0,
+//     title: '',
+//     description: ''
+//   });
+//   const [addArtwork, { error, data }] = useMutation(ADD_ARTWORK);
+
+//   const handleChange = (event) => {
+//     const { name, value } = event.target;
+
+//     setFormState({
+//       ...formState,
+//       [name]: value,
+//     });
+//   };
+
+//   const handleFormSubmit = async (event) => {
+//     event.preventDefault();
+//     console.log(formState);
+
+//     try {
+//       const { data } = await addArtwork({
+//         variables: { ...formState },
+//       });
+
+//       return data
+//     } catch (e) {
+//       console.error(e);
+//     }
+//   };
 
   return (
     <div>
+        <Navbar />
         <h2>Add New Artwork</h2>
         <form>   
         <div className="mt-10 space-y-10">
@@ -100,6 +150,17 @@ const UploadArt = () => {
                   </div>
                   <p className="text-xs leading-5 text-gray-600">PNG or JPG up to 10MB</p>
                 </div>
+
+                <div className="auth-inner" style={{ width: 'auto' }}>
+                Upload your artwork<br />
+                <input accept="image/*" type="file" onChange={convertToBase64} />
+                {image === '' || image === null ? (
+                  ''
+                ) : (
+                  <img width={100} height={100} src={image} />
+                )}
+                <button onClick={handleUploadImage}>Upload</button>
+              </div>
               </div>
             </div>
 
@@ -303,6 +364,6 @@ const UploadArt = () => {
     </form>
     </div>
   )
-}
+}}
 
-export default UploadArt;
+export default ImageUpload;

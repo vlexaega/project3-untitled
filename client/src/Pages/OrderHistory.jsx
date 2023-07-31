@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Navbar from "../components/Navbar";
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
@@ -14,6 +15,7 @@ function OrderHistory() {
   return (
     <>
       <div className="container my-1">
+        <Navbar />
         <Link to="/">← Back to Products</Link>
 
         {user ? (
