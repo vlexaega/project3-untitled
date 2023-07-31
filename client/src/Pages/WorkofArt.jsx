@@ -9,4 +9,4 @@ const WorkofArt = () => {
   );
 };
 
-export default Home;
+export default WorkofArt;

@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import UploadArt from "./pages/UploadArt";
 import Upload from "./pages/Upload";
+import WorkofArt from "./pages/WorkofArt";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/workofart",
         element: <WorkofArt />,
-      }
+      },
       // {
       //   path: "/orderHistory",
       //   element: <OrderHistory />,
