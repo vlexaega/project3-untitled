@@ -64,6 +64,12 @@ const Login = (props) => {
                   className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                   onSubmit={handleFormSubmit}
                 >
+                  {/* The following error structure is adapted from module 22 activity 24 */}
+                  {error ? (
+                    <div>
+                      <p className="error-text text-center">Incorrect email or password, please try again</p>
+                    </div>
+                  ) : null}
                   <div className="mb-4">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
@@ -111,12 +117,6 @@ const Login = (props) => {
                     <Link to="/signup">Signup</Link>
                   </button>
                 </form>
-              </div>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
               </div>
             )}
           </div>
