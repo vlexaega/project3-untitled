@@ -105,7 +105,7 @@ function Profile() {
                     {userName}
                   </div>
                   <div className="mb-2 text-logo-black mt-10">
-                    <button className="bg-logo-pink hover:bg-red-300 text-white font-bold py-2 px-4 rounded-full">
+                    <button className="bg-logo-pink hover:bg-red-200 text-logo-black font-bold py-2 px-4 rounded">
                       <Link to="/upload">Upload Your Art!</Link>
                     </button>
                   </div>
