@@ -30,7 +30,10 @@ const typeDefs = `
   type Mutation {
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    uploadImage(userId: ID!, image: String!, title: String!): Auth
+
+    uploadImage(userId: ID!, image: String,
+      title: String!): ImageDetails!
+
   }
   `;
 module.exports = typeDefs;

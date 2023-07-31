@@ -57,6 +57,7 @@ const resolvers = {
                     image,
                     title,
                     user: userId,
+                    title
                  });
                 return newImageDetails;
 
