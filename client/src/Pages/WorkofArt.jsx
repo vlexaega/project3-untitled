@@ -199,22 +199,7 @@ const WorkofArt = () => {
             </div>
 
             <div className="buttons-container flex flex-col md:flex-row mt-8">
-              <div className="state w-[100%] flex justify-around md:justify-center items-center space-x-10 bg-lightGrayishBlue rounded-lg p-3 md:p-2 md:mr-4 md:w-[150px]">
-                <button
-                  onClick={decrease}
-                  className="minus text-[24px] md:text-[20px] font-[700] text-orange transition-all hover:opacity-50"
-                >
-                  -
-                </button>
-                <p className="md:text-[14px] font-bold">{qty}</p>
-                <button
-                  onClick={() => setQty((prev) => prev + 1)}
-                  className="plus text-[24px] md:text-[20px] font-[700] text-orange transition-all hover:opacity-50"
-                >
-                  +
-                </button>
-              </div>
-              <button className="add-btn border-none bg-orange rounded-lg text-black font-[700] px-[70px] py-[18px] mt-4 md:mt-0 md:py-0 md:text-[14px] transition-all btn-shadow hover:opacity-50">
+              <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                 <img
                   className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
                   src={cartIcon}
