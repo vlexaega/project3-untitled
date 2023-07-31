@@ -95,7 +95,7 @@ export const ADD_USER = gql`
 
   export const UPLOAD_IMAGE = gql `
   mutation uploadImage($userId: ID!, $image: String!, $title: String!) {
-      uploadImage(userId: $userId, image: $image) {
+      uploadImage(userId: $userId, image: $image, title:$title) {
         _id
         image
         title
