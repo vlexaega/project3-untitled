@@ -94,19 +94,11 @@ export const ADD_USER = gql`
 //   }`;
 
   export const UPLOAD_IMAGE = gql `
-    mutation uploadImage($userId: ID!, $image: String!) {
-      uploadImage(userId: $userId, image: $image) {
+  mutation uploadImage($userId: ID!, $image: String!, $title: String!) {
+      uploadImage(userId: $userId, image: $image, title:$title) {
         _id
         image
-        isOriginal
-        canCritique
-        medium
-        canDownload
-        downloadPrice
-        canPurchase
-        purchasePrice
         title
-        description
         user {
           _id
           userName
