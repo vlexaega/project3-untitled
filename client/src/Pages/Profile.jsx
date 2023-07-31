@@ -4,6 +4,13 @@ import Logo from "../assets/LogoBackdrop.png";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
+// import Upload from "./Upload";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Redirect,
+// } from "react-router-dom";
 function Profile() {
   const [userName, setUserName] = useState("");
   const [bio, setUserBio] = useState("");
@@ -100,6 +107,7 @@ function Profile() {
                   <div className="mb-2 text-logo-black mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i>
                     {userName}
+                    
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">
