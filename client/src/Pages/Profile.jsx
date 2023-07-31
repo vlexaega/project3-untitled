@@ -2,7 +2,7 @@
 import React from "react";
 import Logo from "../assets/LogoBackdrop.png";
 function Profile() {
-  const userName = localStorage.getItem("userName");
+  // const userName = localStorage.getItem("userName");
   return (
     <>
       <main className="profile-page">
@@ -49,8 +49,8 @@ function Profile() {
                   <div className="w-full lg:w-4/12 xl:w-1/6 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div className="py-6 px-3 mt-32 sm:mt-0"></div>
                   </div>
-                  <div className="w-full lg:w-4/12 px-4 lg:order-1">
-                    <div className="flex justify-center py-4 lg:pt-4 pt-8 ">
+                  <div className="w-full flex justify-center items-center">
+                    <div className="flex justify-center py-4 lg:pt-4 pt-8 flex-wrap items-center text-center">
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
                           22
