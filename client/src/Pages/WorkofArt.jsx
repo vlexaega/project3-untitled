@@ -38,6 +38,8 @@ const data = [
   },
 ];
 
+// const qty = 1;
+
 const WorkofArt = ({ price, qty, setQty }) => {
   const products = [...data];
   const [value, setValue] = useState(0);
@@ -180,20 +182,16 @@ const WorkofArt = ({ price, qty, setQty }) => {
 
           <div className="description p-6 md:basis-1/2 md:py-[40px]">
             <p className="text-orange text-[14px] tracking-widest uppercase font-[700] mb-6">
-              Sneaker company
+              Artist Name
             </p>
             <h1 className="text-3xl md:text-4xl capitalize font-[700]">
-              Fall limited edition <br /> sneakers
+              Name of art piece
             </h1>
             <p className="hidden md:block text-darkGrayishBlue my-10 leading-7">
-              These low-profile sneakers are your perfect casual wear <br />
-              companion. Featuring a durable rubber outer sole, they'll <br />
-              withstand everything the weather can offer.
+              Description of piece goes here.
             </p>
             <p className="md:hidden text-darkGrayishBlue my-6 leading-7">
-              These low-profile sneakers are your perfect <br /> casual wear
-              companion. Featuring a durable <br /> rubber outer sole, they'll
-              withstand every - thing the br weather can offer.
+              Description of piece goes here.
             </p>
 
             <div className="price flex items-center">
