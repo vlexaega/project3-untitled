@@ -31,7 +31,10 @@ function ImageUpload() {
     };
   }
 
-  async function handleUploadImage() {
+  async function handleUploadImage(event) {
+    event.preventDefault();
+    const title = document.getElementById("title").value;
+    console.log(typeof image );
     try {
       const token = Auth.getToken();
 
@@ -40,11 +43,10 @@ function ImageUpload() {
         return;
       }
 
-      const title = document.getElementById("title").value;
 
       const { data } = await uploadImageMutation({
         variables: { 
-            userId: Auth.getProfile().data._id, 
+            userId: Auth.getProfile().data._id,
             image,
             title,
         },

@@ -14,6 +14,7 @@ const typeDefs = `
     _id: ID
     image: String
     title: String!
+    user: User
   }
 
   type Auth {
