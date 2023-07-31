@@ -55,8 +55,14 @@ https://www.npmjs.com/package/tw-elements
 If you followed tutorials, include links to those here as well.
 
 Thank you to the following tutorials which helped with our project:
+
 Image Carousel:
+
 https://www.youtube.com/watch?v=XJSOgV4VELk&ab_channel=YourCodeLab
+
+Product Display:
+
+https://www.youtube.com/watch?v=VqAFrHdOA0w&ab_channel=Dojcinovic
 
 ## License
 
