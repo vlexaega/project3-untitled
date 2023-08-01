@@ -18,7 +18,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
@@ -58,7 +58,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
@@ -97,7 +97,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
@@ -137,7 +137,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
@@ -177,7 +177,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
@@ -217,7 +217,7 @@ const ArtByMedium = () => {
               </a>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 className="text-lg">
+                <h1 className="text-3xl">
                   <a
                     className="no-underline hover:underline text-black"
                     href="#"
