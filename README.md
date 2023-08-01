@@ -33,6 +33,9 @@ To add a screenshot, create an assets/images folder in your repository and uploa
 ## Credits
 
 - [Profile Page Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile)
+- [Unsplash](Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">charlesdeluvio</a> on <a href="https://unsplash.com/photos/5R5HgLyHMVQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  )
+- Stripe Docs
 
 ### Vite PWA:
 
@@ -47,6 +50,7 @@ The following site helped me convert an image into a favicon with all the necess
 I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
 ### Selected Medium
+
 I consulted this Medium article to select the user's medium choice from a dropdown menu: https://medium.com/@samleashrauner/add-to-a-database-with-selectedindex-6311354b0082
 
 The template for the dropdown menu comes from the Tailwind CSS docs, available here: https://tailwind-elements.com/docs/standard/forms/select/
