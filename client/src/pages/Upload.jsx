@@ -40,11 +40,14 @@ function ImageUpload() {
     const declaration = document.getElementById("declaration").checked;
     const critique = document.getElementById("critique").checked;
     const price = parseFloat(document.getElementById("price").value.replace("$", ""));
+    const medium = document.querySelector('#medium')
+    const selectedMedium = medium.options[medium.selectedIndex].text
     console.log(typeof image );
     console.log(description);
     console.log(declaration);
     console.log(critique);
     console.log(price);
+    console.log(selectedMedium)
     try {
       const token = Auth.getToken();
 
@@ -63,6 +66,7 @@ function ImageUpload() {
             declaration: declaration,
             critique: critique,
             price,
+            selectedMedium: selectedMedium,
         },
         context: {
           headers: {
@@ -151,8 +155,18 @@ return (
                 </div>
               </div>
             </div>
+            <div>
+              <h3>Medium</h3>
+              <select data-te-select-init id="medium">
+                <option value="1">Painting</option>
+                <option value="2">Drawing</option>
+                <option value="3">Mixed Media</option>
+                <option value="4">Digital</option>
+                <option value="5">Fabric</option>
+              </select>
+            </div>                  
 
-            <Menu as="div" className="relative inline-block text-left">
+            {/* <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           Select Medium
@@ -252,7 +266,7 @@ return (
           </div>
         </Menu.Items>
       </Transition>
-    </Menu>
+    </Menu> */}
 
             <div className="col-span-full">
               <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">

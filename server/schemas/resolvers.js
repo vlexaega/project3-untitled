@@ -61,7 +61,7 @@ const resolvers = {
     },
     uploadImage: async (
       parent,
-      { userId, image, title, description, declaration, critique, price }
+      { userId, image, title, description, declaration, critique, price, selectedMedium }
     ) => {
       if (!userId) {
         throw new AuthenticationError("Must be logged in to upload an image!");
@@ -78,6 +78,7 @@ const resolvers = {
           declaration,
           critique: critique || false,
           price,
+          selectedMedium,
           user: userId,
         });
         return newImageDetails;

@@ -18,6 +18,7 @@ const typeDefs = `
     declaration: Boolean!
     critique: Boolean
     price: Float
+    selectedMedium: String!
     user: User
   }
 
@@ -38,7 +39,7 @@ const typeDefs = `
   type Mutation {
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!): ImageDetails!
+    uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, selectedMedium: String!): ImageDetails!
   }
   `;
 module.exports = typeDefs;

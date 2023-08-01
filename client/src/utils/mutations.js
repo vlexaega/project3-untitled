@@ -96,8 +96,8 @@ export const ADD_USER = gql`
 //   }`;
 
   export const UPLOAD_IMAGE = gql `
-  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!, $critique: Boolean, $price: Float!) {
-      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration, critique: $critique, price: $price) {
+  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!, $critique: Boolean, $price: Float!, $selectedMedium: String!) {
+      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration, critique: $critique, price: $price, selectedMedium: $selectedMedium) {
         _id
         image
         title
@@ -105,6 +105,7 @@ export const ADD_USER = gql`
         declaration
         critique
         price
+        selectedMedium
         user {
           _id
           userName
