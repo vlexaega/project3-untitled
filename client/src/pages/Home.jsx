@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-    <div className="container">
+    {/* <div className="container"> */}
       <h1 className="text-6xl text-center p-8">Welcome</h1>
       <div className="max-w-lg mx-auto">
         {images.length > 0 ? ( // Check if there are images available
@@ -35,7 +35,7 @@ const Home = () => {
           )}
       </div>
     </div>
-    </div>
+    // </div>
   );
 };
 
