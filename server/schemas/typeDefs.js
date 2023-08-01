@@ -18,6 +18,7 @@ const typeDefs = `
     declaration: Boolean!
     critique: Boolean
     price: Float
+    selectedMedium: String!
     user: User
   }
 
