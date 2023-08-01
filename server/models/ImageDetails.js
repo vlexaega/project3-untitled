@@ -27,6 +27,10 @@ const ImageDetailsSchema = new Schema({
         type: Number,
         required: true,
     },
+    selectedMedium: {
+        type: String,
+        required: true,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
