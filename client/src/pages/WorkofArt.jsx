@@ -19,10 +19,10 @@ const WorkofArt = () => {
   const artinfo = data?.image;
 
   console.log(artinfo);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // console.log(artinfo.description);
+  // const artTitle = artinfo.title;
+  // const artDescription = artinfo.description;
+  const artImgSrc = artinfo.image;
 
   const largeImage = "../assets/image-product-1.jpg";
   const Price = "150";
@@ -38,8 +38,8 @@ const WorkofArt = () => {
               <div className="md:block large-image">
                 <img
                   className="object-cover mx-auto rounded-xl w-[400px] h-[400px]"
-                  src={largeImage}
-                  alt="snekers-photo"
+                  src={artImgSrc}
+                  alt="artwork image"
                 />
               </div>
             </div>
@@ -49,13 +49,13 @@ const WorkofArt = () => {
                 Artist Name
               </p>
               <h1 className="text-3xl md:text-4xl capitalize font-[700]">
-                Name of art piece
+                Art Title
               </h1>
               <p className="hidden md:block text-darkGrayishBlue my-10 leading-7">
-                Description of piece goes here.
+                Art description
               </p>
               <p className="md:hidden text-darkGrayishBlue my-6 leading-7">
-                Description of piece goes here.
+                art description
               </p>
 
               <div className="price flex items-center">
