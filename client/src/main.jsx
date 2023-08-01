@@ -55,6 +55,10 @@ const router = createBrowserRouter([
         path: "/artists",
         element: <Artists />,
       },
+      {
+        path: "*",
+        element: <NoMatch />,
+      },
       // {
       //   path: "/orderHistory",
       //   element: <OrderHistory />,
