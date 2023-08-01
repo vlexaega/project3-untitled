@@ -7,57 +7,25 @@ import { QUERY_SINGLE_IMAGE } from "../utils/queries";
 // import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
 import cartIcon from "../assets/icon-cart.svg";
-import closeIcon from "../assets/icon-close.svg";
-import prevIcon from "../assets/icon-previous.svg";
-import nextIcon from "../assets/icon-next.svg";
-
-// import large1 from "../assets/image-product-1.jpg";
-// import large2 from "../assets/image-product-2.jpg";
-// import large3 from "../assets/image-product-3.jpg";
-// import large4 from "../assets/image-product-4.jpg";
-
-// import small1 from "../assets/image-product-1-thumbnail.jpg";
-// import small2 from "../assets/image-product-2-thumbnail.jpg";
-// import small3 from "../assets/image-product-3-thumbnail.jpg";
-// import small4 from "../assets/image-product-4-thumbnail.jpg";
-
-// const data = [
-//   {
-//     id: 1,
-//     largeImg: large1,
-//     smallImg: small1,
-//   },
-//   {
-//     id: 2,
-//     largeImg: large2,
-//     smallImg: small2,
-//   },
-//   {
-//     id: 3,
-//     largeImg: large3,
-//     smallImg: small3,
-//   },
-//   {
-//     id: 4,
-//     largeImg: large4,
-//     smallImg: small4,
-//   },
-// ];
 
 const WorkofArt = () => {
-  let { imageid } = useParams();
-  console.log(imageid);
+  let { imageId } = useParams();
+  console.log(imageId);
 
   const { loading, data } = useQuery(QUERY_SINGLE_IMAGE, {
-    variables: { imageid: imageid },
+    variables: { imageId: imageId },
   });
 
   const artinfo = data?.artid || {};
 
   console.log(artinfo);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   const largeImage = "../assets/image-product-1.jpg";
-  const Price = "150"
+  const Price = "150";
 
   return (
     <div>
