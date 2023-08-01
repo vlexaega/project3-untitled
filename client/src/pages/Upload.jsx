@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import { PhotoIcon } from '@heroicons/react/24/solid'
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -15,6 +16,7 @@ function classNames(...classes) {
 function ImageUpload() {
   const [image, setImage] = useState("");
   const [uploadImageMutation] = useMutation(UPLOAD_IMAGE);
+  const navigate = useNavigate();
 
   const isLoggedIn = Auth.loggedIn();
 
@@ -70,6 +72,7 @@ function ImageUpload() {
       });
       const uploadedImage = data.uploadImage.image;
       console.log("Image Uploaded: ", uploadedImage);
+      navigate("/profile");
     } catch (error) {
       console.error("Error uploading image: ", error.message);
     }
@@ -354,7 +357,7 @@ return (
         type="submit"
         className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         onClick={handleUploadImage}>
-        Upload
+          Upload
         </button>
       </div>
     </form>
