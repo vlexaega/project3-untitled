@@ -25,7 +25,7 @@ const WorkofArt = () => {
 
   // console.log(loading, artinfo);
   // console.log(artinfo)
-  console.log(artinfo.critique);
+  // console.log(artinfo.critique);
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
   const artDescription = artinfo.description;
