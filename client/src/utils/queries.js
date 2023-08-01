@@ -69,13 +69,18 @@ export const QUERY_USER = gql`
   }
 `;
 
-
-export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+export const QUERY_SINGLE_IMAGE = gql`
+  query Query($imageId: ID!) {
+    image(imageId: $imageId) {
       _id
-      name
-      skills
+      image
+      title
+      description
+      critique
+      price
+      user {
+        userName
+      }
     }
   }
 `;

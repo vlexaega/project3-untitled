@@ -32,7 +32,7 @@ const typeDefs = `
     images: [ImageDetails]
     getUserImages: [ImageDetails]
     getUserProfile: User
-    image(imageId: ID!): Image
+    image(imageId: ID!): ImageDetails
   }
 
   type Mutation {

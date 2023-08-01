@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
-import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { Navigate, useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_ARTPIECE } from '../utils/queries';
+import { QUERY_SINGLE_IMAGE } from "../utils/queries";
 
 // import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
@@ -45,6 +45,8 @@ const data = [
 ];
 
 const WorkofArt = () => {
+  let { artid } = useParams();
+  console.log(artid);
   const [price, setPrice] = useState(125.0);
   const [qty, setQty] = useState(0);
   const products = [...data];
