@@ -85,7 +85,8 @@ function ImageUpload() {
 return (
     <div>
         <Navbar />
-        <h2>Add New Artwork</h2>
+        <div className="mx-5">
+        <h1 className="text-6xl text-center p-8">Add New Artwork</h1>
         <form>   
         <div className="mt-10 space-y-10">
             <fieldset>
@@ -377,6 +378,7 @@ return (
         </button>
       </div>
     </form>
+    </div>
     </div>
   )
 }
