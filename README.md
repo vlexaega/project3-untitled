@@ -73,6 +73,10 @@ Product Display:
 
 https://www.youtube.com/watch?v=VqAFrHdOA0w&ab_channel=Dojcinovic
 
+Tailwind Cards:
+
+https://codepen.io/codetimeio/pen/RYMEJe
+
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).

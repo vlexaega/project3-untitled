@@ -24,16 +24,27 @@ const WorkofArt = () => {
   const artinfo = data?.image;
 
   // console.log(loading, artinfo);
+  // console.log(artinfo)
+  // console.log(artinfo.critique);
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
   const artDescription = artinfo.description;
   const artImgSrc = artinfo.image;
   const artUserName = artinfo.user.userName;
   const artPrice = artinfo.price;
+  const critique = artinfo.critique;
 
   const checkPrice = (artPrice) => {
     if (artinfo.price === undefined || artinfo.price === null) {
       return <p>Piece not for sale</p>;
+    }
+  };
+
+  const checkforCritique = (critique) => {
+    if (artinfo.critique === true) {
+      return <p>Critique component will go here</p>;
+    } else {
+      return <p>Critique disabled</p>;
     }
   };
 
@@ -54,7 +65,7 @@ const WorkofArt = () => {
           </div>
 
           <div className="description p-6 md:basis-1/2 md:py-[40px]">
-            <p className="text-orange text-[14px] tracking-widest uppercase font-[700] mb-6">
+            <p className="text-[14px] tracking-widest uppercase font-[700] mb-6">
               {artUserName}
             </p>
             <h1 className="text-3xl md:text-4xl capitalize font-[700]">
@@ -82,8 +93,8 @@ const WorkofArt = () => {
                 />
                 &nbsp;Add to cart
               </button>
-              {/* <CommentForm /> */}
             </div>
+            <div className="block">{checkforCritique(critique)}</div>
           </div>
         </div>
       </main>
