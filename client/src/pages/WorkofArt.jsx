@@ -16,7 +16,7 @@ const WorkofArt = () => {
     variables: { imageId: imageId },
   });
 
-  const artinfo = data?.artid || {};
+  const artinfo = data?.image;
 
   console.log(artinfo);
 
