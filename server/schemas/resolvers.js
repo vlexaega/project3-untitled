@@ -19,6 +19,18 @@ const resolvers = {
             const images = await Images.find();
             return images;
         },
+        getUserImages: async (parent, args, context) => {
+            if (context.user) {
+              const userImages = await Images.find({ user: context.user._id });
+              return userImages;
+            }
+          },
+        getUserProfile: async (parent, args, context) => {
+            if(context.user) {
+                const user = await User.findById(context.user._id);
+                return user;
+            }
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {

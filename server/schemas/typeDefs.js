@@ -30,6 +30,8 @@ const typeDefs = `
     user: User
     users: [User]
     images: [ImageDetails]
+    getUserImages: [ImageDetails]
+    getUserProfile: User
   }
 
   type Mutation {

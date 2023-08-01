@@ -1,22 +1,5 @@
 import { gql } from "@apollo/client";
 
-// export const ADD_IMAGE = gql`
-//   mutation addImage($products: [ID]!) {
-//     addOrder(products: $products) {
-//       purchaseDate
-//       products {
-//         _id
-//         name
-//         description
-//         price
-//         quantity
-//         category {
-//           name
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -29,6 +12,25 @@ export const LOGIN_USER = gql`
   }
 `;
 
+export const GET_USER_PROFILE = gql `
+  query {
+    getUserProfile {
+      userName
+      bio
+    }
+  }
+`;
+
+export const GET_USER_IMAGES = gql `
+  query {
+    getUserImages {
+      _id
+      image
+      title
+      description
+    }
+  }
+`;
 // export const ADD_ORDER = gql`
 //   mutation addOrder($products: [ID]!) {
 //     addOrder(products: $products) {

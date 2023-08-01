@@ -5,24 +5,56 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { GET_USER_PROFILE } from "../utils/mutations";
+import { GET_USER_IMAGES } from "../utils/mutations";
+import { useQuery } from "@apollo/client";
+
 // minor updates
 function Profile() {
+  const { loading: profileLoading, error: profileError, data: profileData } = useQuery(GET_USER_PROFILE);
+  const { loading: imagesLoading, error: imagesError, data: imagesData } = useQuery(GET_USER_IMAGES);
+
   const [userName, setUserName] = useState("");
   const [bio, setUserBio] = useState("");
-  // retrieve username from local storage and set it
+  const [userImages, setUserImages] = useState([]);
+
   useEffect(() => {
-    const storedUserName = localStorage.getItem("userName");
-    if (storedUserName) {
-      setUserName(storedUserName);
+    if (profileData && profileData.getUserProfile) {
+      setUserName(profileData.getUserProfile.userName);
+      setUserBio(profileData.getUserProfile.bio);
     }
-  }, []);
-  // retrieve bio form localstorage and set it
+    }, [profileData]);
+
   useEffect(() => {
-    const storedBio = localStorage.getItem("bio");
-    if (storedBio) {
-      setUserBio(storedBio);
+    if (imagesData && imagesData.getUserImages) {
+      setUserImages(imagesData.getUserImages);
     }
-  }, []);
+    }, [imagesData]);
+
+    if (profileLoading || imagesLoading){
+      return <div>Loading..</div>
+    }
+    if (profileError || imagesError){
+      console.error("Error collecting data", profileError || imagesError);
+      return <div>Error collecting data</div>;
+    }
+
+  // const [userName, setUserName] = useState("");
+  // const [bio, setUserBio] = useState("");
+  // // retrieve username from local storage and set it
+  // useEffect(() => {
+  //   const storedUserName = localStorage.getItem("userName");
+  //   if (storedUserName) {
+  //     setUserName(storedUserName);
+  //   }
+  // }, []);
+  // // retrieve bio form localstorage and set it
+  // useEffect(() => {
+  //   const storedBio = localStorage.getItem("bio");
+  //   if (storedBio) {
+  //     setUserBio(storedBio);
+  //   }
+  // }, []);
   return (
     <>
       <main className="profile-page">
@@ -118,6 +150,25 @@ function Profile() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 py-10 border-t border-gray-300 text-center">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full lg:w-9/12 px-4">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">Uploaded Images</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {userImages.map((image) => (
+                    <div key={image._id} className="rounded-lg overflow-hidden shadow-md">
+                      <img src={image.image} alt={image.title} className="w-full h-40 object-cover" />
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold text-gray-800">{image.title}</h3>
+                        <p className="text-gray-600">{image.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
