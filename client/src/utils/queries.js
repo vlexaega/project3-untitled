@@ -68,3 +68,19 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_SINGLE_IMAGE = gql`
+  query Query($imageId: ID!) {
+    image(imageId: $imageId) {
+      _id
+      image
+      title
+      description
+      critique
+      price
+      user {
+        userName
+      }
+    }
+  }
+`;
