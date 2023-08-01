@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import { UPLOAD_IMAGE } from "../utils/mutations";
 import Auth from "../utils/auth";
 import Navbar from "../components/Navbar";
+// import { useForm } from "react-hook-form"
 
 import { PhotoIcon } from '@heroicons/react/24/solid'
 import { Menu, Transition } from "@headlessui/react";
@@ -33,7 +34,7 @@ function ImageUpload() {
     };
   }
 
-  async function handleUploadImage(event) {
+  async function HandleUploadImage(event) {
     event.preventDefault();
     const title = document.getElementById("title").value;
     const description = document.getElementById("description").value;
@@ -48,6 +49,16 @@ function ImageUpload() {
     console.log(critique);
     console.log(price);
     console.log(selectedMedium)
+
+    // const {
+    //   register,
+    //   handleSubmit,
+    //   watch,
+    //   formState: { errors },
+    // } = useForm()
+  
+    // const onSubmit = (data) => console.log(data)
+
     try {
       const token = Auth.getToken();
 
@@ -373,7 +384,7 @@ return (
         <button 
         type="submit"
         className="rounded-md bg-logo-pink px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        onClick={handleUploadImage}>
+        onClick={HandleUploadImage}>
           Upload
         </button>
       </div>
