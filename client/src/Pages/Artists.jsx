@@ -8,65 +8,125 @@ function Artists() {
     <>
       <main>
         <Navbar />
-        <section className="grid grid-cols-5 gap-4 m-5">
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+        <section className="grid grid-cols-3 gap-4 m-5">
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
-          <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
-            <h2>Artist</h2>
-            <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="src/assets/goldblum.png" alt="Goldblum" />
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
+            </Link>
+          </div>
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
+            </Link>
+          </div>
+          <div className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
+            <h2 className="text-center p-1">Artist</h2>
+            <Link to="/profile/:id" target="_blank" rel="noreferrer">
+              <img
+                className="p-2 rounded"
+                src="src/assets/goldblum.png"
+                alt="Goldblum"
+              />
             </Link>
           </div>
         </section>
