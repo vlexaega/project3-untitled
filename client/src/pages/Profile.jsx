@@ -104,6 +104,7 @@ function Profile() {
                             <br></br>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                               {userImages.map((image) => (
+                                <Link to={`/workofart/${image._id}`} key={image._id}>
                                 <div
                                   key={image._id}
                                   className="rounded-lg overflow-hidden shadow-md"
@@ -122,7 +123,7 @@ function Profile() {
                                     </p>
                                   </div>
                                 </div>
-                              ))}
+                                </Link>))}
                             </div>
                             <div className="text-center mt-12">
                               <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
