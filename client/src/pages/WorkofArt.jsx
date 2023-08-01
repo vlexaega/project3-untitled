@@ -11,53 +11,53 @@ import closeIcon from "../assets/icon-close.svg";
 import prevIcon from "../assets/icon-previous.svg";
 import nextIcon from "../assets/icon-next.svg";
 
-import large1 from "../assets/image-product-1.jpg";
-import large2 from "../assets/image-product-2.jpg";
-import large3 from "../assets/image-product-3.jpg";
-import large4 from "../assets/image-product-4.jpg";
+// import large1 from "../assets/image-product-1.jpg";
+// import large2 from "../assets/image-product-2.jpg";
+// import large3 from "../assets/image-product-3.jpg";
+// import large4 from "../assets/image-product-4.jpg";
 
-import small1 from "../assets/image-product-1-thumbnail.jpg";
-import small2 from "../assets/image-product-2-thumbnail.jpg";
-import small3 from "../assets/image-product-3-thumbnail.jpg";
-import small4 from "../assets/image-product-4-thumbnail.jpg";
+// import small1 from "../assets/image-product-1-thumbnail.jpg";
+// import small2 from "../assets/image-product-2-thumbnail.jpg";
+// import small3 from "../assets/image-product-3-thumbnail.jpg";
+// import small4 from "../assets/image-product-4-thumbnail.jpg";
 
-const data = [
-  {
-    id: 1,
-    largeImg: large1,
-    smallImg: small1,
-  },
-  {
-    id: 2,
-    largeImg: large2,
-    smallImg: small2,
-  },
-  {
-    id: 3,
-    largeImg: large3,
-    smallImg: small3,
-  },
-  {
-    id: 4,
-    largeImg: large4,
-    smallImg: small4,
-  },
-];
+// const data = [
+//   {
+//     id: 1,
+//     largeImg: large1,
+//     smallImg: small1,
+//   },
+//   {
+//     id: 2,
+//     largeImg: large2,
+//     smallImg: small2,
+//   },
+//   {
+//     id: 3,
+//     largeImg: large3,
+//     smallImg: small3,
+//   },
+//   {
+//     id: 4,
+//     largeImg: large4,
+//     smallImg: small4,
+//   },
+// ];
 
 const WorkofArt = () => {
-  let { artid } = useParams();
-  console.log(artid);
-  const [price, setPrice] = useState(125.0);
-  const [qty, setQty] = useState(0);
-  const products = [...data];
-  const [value, setValue] = useState(0);
+  let { imageid } = useParams();
+  console.log(imageid);
 
-  const [modal, setModal] = useState(true);
+  const { loading, data } = useQuery(QUERY_SINGLE_IMAGE, {
+    variables: { imageid: imageid },
+  });
 
-  const largeImage = products[value].largeImg;
+  const artinfo = data?.artid || {};
 
-  //   const fixedPrice = 99.99;
-  const fixedPrice = price.toFixed(2);
+  console.log(artinfo);
+
+  const largeImage = "../assets/image-product-1.jpg";
+  const Price = "150"
 
   return (
     <div>
@@ -91,7 +91,7 @@ const WorkofArt = () => {
               </p>
 
               <div className="price flex items-center">
-                <span className="text-3xl font-[700] mr-4">${fixedPrice}</span>
+                <span className="text-3xl font-[700] mr-4">${Price}</span>
               </div>
 
               <div className="buttons-container flex flex-col md:flex-row mt-8">
