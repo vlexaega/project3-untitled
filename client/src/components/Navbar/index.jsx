@@ -163,25 +163,25 @@ function Navbar() {
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
-            Dashboard
+            Profile
           </a>
           <a
             to=""
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
-            Team
+            Art by Medium
           </a>
           <a
             to=""
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
-            Projects
+            Cart
           </a>
           <a
             to=""
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
-            Calendar
+            Order History
           </a>
         </div>
       </div>
