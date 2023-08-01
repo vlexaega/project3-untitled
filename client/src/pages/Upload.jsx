@@ -85,7 +85,8 @@ function ImageUpload() {
 return (
     <div>
         <Navbar />
-        <h2>Add New Artwork</h2>
+        <div className="mx-5">
+        <h1 className="text-6xl text-center p-8">Add New Artwork</h1>
         <form>   
         <div className="mt-10 space-y-10">
             <fieldset>
@@ -371,12 +372,13 @@ return (
         </button>
         <button 
         type="submit"
-        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="rounded-md bg-logo-pink px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         onClick={handleUploadImage}>
           Upload
         </button>
       </div>
     </form>
+    </div>
     </div>
   )
 }
