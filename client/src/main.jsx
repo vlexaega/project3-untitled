@@ -13,6 +13,7 @@ import UploadArt from "./pages/UploadArt";
 import Upload from "./pages/Upload";
 import WorkofArt from "./pages/WorkofArt";
 import Artists from "./pages/Artists";
+import Cart from "./pages/Cart";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/artists",
         element: <Artists />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       // {
       //   path: "/orderHistory",
