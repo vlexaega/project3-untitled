@@ -1,4 +1,9 @@
 import Navbar from "../components/Navbar";
+import { Navigate, useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+
+import { QUERY_SINGLE_ARTPIECE } from '../utils/queries';
+
 // import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
 import cartIcon from "../assets/icon-cart.svg";

@@ -25,6 +25,9 @@ const resolvers = {
               return userImages;
             }
           },
+        image: async (parent, { imageId }) => {
+        return Image.findOne({ _id: imageId });
+        },
         getUserProfile: async (parent, args, context) => {
             if(context.user) {
                 const user = await User.findById(context.user._id);
