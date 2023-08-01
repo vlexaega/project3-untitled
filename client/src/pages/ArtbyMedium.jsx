@@ -26,7 +26,7 @@ const ArtByMedium = () => {
                     Paintings
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -34,12 +34,7 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">Author Name</p>
+
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
@@ -71,7 +66,7 @@ const ArtByMedium = () => {
                     Drawings
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -79,12 +74,6 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">uhoh</p>
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
@@ -116,7 +105,7 @@ const ArtByMedium = () => {
                     Mixed Media
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -124,12 +113,7 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">Author Name</p>
+
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
@@ -161,7 +145,7 @@ const ArtByMedium = () => {
                     Digital
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -169,12 +153,7 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">Author Name</p>
+
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
@@ -206,7 +185,7 @@ const ArtByMedium = () => {
                     Fabric
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -214,12 +193,7 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">Author Name</p>
+
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
@@ -251,7 +225,7 @@ const ArtByMedium = () => {
                     Photography
                   </a>
                 </h1>
-                <p className="text-grey-darker text-sm">11/1/19</p>
+                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
@@ -259,12 +233,7 @@ const ArtByMedium = () => {
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
                 >
-                  <img
-                    alt="Placeholder"
-                    className="block rounded-full"
-                    src="https://picsum.photos/32/32/?random"
-                  />
-                  <p className="ml-2 text-sm">Author Name</p>
+
                 </a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
