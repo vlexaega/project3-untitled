@@ -54,22 +54,10 @@ function Profile() {
         <Navbar />
 
         <section className="relative block" style={{ height: "500px" }}>
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200"
-            // style={{
-            //   backgroundImage: `url(${Logo})`,
-            // }}
-          >
+          <div className="absolute top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
             <div className="mb-2 text-logo-black shadow-xl shadow-indigo-500/50  text-5xl text-center p-8">
               <h3 className="mb-2 mt-10  text-6xl">{userName}</h3>
               <h3 className="mb-2 mt-10 text-2xl">{bio}</h3>
-              {/* <div className="mt-10 py-10 border-t flex flex-wrap justify-center border-logo-black text-center">
-                <div className="w-full lg:w-9/12 px-4">
-                  <p className="mb-4 text-lg leading-relaxed text-logo-black">
-                    
-                  </p>
-                </div>
-              </div> */}
             </div>
 
             <span
@@ -90,12 +78,7 @@ function Profile() {
               viewBox="0 0 2560 100"
               x="0"
               y="0"
-            >
-              {/* <polygon
-                className="text-center text-red-200 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon> */}
-            </svg>
+            ></svg>
           </div>
         </section>
         <section className="relative py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
@@ -115,7 +98,7 @@ function Profile() {
                       <div className="mr-4 p-3 text-center">
                         <div className="flex flex-wrap justify-center">
                           <div className="w-full lg:w-9/12 px-4">
-                            <h2 className="text-2xl font-semibold border-b border-indigo-800 text-logo-black mb-4">
+                            <h2 className="text-2xl font-semibold shadow-current text-logo-black mb-4">
                               {userName}'s Art
                             </h2>
                             <br></br>
