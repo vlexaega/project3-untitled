@@ -19,6 +19,18 @@ const resolvers = {
             const images = await Images.find();
             return images;
         },
+        getUserImages: async (parent, args, context) => {
+            if (context.user) {
+              const userImages = await Images.find({ user: context.user._id });
+              return userImages;
+            }
+          },
+        getUserProfile: async (parent, args, context) => {
+            if(context.user) {
+                const user = await User.findById(context.user._id);
+                return user;
+            }
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {
@@ -44,7 +56,7 @@ const resolvers = {
 
             return { token, user }
         },
-        uploadImage: async (parent, { userId, image, title, description, declaration, critique }) => {
+        uploadImage: async (parent, { userId, image, title, description, declaration, critique, price }) => {
             if (!userId) {
                 throw new AuthenticationError('Must be logged in to upload an image!')
             }
@@ -59,6 +71,7 @@ const resolvers = {
                     description,
                     declaration,
                     critique: critique || false,
+                    price,
                     user: userId,
                  });
                 return newImageDetails;

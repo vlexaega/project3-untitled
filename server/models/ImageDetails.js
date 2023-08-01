@@ -23,6 +23,10 @@ const ImageDetailsSchema = new Schema({
         type: Boolean,
         required: true,
     },
+    price: {
+        type: Number,
+        required: true,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
