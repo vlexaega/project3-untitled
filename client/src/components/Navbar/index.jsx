@@ -22,19 +22,13 @@ function Navbar() {
 
                         Menu open: "hidden", Menu closed: "block"
                     --> */}
-              <svg
-              
-              >
-              
-              </svg>
+              <svg></svg>
               {/* <!--
                         Icon when menu is open.
 
                         Menu open: "block", Menu closed: "hidden"
                     --> */}
-              <svg
-                
-              >
+              <svg>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -113,7 +107,7 @@ function Navbar() {
                       Signup
                     </Link>
                     <Link
-                      to="/login"
+                      to="/"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
                       Login
@@ -124,8 +118,6 @@ function Navbar() {
             </div>
           </div>
           <div>
-           
-
             {/* <!-- Profile dropdown --> */}
             <div className="relative ml-3">
               <div>
@@ -136,12 +128,8 @@ function Navbar() {
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
-
                   <span className="sr-only">Open user menu</span>
-                  <img
-                  
-                    alt=""
-                  />
+                  <img alt="" />
                 </button>
               </div>
 

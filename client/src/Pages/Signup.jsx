@@ -39,7 +39,7 @@ function Signup(props) {
 
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen">
-      <Link to="/login">← Go to Login</Link>
+      <Link to="/">← Go to Login</Link>
 
       <h2 className="text-6xl text-center p-8">Signup</h2>
       <div className="w-full max-w-xs block">
