@@ -23,6 +23,7 @@ function Cart(){
       </button>
     </form>
   </section>
+  
 
         </main>
         </>
