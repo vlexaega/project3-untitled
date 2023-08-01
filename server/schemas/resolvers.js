@@ -44,7 +44,7 @@ const resolvers = {
 
             return { token, user }
         },
-        uploadImage: async (parent, { userId, image, title, description, declaration, critique }) => {
+        uploadImage: async (parent, { userId, image, title, description, declaration, critique, price }) => {
             if (!userId) {
                 throw new AuthenticationError('Must be logged in to upload an image!')
             }
@@ -59,6 +59,7 @@ const resolvers = {
                     description,
                     declaration,
                     critique: critique || false,
+                    price,
                     user: userId,
                  });
                 return newImageDetails;
