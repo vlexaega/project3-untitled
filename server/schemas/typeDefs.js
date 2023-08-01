@@ -10,6 +10,12 @@ const typeDefs = `
     bio: String
   }
   
+  type Comment {
+    user: User
+    comment: String
+    createdAt: String
+  }
+
   type ImageDetails{
     _id: ID
     image: String
@@ -20,6 +26,7 @@ const typeDefs = `
     price: Float
     selectedMedium: String!
     user: User
+    comments: [Comment]
   }
 
   type Auth {
@@ -40,6 +47,7 @@ const typeDefs = `
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, selectedMedium: String!): ImageDetails!
+    addComment(imageId: ID!, comment: String!): ImageDetails
   }
   `;
 module.exports = typeDefs;
