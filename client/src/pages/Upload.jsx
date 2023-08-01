@@ -87,7 +87,7 @@ return (
         <Navbar />
         <div className="mx-5">
         <h1 className="text-6xl text-center p-8">Add New Artwork</h1>
-        <form>   
+        <form className="mb-16">   
         <div className="mt-10 space-y-10">
             <fieldset>
               <legend className="text-sm font-semibold leading-6 text-gray-900">Declaration</legend>
