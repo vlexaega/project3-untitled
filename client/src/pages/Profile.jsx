@@ -110,10 +110,16 @@ function Profile() {
                   <div className="w-full lg:w-4/12 xl:w-1/6 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div className="py-6 px-3 mt-32 sm:mt-0"></div>
                   </div>
+                  <div className="">
+                    <div className="mb-2 text-logo-black mt-10">
+                      <h3 className="mb-2 mt-10">Hey there,</h3>
+                      {userName}
+                    </div>
+                  </div>
                   <div className="w-full flex justify-center text-center items-center">
                     <div className="flex justify-center py-4 lg:pt-4 pt-8 flex-wrap items-center text-center">
                       <div className="mr-4 p-3 text-center">
-                        <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
+                        <span className="text-xl font-bold text-center block uppercase tracking-wide text-gray-700">
                           22
                         </span>
                         <span className="text-sm text-logo-black">Uploads</span>
@@ -152,11 +158,7 @@ function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
-                  <div className="mb-2 text-logo-black mt-10">
-                    <h3 className="mb-2 mt-10 text-center">Username:</h3>
-                    {/* <i className="fas fa-briefcase mr-2 text-lg text-logo-black"></i> */}
-                    {userName}
-                  </div>
+
                   <div className="mb-2 text-logo-black mt-10">
                     <button className="bg-logo-pink hover:bg-red-200 text-logo-black font-bold py-2 px-4 rounded">
                       <Link to="/upload">Upload Your Art!</Link>
@@ -175,8 +177,6 @@ function Profile() {
               </div>
             </div>
           </div>
-
-          <div className="mt-10 py-10 border-t border-gray-300 text-center"></div>
         </section>
       </main>
     </>
