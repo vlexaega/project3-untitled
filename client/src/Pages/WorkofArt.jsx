@@ -79,6 +79,9 @@ const WorkofArt = () => {
               <p className="hidden md:block text-darkGrayishBlue my-10 leading-7">
                 Description of piece goes here.
               </p>
+              <p className="md:hidden text-darkGrayishBlue my-6 leading-7">
+                Description of piece goes here.
+              </p>
 
               <div className="price flex items-center">
                 <span className="text-3xl font-[700] mr-4">${fixedPrice}</span>

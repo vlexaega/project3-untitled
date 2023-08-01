@@ -11,7 +11,7 @@ function Navbar() {
             {/* <!-- Mobile menu button--> */}
             <button
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -53,7 +53,7 @@ function Navbar() {
                   <>
                     <Link
                       to="/home"
-                      className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                      className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                       aria-current="page"
                     >
                       Home
@@ -160,7 +160,7 @@ function Navbar() {
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
           <Link
             to="/home"
-            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-larg"
           >
             Home
           </Link>
