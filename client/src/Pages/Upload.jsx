@@ -37,10 +37,12 @@ function ImageUpload() {
     const description = document.getElementById("description").value;
     const declaration = document.getElementById("declaration").checked;
     const critique = document.getElementById("critique").checked;
+    const price = parseFloat(document.getElementById("price").value.replace("$", ""));
     console.log(typeof image );
     console.log(description);
     console.log(declaration);
     console.log(critique);
+    console.log(price);
     try {
       const token = Auth.getToken();
 
@@ -58,6 +60,7 @@ function ImageUpload() {
             description,
             declaration: declaration,
             critique: critique,
+            price,
         },
         context: {
           headers: {
@@ -262,6 +265,21 @@ return (
                 />
               </div>
             </div>
+            <div className="col-span-full">
+              <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
+                Artwork Price
+              </label>
+              <div className="mt-2">
+                <textarea
+                  id="price"
+                  name="price"
+                  rows={1}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  defaultValue={"$" + ''}
+                />
+              </div>
+            </div>
+
             <div className="relative flex gap-x-3">
                   <div className="flex h-6 items-center">
                     <input
