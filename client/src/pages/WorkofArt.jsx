@@ -24,16 +24,27 @@ const WorkofArt = () => {
   const artinfo = data?.image;
 
   // console.log(loading, artinfo);
+  // console.log(artinfo)
+  console.log(artinfo.critique)
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
   const artDescription = artinfo.description;
   const artImgSrc = artinfo.image;
   const artUserName = artinfo.user.userName;
   const artPrice = artinfo.price;
+  const critique = artinfo.critique;
 
   const checkPrice = (artPrice) => {
     if (artinfo.price === undefined || artinfo.price === null) {
       return <p>Piece not for sale</p>;
+    }
+  };
+
+  const checkforCritique = (critique) => {
+    if (artinfo.critique === true) {
+      return <p>Critique component will go here</p>;
+    } else {
+      return <p>Critique disabled</p>;
     }
   };
 
@@ -82,6 +93,7 @@ const WorkofArt = () => {
                 />
                 &nbsp;Add to cart
               </button>
+              <div>{checkforCritique(critique)}</div>
               {/* <CommentForm /> */}
             </div>
           </div>
