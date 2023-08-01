@@ -17,9 +17,13 @@ const WorkofArt = () => {
     variables: { imageId: imageId },
   });
 
+  if (loading) {
+    return <div>Error</div>;
+  }
+
   const artinfo = data?.image;
 
-  console.log(artinfo);
+  // console.log(loading, artinfo);
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
   const artDescription = artinfo.description;
