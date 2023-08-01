@@ -46,6 +46,11 @@ The following site helped me convert an image into a favicon with all the necess
 
 I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
+### Selected Medium
+I consulted this Medium article to select the user's medium choice from a dropdown menu: https://medium.com/@samleashrauner/add-to-a-database-with-selectedindex-6311354b0082
+
+The template for the dropdown menu comes from the Tailwind CSS docs, available here: https://tailwind-elements.com/docs/standard/forms/select/
+
 List your collaborators, if any, with links to their GitHub profiles.
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.

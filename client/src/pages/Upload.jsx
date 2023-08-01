@@ -157,12 +157,14 @@ return (
             </div>
             <div>
               <h3>Medium</h3>
+              {/* This form is adapted from the Tailwind CSS docs, please see the README for the link */}
               <select data-te-select-init id="medium">
                 <option value="1">Painting</option>
                 <option value="2">Drawing</option>
                 <option value="3">Mixed Media</option>
                 <option value="4">Digital</option>
                 <option value="5">Fabric</option>
+                <option value="6">Photography</option>
               </select>
             </div>                  
 
