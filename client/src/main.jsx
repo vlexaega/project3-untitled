@@ -16,8 +16,6 @@ import Artists from "./pages/Artists";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,7 +48,7 @@ const router = createBrowserRouter([
         element: <Upload />,
       },
       {
-        path: "/workofart",
+        path: "/workofart/:artid",
         element: <WorkofArt />,
       },
       {
