@@ -31,6 +31,12 @@ const WorkofArt = () => {
   const artUserName = artinfo.user.userName;
   const artPrice = artinfo.price;
 
+  const checkPrice = (artPrice) => {
+    if (artinfo.price === undefined || artinfo.price === null) {
+      return <p>Piece not for sale</p>;
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -62,7 +68,9 @@ const WorkofArt = () => {
             </p>
 
             <div className="price flex items-center">
-              <span className="text-3xl font-[700] mr-4">${artPrice}</span>
+              <span className="text-3xl font-[700] mr-4">
+                {checkPrice(artPrice)}
+              </span>
             </div>
 
             <div className="buttons-container flex flex-col md:flex-row mt-8">
