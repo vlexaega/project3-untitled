@@ -30,7 +30,6 @@ const typeDefs = `
     user: User
     users: [User]
     images: [ImageDetails]
-    bond: 
   }
 
   type Mutation {
