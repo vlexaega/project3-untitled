@@ -66,6 +66,7 @@ function ImageUpload() {
             declaration: declaration,
             critique: critique,
             price,
+            selectedMedium: selectedMedium,
         },
         context: {
           headers: {
