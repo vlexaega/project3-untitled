@@ -12,61 +12,61 @@ function Artists() {
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
           <div className="box-border bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300">
             <h2>Artist</h2>
             <Link to="/home" target="_blank" rel="noreferrer">
-              <img src="./assets/goldblum.png"></img>
+              <img src="src/assets/goldblum.png" alt="Goldblum" />
             </Link>
           </div>
         </section>
