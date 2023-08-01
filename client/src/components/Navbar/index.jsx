@@ -160,29 +160,50 @@ function Navbar() {
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
           <a
             to=""
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+          >
+            Home
+          </a>
+          <a
+            to=""
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
             aria-current="page"
           >
             Profile
           </a>
           <a
             to=""
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+            aria-current="page"
+          >
+            Artists
+          </a>
+          <a
+            to=""
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Art by Medium
           </a>
           <a
             to=""
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Cart
           </a>
           <a
             to=""
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Order History
           </a>
+          <Link
+            to=""
+            className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
+          >
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
