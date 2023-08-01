@@ -25,7 +25,7 @@ const WorkofArt = () => {
 
   // console.log(loading, artinfo);
   // console.log(artinfo)
-  console.log(artinfo.critique)
+  console.log(artinfo.critique);
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
   const artDescription = artinfo.description;
@@ -65,7 +65,7 @@ const WorkofArt = () => {
           </div>
 
           <div className="description p-6 md:basis-1/2 md:py-[40px]">
-            <p className="text-orange text-[14px] tracking-widest uppercase font-[700] mb-6">
+            <p className="text-[14px] tracking-widest uppercase font-[700] mb-6">
               {artUserName}
             </p>
             <h1 className="text-3xl md:text-4xl capitalize font-[700]">
@@ -93,9 +93,8 @@ const WorkofArt = () => {
                 />
                 &nbsp;Add to cart
               </button>
-              <div>{checkforCritique(critique)}</div>
-              {/* <CommentForm /> */}
             </div>
+            <div className="block">{checkforCritique(critique)}</div>
           </div>
         </div>
       </main>
