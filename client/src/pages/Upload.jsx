@@ -40,12 +40,14 @@ function ImageUpload() {
     const declaration = document.getElementById("declaration").checked;
     const critique = document.getElementById("critique").checked;
     const price = parseFloat(document.getElementById("price").value.replace("$", ""));
-    const medium = 
+    const medium = document.querySelector('#medium')
+    const selectedMedium = medium.options[medium.selectedIndex].text
     console.log(typeof image );
     console.log(description);
     console.log(declaration);
     console.log(critique);
     console.log(price);
+    console.log(selectedMedium)
     try {
       const token = Auth.getToken();
 
@@ -160,9 +162,6 @@ return (
                 <option value="3">Mixed Media</option>
                 <option value="4">Digital</option>
                 <option value="5">Fabric</option>
-                <option value="6">Six</option>
-                <option value="7">Seven</option>
-                <option value="8">Eight</option>
               </select>
             </div>                  
 
