@@ -158,44 +158,44 @@ function Navbar() {
       <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          <a
-            to=""
+          <Link
+            to="/home"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Home
-          </a>
-          <a
-            to=""
+          </Link>
+          <Link
+            to="/profile"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
             aria-current="page"
           >
             Profile
-          </a>
-          <a
-            to=""
+          </Link>
+          <Link
+            to="/artists"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
             aria-current="page"
           >
             Artists
-          </a>
-          <a
-            to=""
+          </Link>
+          <Link
+            to="/artbymedium"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Art by Medium
-          </a>
-          <a
-            to=""
+          </Link>
+          <Link
+            to="/cart"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Cart
-          </a>
-          <a
-            to=""
+          </Link>
+          <Link
+            to="/orderhistory"
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
           >
             Order History
-          </a>
+          </Link>
           <Link
             to=""
             className="text-zinc-950 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-large"
