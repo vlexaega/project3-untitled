@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import CommentForm from "../components/CommentForm";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
@@ -42,7 +43,7 @@ const WorkofArt = () => {
 
   const checkforCritique = (critique) => {
     if (artinfo.critique === true) {
-      return <p>Critique component will go here</p>;
+      return <CommentForm imageId={imageId} />;
     } else {
       return <p>Critique disabled</p>;
     }

@@ -86,6 +86,30 @@ const resolvers = {
         throw new Error("Failed to upload image: ", error.message);
       }
     },
+    addComment: async (parent, { imageId, comment }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError("Please log in to leave a critique");
+      }
+      const user = await User.findById(context.user._id);
+      if (!user) {
+        throw new Error("User does not exist");
+      }
+      try {
+        const image = await Images.findById(imageId);
+        if (!image) {
+          throw new Error("Image does not exist");
+        }
+        image.comments.push({
+          user: context.user._id,
+          comment,
+          createdAt: new Date(),
+        });
+        await image.save();
+        return image;
+      } catch (error) {
+        throw new Error("Failed to add critique: ", error.message);
+      }
+    },
   },
 };
 
