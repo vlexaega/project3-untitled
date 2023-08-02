@@ -44,7 +44,7 @@ const CommentForm = ({ thoughtId }) => {
 
   return (
     <div>
-      <h4>Add your comments here!</h4>
+      <h4>Add your comments here:</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -72,7 +72,7 @@ const CommentForm = ({ thoughtId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-3 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50" type="submit">
                 Add Comment
               </button>
             </div>
