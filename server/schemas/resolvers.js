@@ -86,7 +86,7 @@ const resolvers = {
         throw new Error("Failed to upload image: ", error.message);
       }
     },
-    addComment: async (parent, { imageId, comment }, context) => {
+    addComment: async (_, { imageId, comment }, context) => {
       console.log("User ID:", context.user ? context.user._id : "Not logged in");
       console.log("Image ID:", imageId);
       console.log("Comment:", comment);
@@ -111,6 +111,7 @@ const resolvers = {
         await image.save();
         return image;
       } catch (error) {
+        console.error("Error adding comment:", error);
         throw new Error("Failed to add comment: ", error.message);
       }
     },

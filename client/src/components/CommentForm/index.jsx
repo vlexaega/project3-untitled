@@ -17,6 +17,8 @@ const CommentForm = ({ thoughtId }) => {
     event.preventDefault();
 
     try {
+      console.log("Image ID: ", thoughtId);
+      console.log("Comment: ", commentText);
       // eslint-disable-next-line no-unused-vars
       const { data } = await addComment({
         variables: {

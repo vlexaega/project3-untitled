@@ -2,7 +2,21 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const CommentSchema = require('./Comments');
+const CommentSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
+    comment: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+});
 
 const ImageDetailsSchema = new Schema({
     image: {
@@ -27,18 +41,18 @@ const ImageDetailsSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true,
+        required: false,
     },
     selectedMedium: {
         type: String,
-        required: true,
+        required: false,
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true,
     },
-    comments: [CommentSchema],
+    comments: [CommentSchema]
 }
     
 );
