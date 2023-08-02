@@ -79,6 +79,11 @@ const typeDefs = `
     getUserProfile: User
     image(imageId: ID!): ImageDetails
     usersWithImages: [UserWithImages]
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
@@ -86,6 +91,8 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, canDownload: Boolean, purchasePrice: Float!, canPurchase: Boolean, selectedMedium: String!): ImageDetails!
     addComment(imageId: ID!, comment: String!): ImageDetails
+    addOrder(products: [ID]!): Order
+    updateProduct(_id: ID!, quantity: Int!): Product
   }
   `;
 module.exports = typeDefs;
