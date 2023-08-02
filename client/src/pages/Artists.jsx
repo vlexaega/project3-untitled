@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { QUERY_USERS_WITH_IMAGES } from "../utils/queries";
 
 function Artists() {
   return (
