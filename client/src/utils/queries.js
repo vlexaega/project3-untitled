@@ -87,7 +87,10 @@ export const QUERY_SINGLE_IMAGE = gql`
       title
       description
       critique
+      canDownload
       price
+      canPurchase
+      purchasePrice
       user {
         userName
       }
