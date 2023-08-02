@@ -189,7 +189,7 @@ return (
                               <textarea
                                 id="description"
                                 name="description"
-                                rows={3}
+                                rows={2}
                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 defaultValue={''}
                                 />
@@ -215,21 +215,22 @@ return (
                             </div>
                         </div>
                       </div>
+                      
+                      {/* This is the sales section */}
+                      <div id="sales-section">
+                        <div id="sales-header">
+                          <h2 className="text-base font-semibold text-gray-900 text-center">Sale Options</h2>
+                          <p className="mt-1 text-sm leading-6 text-gray-600 text-center">
+                            Would you like to sell your work as a digital download or physical artwork? Choose either, both, or neither of the options below:
+                          </p>
+                        </div>
 
-        <div className="mt=0">
-          <h2 className="text-base font-semibold text-gray-900 text-center">Sale Options</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600 text-center">
-          Would you like to sell your work as a digital download or physical artwork? Choose either, both, or neither of the options below:
-          </p>
-
-          <div>
-              <div className="mt-6 space-y-6">
-                
-                <div className="relative flex gap-x-3">
-                  
-
-                  <div>
-                          <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Digital Download</h2>
+                        {/* This div sets the grid for the sales options */}
+                        <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
+                          
+                          {/* The following two divs are for the digital download option */}
+                          <div className="sm:col-span-4">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Digital Download</h2>
                             <div className="flex gap-x-3">
                               <input
                                 id="canDownload"
@@ -243,35 +244,55 @@ return (
                                 </label>
                               </div>
                             </div>
-                        </div>
+                          </div>
 
-                  <div className="col-span-full">
-              <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
-              Artwork Price
-              </label>
-              <div className="mt-2">
-                <textarea
-                  id="price"
-                  name="price"
-                  rows={1}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  defaultValue={"$" + ''}
-                />
-              </div>
-            </div>
+                          <div className="sm:col-span-2">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Download Price</h2>
+                              <div className="mt-2">
+                                <textarea
+                                  id="price"
+                                  name="price"
+                                  rows={1}
+                                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                  defaultValue={"$" + ''}
+                                />
+                              </div>
+                          </div>
 
-                  <div className="text-sm leading-6">
-                    <label htmlFor="candidates" className="font-medium text-gray-900">
-                      Physical Artwork
-                    </label>
-                    <p className="text-gray-500">Check this box to sell your work as a physical product</p>
-                  </div>
+                          {/* The following two divs are for the physical artwork option */}
+                          <div className="sm:col-span-4">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Physical Artwork</h2>
+                            <div className="flex gap-x-3">
+                              <input
+                                id="canPurchase"
+                                name="canPurchase"
+                                type="checkbox"
+                                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                              />
+                              <div className="text-sm leading-6">
+                                <label className="font-medium text-gray-900">
+                                Check this box to sell your work as a physical product 
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="sm:col-span-2">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Purchase Price</h2>
+                              <div className="mt-2">
+                                <textarea
+                                  id="price"
+                                  name="price"
+                                  rows={1}
+                                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                  defaultValue={"$" + ''}
+                                />
+                              </div>
+                          </div>
+                  
                 </div>
               </div>
-
-          </div>
-        </div>
-      </div>
+              </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
