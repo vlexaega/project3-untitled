@@ -1,20 +1,16 @@
 import Navbar from "../components/Navbar";
 import React, { useState, useEffect } from "react";
 
-function Cart(){
-    return(
-        <>
-        <main>
-            <Navbar />
-        <section>
+const ProductDisplay = () => (
+  <section>
     <div className="product">
       <img
         src="https://i.imgur.com/EHyR2nP.png"
         alt="The cover of Stubborn Attachments"
       />
       <div className="description">
-      <h3>Stubborn Attachments</h3>
-      <h5>$20.00</h5>
+        <h3>Stubborn Attachments</h3>
+        <h5>$20.00</h5>
       </div>
     </div>
     <form action="/create-checkout-session" method="POST">
@@ -23,13 +19,30 @@ function Cart(){
       </button>
     </form>
   </section>
-  
-
-        </main>
-        </>
-
-    )
+);
+const Message = ({ message }) => (
+  <section>
+    <p>{message}</p>
+  </section>
+);
+  function Cart() {
+  const [message, setMessage] = useState('');
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('success')) {
+      setMessage('Order Confirmed! You will receive an email confirmation shortly.');
+    }
+    if (query.get('canceled')) {
+      setMessage(
+        'Order canceled. Proceed to checkout when ready.'
+      );
+    }
+  }, []);
+  return message ? (
+    <Message message={message} />
+  ) : (
+    <ProductDisplay />
+  );
 }
-
-export default Cart 
-
+export default Cart
