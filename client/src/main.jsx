@@ -16,6 +16,7 @@ import Artists from "./pages/Artists";
 import ArtByMedium from "./pages/ArtByMedium";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
+import Cart from "./pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <NoMatch />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       // {
       //   path: "/orderHistory",
