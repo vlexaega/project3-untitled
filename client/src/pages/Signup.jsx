@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMutation } from "@apollo/client";
+import { ApolloError, useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
@@ -22,6 +22,7 @@ function Signup(props) {
         password: formState.password,
         bio: formState.bio,
       },
+      
     });
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
@@ -43,6 +44,13 @@ function Signup(props) {
 
       <h2 className="text-6xl text-center p-8">Signup</h2>
       
+      {/* The following error structure is adapted from module 22 activity 24 */}
+      { ApolloError ? (
+                    <div>
+                      <p className="error-text text-center">Please sign up with a unique password</p>
+                    </div>
+                  ) : null}
+
       <div className="w-full max-w-xs block">
         <form
           onSubmit={handleFormSubmit}
