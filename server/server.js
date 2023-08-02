@@ -13,7 +13,8 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
 });
-
+const stripe = require('stripe')('sk_test_51Nag9dL4xPozXGUQJXRSnIfcjbtm6WGtw0LDGOBCCPI3BZWOVDOaXLTpnPVuehnw0M2LCSL00DyiRZaqBSyebnac00kYtivAof');
+const domain = 'http://localhost:3001';
 //need to increase the body-parser size limit
 //found this via link https://reactgo.com/request-entity-too-large-node/
 app.use(express.json({limit: '25mb'}));
