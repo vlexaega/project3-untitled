@@ -34,6 +34,7 @@ To add a screenshot, create an assets/images folder in your repository and uploa
 
 - [Profile Page Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile)
 - [useNavigate] (https://www.makeuseof.com/redirect-user-after-login-react/)
+- [date-fns] (https://date-fns.org/v2.22.1/docs/format)
 
 ### Vite PWA:
 

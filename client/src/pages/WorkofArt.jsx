@@ -9,6 +9,7 @@ import { QUERY_SINGLE_IMAGE, QUERY_SINGLE_IMAGE_COMMENTS } from "../utils/querie
 import React, { useState } from "react";
 import { useEffect } from "react";
 import cartIcon from "../assets/icon-cart.svg";
+import { format } from 'date-fns';
 
 const WorkofArt = () => {
   let { imageId } = useParams();
@@ -113,7 +114,7 @@ const WorkofArt = () => {
                         <strong>{comment.user.userName}: </strong>
                         {comment.comment}
                       </p>
-                      <p>Posted on: {comment.createdAt}</p>
+                      <p>Posted on: {format(parseInt(comment.createdAt),'dd-mm-yyyy')}</p>
                     </div>
                   ))}
                 </>
