@@ -89,7 +89,7 @@ return (
         <section className=" py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-              <div className="w-full flex justify-center items-center py-6">
+              <div className="w-full flex justify-center items-center pt-2 pb-4">
                 <div className="mx-5">
                   <form>   
                     {/* This div contains the declaration checkbox */}
@@ -115,10 +115,10 @@ return (
                       <h2 className="text-3x1 font-semibold leading-6 text-gray-900">
                         Artwork Image
                       </h2>
-                      <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                      <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6">
                         <div className="text-center">
                           <PhotoIcon className="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
-                          <div className="items-center text-sm leading-6 text-gray-600">
+                          <div className="items-center text-sm text-gray-600">
                             <label
                               htmlFor="file-upload"
                               className="text-center cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
@@ -138,9 +138,9 @@ return (
                     </div>
                     
                     {/* This div contains artwork title, medium, and description */}
-                    <div className="space-y-12">
-                      <div className="border-b border-gray-900/10 pb-12">
-                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div className="space-y-6">
+                      <div className="border-b border-gray-900/10 pb-3">
+                        <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
                           
                           {/* This div is the title input */}
                           <div className="sm:col-span-4">
@@ -189,7 +189,7 @@ return (
                               <textarea
                                 id="description"
                                 name="description"
-                                rows={3}
+                                rows={2}
                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 defaultValue={''}
                                 />
@@ -215,69 +215,84 @@ return (
                             </div>
                         </div>
                       </div>
+                      
+                      {/* This is the sales section */}
+                      <div id="sales-section">
+                        <div id="sales-header">
+                          <h2 className="text-base font-semibold text-gray-900 text-center">Sale Options</h2>
+                          <p className="mt-1 text-sm leading-6 text-gray-600 text-center">
+                            Would you like to sell your work as a digital download or physical artwork? Choose either, both, or neither of the options below:
+                          </p>
+                        </div>
 
-        <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Sale Options</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-          Would you like to sell your work as a digital download or physical artwork? Choose any, all, or none of the options below:
-          </p>
+                        {/* This div sets the grid for the sales options */}
+                        <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
+                          
+                          {/* The following two divs are for the digital download option */}
+                          <div className="sm:col-span-4">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Digital Download</h2>
+                            <div className="flex gap-x-3">
+                              <input
+                                id="canDownload"
+                                name="canDownload"
+                                type="checkbox"
+                                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                              />
+                              <div className="text-sm leading-6">
+                                <label className="font-medium text-gray-900">
+                                Check this box to sell your work as a digital download 
+                                </label>
+                              </div>
+                            </div>
+                          </div>
 
-          <div className="mt-10 space-y-10">
-            <fieldset>
-              <div className="mt-6 space-y-6">
-                <div className="relative flex gap-x-3">
-                  <div className="flex h-6 items-center">
-                    <input
-                      id="comments"
-                      name="comments"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                    />
-                  </div>
-                  <div className="text-sm leading-6">
-                    <label htmlFor="comments" className="font-medium text-gray-900">
-                      Digital Download
-                    </label>
-                    <p className="text-gray-500">Check this box to sell your work as a digital download</p>
-                  </div>
+                          <div className="sm:col-span-2">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Download Price</h2>
+                              <div className="mt-2">
+                                <textarea
+                                  id="price"
+                                  name="price"
+                                  rows={1}
+                                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                  defaultValue={"$" + ''}
+                                />
+                              </div>
+                          </div>
+
+                          {/* The following two divs are for the physical artwork option */}
+                          <div className="sm:col-span-4">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Physical Artwork</h2>
+                            <div className="flex gap-x-3">
+                              <input
+                                id="canPurchase"
+                                name="canPurchase"
+                                type="checkbox"
+                                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                              />
+                              <div className="text-sm leading-6">
+                                <label className="font-medium text-gray-900">
+                                Check this box to sell your work as a physical product 
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="sm:col-span-2">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Purchase Price</h2>
+                              <div className="mt-2">
+                                <textarea
+                                  id="price"
+                                  name="price"
+                                  rows={1}
+                                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                  defaultValue={"$" + ''}
+                                />
+                              </div>
+                          </div>
+                  
                 </div>
-                <div className="relative flex gap-x-3">
-                  <div className="flex h-6 items-center">
-                    <input
-                      id="candidates"
-                      name="candidates"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                    />
-                  </div>
-
-                  <div className="col-span-full">
-              <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
-                Artwork Price
-              </label>
-              <div className="mt-2">
-                <textarea
-                  id="price"
-                  name="price"
-                  rows={1}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  defaultValue={"$" + ''}
-                />
               </div>
-            </div>
-
-                  <div className="text-sm leading-6">
-                    <label htmlFor="candidates" className="font-medium text-gray-900">
-                      Physical Artwork
-                    </label>
-                    <p className="text-gray-500">Check this box to sell your work as a physical product</p>
-                  </div>
-                </div>
               </div>
-            </fieldset>
-          </div>
-        </div>
-      </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
