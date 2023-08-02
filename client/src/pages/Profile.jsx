@@ -112,7 +112,7 @@ function Profile() {
                                   <img
                                     src={image.image}
                                     alt={image.title}
-                                    className="w-full h-40 object-cover"
+                                    className="w-full h-40 object-contain"
                                   />
                                   <div className="p-4">
                                     <h3 className="text-lg font-semibold text-logo-black">
