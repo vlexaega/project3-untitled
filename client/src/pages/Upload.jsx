@@ -85,12 +85,14 @@ return (
           </div>
         </section>
 
+        {/* This is the main form section of the page */}
         <section className=" py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
               <div className="w-full flex justify-center items-center py-6">
                 <div className="mx-5">
                   <form>   
+                    {/* This div contains the declaration checkbox */}
                     <div className="my-5">
                       <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Declaration</h2>
                       <div className="relative flex gap-x-3">
@@ -108,32 +110,32 @@ return (
                       </div>
                     </div>
 
-        <div className="col-span-full">
-              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
-                Artwork Image
-              </label>
-              <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                <div className="text-center">
-                  <PhotoIcon className="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
-                  <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                    <label
-                      htmlFor="file-upload"
-                      className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                    >
-                        
-                        <input accept="image/*" type="file" onChange={convertToBase64} />
-                        {image === '' || image === null ? (
-                        ''
-                        ) : (
-                        <img width={100} height={100} src={image} />
-                        )}
-                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                    </label>
-                  </div>
-                  <p className="text-xs leading-5 text-gray-600">PNG or JPG up to 10MB</p>
-                </div>
-              </div>
-            </div>
+                    {/* This div contains the artwork upload box */}
+                    <div className="col-span-full">
+                      <h2 className="text-3x1 font-semibold leading-6 text-gray-900">
+                        Artwork Image
+                      </h2>
+                      <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                        <div className="text-center">
+                          <PhotoIcon className="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
+                          <div className="items-center text-sm leading-6 text-gray-600">
+                            <label
+                              htmlFor="file-upload"
+                              className="text-center cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
+                            >
+                              <input accept="image/*" type="file" className="flex justify-center" onChange={convertToBase64} />
+                                {image === '' || image === null ? (
+                                ''
+                                ) : (
+                              <img width={100} height={100} src={image} />
+                              )}
+                              <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                            </label>
+                          </div>
+                          <p className="text-xs leading-5 mt-4 text-gray-600">PNG or JPG up to 10MB</p>
+                        </div>
+                      </div>
+                    </div>
 
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
