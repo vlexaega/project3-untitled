@@ -86,6 +86,35 @@ const resolvers = {
         throw new Error("Failed to upload image: ", error.message);
       }
     },
+    addComment: async (_, { imageId, comment }, context) => {
+      console.log("User ID:", context.user ? context.user._id : "Not logged in");
+      console.log("Image ID:", imageId);
+      console.log("Comment:", comment);
+      if (!context.user) {
+        throw new AuthenticationError("Please log in to leave a critique");
+      }
+      const user = await User.findById(context.user._id);
+      if (!user) {
+        throw new Error("User does not exist");
+      }
+      try {
+        const image = await Images.findById(imageId);
+        if (!image) {
+          throw new Error("Image does not exist");
+        }
+        const newComment = {
+          user: context.user._id,
+          comment,
+          createdAt: new Date(),
+        };
+        image.comments.push(newComment);
+        await image.save();
+        return image;
+      } catch (error) {
+        console.error("Error adding comment:", error);
+        throw new Error("Failed to add comment: ", error.message);
+      }
+    },
   },
 };
 

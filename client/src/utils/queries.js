@@ -94,3 +94,18 @@ export const QUERY_SINGLE_IMAGE = gql`
     }
   }
 `;
+
+export const QUERY_SINGLE_IMAGE_COMMENTS = gql `
+  query getSingleImageComments($imageId: ID!) {
+    image(imageId: $imageId) {
+      comments{
+        _id
+        comment
+        createdAt
+        user {
+          userName
+        }
+      }
+    }
+  }
+`;

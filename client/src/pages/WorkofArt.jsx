@@ -1,27 +1,34 @@
 import Navbar from "../components/Navbar";
+import CommentForm from "../components/CommentForm";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_IMAGE } from "../utils/queries";
+import { QUERY_SINGLE_IMAGE, QUERY_SINGLE_IMAGE_COMMENTS } from "../utils/queries";
 
 // import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import cartIcon from "../assets/icon-cart.svg";
+import { format } from 'date-fns';
 
 const WorkofArt = () => {
   let { imageId } = useParams();
-  // console.log(imageId);
+  console.log(imageId);
 
-  const { loading, data } = useQuery(QUERY_SINGLE_IMAGE, {
+  const { loading: imageLoading, data: imageData } = useQuery(QUERY_SINGLE_IMAGE, {
     variables: { imageId: imageId },
   });
 
-  if (loading) {
+  const { loading: commentsLoading, data: commentsData } = useQuery(QUERY_SINGLE_IMAGE_COMMENTS, {
+    variables: { imageId: imageId },
+  });
+
+  if (imageLoading || commentsLoading) {
     return <div>Loading...</div>;
   }
 
-  const artinfo = data?.image;
+  const artinfo = imageData?.image;
+  const comments = commentsData?.image?.comments;
 
   // console.log(loading, artinfo);
   // console.log(artinfo)
@@ -40,9 +47,9 @@ const WorkofArt = () => {
     }
   };
 
-  const checkforCritique = (critique) => {
-    if (artinfo.critique === true) {
-      return <p>Critique component will go here</p>;
+  const checkforCritique = (critique, imageId) => {
+    if (artinfo && artinfo.critique === true) {
+      return <CommentForm thoughtId={imageId} />;
     } else {
       return <p>Critique disabled</p>;
     }
@@ -94,7 +101,26 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div>
-            <div className="block">{checkforCritique(critique)}</div>
+
+
+            <div className="block">
+              {checkforCritique(critique, imageId)}
+              {comments && (
+                <>
+                  <h2>Comments:</h2>
+                  {comments.map((comment) => (
+                    <div key={comment._id}>
+                      <p>
+                        <strong>{comment.user.userName}: </strong>
+                        {comment.comment}
+                      </p>
+                      <p>Posted on: {format(parseInt(comment.createdAt),'dd-mm-yyyy')}</p>
+                    </div>
+                  ))}
+                </>
+              )}
+
+            </div>
           </div>
         </div>
       </main>

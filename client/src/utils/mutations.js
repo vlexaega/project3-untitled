@@ -59,21 +59,22 @@ export const ADD_USER = gql`
     }
   }
 `;
-// export const ADD_COMMENT = gql`
-//   mutation addComment($thoughtId: ID!, $commentText: String!) {
-//     addComment(thoughtId: $thoughtId, commentText: $commentText) {
-//       _id
-//       thoughtText
-//       thoughtAuthor
-//       createdAt
-//       comments {
-//         _id
-//         commentText
-//         createdAt
-//       }
-//     }
-//   }
-// `;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($imageId: ID!, $comment: String!) {
+    addComment(imageId: $imageId, comment: $comment) {
+      _id
+      comments {
+        user {
+          _id
+          userName
+        }
+      comment
+      createdAt
+      }
+    }
+  }
+`;
 // export const ADD_ARTWORK = gql`
 //   mutation addArtwork($userId: ID!, $artImage: String!) {
 //     addArtwork(userId: $userId, artImage: $artImage) {
