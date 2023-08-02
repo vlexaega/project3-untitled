@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
-import { reducer } from "./reducers";
+import { reducer } from './reducers'
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -10,7 +10,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     cart: [],
     cartOpen: false,
     categories: [],
-    currentCategory: "",
+    currentCategory: '',
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
@@ -20,5 +20,4 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { StoreProvider, useStoreContext };

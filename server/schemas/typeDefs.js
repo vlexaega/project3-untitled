@@ -3,11 +3,36 @@
 // create mutation to allow for uploadImage
 
 const typeDefs = `
+  type Category{
+    _id: ID
+    name: String
+  }
+  type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
   type User {
     _id: ID
     userName: String
     email: String
     bio: String
+    orders: [Order]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type UserWithImages {
@@ -54,6 +79,11 @@ const typeDefs = `
     getUserProfile: User
     image(imageId: ID!): ImageDetails
     usersWithImages: [UserWithImages]
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
@@ -61,6 +91,8 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
     uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, canDownload: Boolean, purchasePrice: Float!, canPurchase: Boolean, selectedMedium: String!): ImageDetails!
     addComment(imageId: ID!, comment: String!): ImageDetails
+    addOrder(products: [ID]!): Order
+    updateProduct(_id: ID!, quantity: Int!): Product
   }
   `;
 module.exports = typeDefs;
