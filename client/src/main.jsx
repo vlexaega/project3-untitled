@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <Artists />,
       },
       {
-        path: "/artBymedium",
+        path: "/artbymedium",
         element: <ArtByMedium />,
       },
       {
