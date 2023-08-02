@@ -34,6 +34,18 @@ const resolvers = {
         return user;
       }
     },
+    usersWithImages: async () => {
+      try {
+        const users = await User.find();
+        const usersImages = users.map(async (user) => {
+          const userImages = await Images.find({ user: user._id });
+          return { ...user.toObject(), images: userImages };
+        });
+        return Promise.all(usersImages);
+      } catch (error) {
+        throw new Error("Error find user images");
+      }
+    },
   },
   Mutation: {
     addUser: async (parent, args) => {

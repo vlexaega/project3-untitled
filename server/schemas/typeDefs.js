@@ -9,6 +9,14 @@ const typeDefs = `
     email: String
     bio: String
   }
+
+  type UserWithImages {
+    _id: ID
+    userName: String
+    email: String
+    bio: String
+    images: [ImageDetails!]
+  }
   
   type Comment {
     _id: ID
@@ -42,6 +50,7 @@ const typeDefs = `
     getUserImages: [ImageDetails]
     getUserProfile: User
     image(imageId: ID!): ImageDetails
+    usersWithImages: [UserWithImages]
   }
 
   type Mutation {
