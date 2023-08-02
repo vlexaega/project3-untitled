@@ -152,6 +152,11 @@ const resolvers = {
 
       return { token, user };
     },
+    updateProduct: async (parent, { _id, quantity }) => {
+      const decrement = Math.abs(quantity) * -1;
+
+      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    },
     uploadImage: async (
       parent,
       { userId, image, title, description, declaration, critique, price, selectedMedium, purchasePrice, canDownload, canPurchase }
