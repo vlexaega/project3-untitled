@@ -136,37 +136,53 @@ return (
                         </div>
                       </div>
                     </div>
+                    
+                    {/* This div contains artwork title, medium, and description */}
+                    <div className="space-y-12">
+                      <div className="border-b border-gray-900/10 pb-12">
+                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                          
+                          {/* This div is the title input */}
+                          <div className="sm:col-span-4">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">
+                              Arwork Title
+                            </h2>
+                            <div className="mt-2">
+                              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                <input
+                                  type="text"
+                                  name="title"
+                                  id="title"
+                                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* This div contains the medium input */}
+                          <div className="sm:col-span-2">
+                            <h2 className="text-3x1 font-semibold leading-6 text-gray-900">
+                              Medium
+                            </h2>
+                            <div className="mt-2">
+                              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                              {/* This form is adapted from the Tailwind CSS docs, please see the README for the link */}
+                              <select data-te-select-init id="medium" className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
+                                <option value="1">Painting</option>
+                                <option value="2">Drawing</option>
+                                <option value="3">Mixed Media</option>
+                                <option value="4">Digital</option>
+                                <option value="5">Fabric</option>
+                                <option value="6">Photography</option>
+                              </select>
+                                
+                              </div>
+                            </div>
+                          </div>
 
-      <div className="space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div className="sm:col-span-4">
-              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
-                Arwork Title
-              </label>
-              <div className="mt-2">
-                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                  <input
-                    type="text"
-                    name="title"
-                    id="title"
-                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3>Medium</h3>
-              {/* This form is adapted from the Tailwind CSS docs, please see the README for the link */}
-              <select data-te-select-init id="medium">
-                <option value="1">Painting</option>
-                <option value="2">Drawing</option>
-                <option value="3">Mixed Media</option>
-                <option value="4">Digital</option>
-                <option value="5">Fabric</option>
-                <option value="6">Photography</option>
-              </select>
-            </div>                  
+
+            
+                 
 
             <div className="col-span-full">
               <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
