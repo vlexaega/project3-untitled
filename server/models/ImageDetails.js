@@ -39,7 +39,19 @@ const ImageDetailsSchema = new Schema({
         type: Boolean,
         required: true,
     },
+    canDownload: {
+        type: Boolean,
+        required: true,
+    },
+    canPurchase: {
+        type: Boolean,
+        required: true,
+    },
     price: {
+        type: Number,
+        required: false,
+    },
+    purchasePrice: {
         type: Number,
         required: false,
     },
