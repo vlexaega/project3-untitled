@@ -3,29 +3,42 @@ import CommentForm from "../components/CommentForm";
 import { Navigate, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_IMAGE, QUERY_SINGLE_IMAGE_COMMENTS } from "../utils/queries";
+import {
+  QUERY_SINGLE_IMAGE,
+  QUERY_SINGLE_IMAGE_COMMENTS,
+} from "../utils/queries";
 
 // import CommentForm from "../components/CommentForm";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import cartIcon from "../assets/icon-cart.svg";
-import { format } from 'date-fns';
+import { format } from "date-fns";
 
 const WorkofArt = () => {
   let { imageId } = useParams();
-  console.log(imageId);
+  // console.log(imageId);
 
-  const { loading: imageLoading, data: imageData } = useQuery(QUERY_SINGLE_IMAGE, {
-    variables: { imageId: imageId },
-  });
+  const { loading: imageLoading, data: imageData } = useQuery(
+    QUERY_SINGLE_IMAGE,
+    {
+      variables: { imageId: imageId },
+    }
+  );
 
-  const { loading: commentsLoading, data: commentsData } = useQuery(QUERY_SINGLE_IMAGE_COMMENTS, {
-    variables: { imageId: imageId },
-  });
+  const { loading: commentsLoading, data: commentsData } = useQuery(
+    QUERY_SINGLE_IMAGE_COMMENTS,
+    {
+      variables: { imageId: imageId },
+    }
+  );
 
   if (imageLoading || commentsLoading) {
     return <div>Loading...</div>;
   }
+
+  const today = format(new Date(), "dd.MM.yyyy");
+  // console.log(today);
+  // console.log(typeof today);
 
   const artinfo = imageData?.image;
   const comments = commentsData?.image?.comments;
@@ -102,7 +115,6 @@ const WorkofArt = () => {
               </button>
             </div>
 
-
             <div className="block">
               {checkforCritique(critique, imageId)}
               {comments && (
@@ -114,12 +126,11 @@ const WorkofArt = () => {
                         <strong>{comment.user.userName}: </strong>
                         {comment.comment}
                       </p>
-                      <p>Posted on: {format(parseInt(comment.createdAt),'dd-mm-yyyy')}</p>
+                      <p>Posted on: {Date(comment.createdAt * 1000)}</p>
                     </div>
                   ))}
                 </>
               )}
-
             </div>
           </div>
         </div>
