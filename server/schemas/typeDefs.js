@@ -3,6 +3,26 @@
 // create mutation to allow for uploadImage
 
 const typeDefs = `
+  type Category{
+    _id: ID
+    name: String
+  }
+  type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+  
   type User {
     _id: ID
     userName: String
