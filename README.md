@@ -25,7 +25,8 @@ A platform for artists to find inspiration and share their work.
 
 - Users can go to their profile to upload new pieces of art once they login.
 - Users can browse art by clicking on artist or art by medium.
-![screenshot of login page](assets/herokuscreenshot.png)
+- Screenshot:
+![screenshot of login page](client/src/assets/herokuscreenshot.png)
 
 
 ## Credits
