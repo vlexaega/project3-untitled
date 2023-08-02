@@ -11,6 +11,7 @@ const typeDefs = `
   }
   
   type Comment {
+    _id: ID
     user: User
     comment: String
     createdAt: String

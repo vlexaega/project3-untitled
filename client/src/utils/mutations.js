@@ -59,6 +59,7 @@ export const ADD_USER = gql`
     }
   }
 `;
+
 export const ADD_COMMENT = gql`
   mutation addComment($imageId: ID!, $comment: String!) {
     addComment(imageId: $imageId, comment: $comment) {
