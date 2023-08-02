@@ -147,6 +147,7 @@ const WorkofArt = () => {
       <Navbar />
       <h1 className="text-6xl text-center p-8">Work of Art</h1>
       <main>
+        <Cart />
         <div className="main-wrapper flex flex-col md:flex-row md:px-[200px] md:py-[100px] relative">
           <div className="image md:basis-1/2 md:flex md:flex-col md:justify-between">
             <div className="md:block large-image">
