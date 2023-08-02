@@ -88,31 +88,25 @@ return (
         <section className=" py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-                    <div className="w-full flex justify-center items-center py-6">
-        <div className="mx-5">
-
-        <form>   
-        <div className="mt-10 space-y-10">
-            <fieldset>
-              <legend className="text-sm font-semibold leading-6 text-gray-900">Declaration</legend>
-             
-                <div className="relative flex gap-x-3">
-                  <div className="flex h-6 items-center">
-                    <input
-                      id="declaration"
-                      name="declaration"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                    />
-                  </div>
-                  <div className="text-sm leading-6">
-                    <label htmlFor="comments" className="font-medium text-gray-900">
-                      I confirm that this is my own artwork and I have the right to distribute this work
-                    </label>
-                  </div>
-                </div>
-            </fieldset>
-        </div>
+              <div className="w-full flex justify-center items-center py-6">
+                <div className="mx-5">
+                  <form>   
+                    <div className="my-5">
+                      <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Declaration</h2>
+                      <div className="relative flex gap-x-3">
+                        <input
+                          id="declaration"
+                          name="declaration"
+                          type="checkbox"
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        />
+                        <div className="text-sm leading-6">
+                          <label htmlFor="comments" className="font-medium text-gray-900">
+                            I confirm that this is my own artwork and I have the right to distribute this work
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
         <div className="col-span-full">
               <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
