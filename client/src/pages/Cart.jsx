@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const ProductDisplay = () => (
   <section>
+    <Navbar />
     <div className="product">
       <img
         src="https://i.imgur.com/EHyR2nP.png"
@@ -14,9 +15,7 @@ const ProductDisplay = () => (
       </div>
     </div>
     <form action="/create-checkout-session" method="POST">
-      <button type="submit">
-        Checkout
-      </button>
+      <button type="submit">Checkout</button>
     </form>
   </section>
 );
@@ -25,24 +24,20 @@ const Message = ({ message }) => (
     <p>{message}</p>
   </section>
 );
-  function Cart() {
-  const [message, setMessage] = useState('');
+function Cart() {
+  const [message, setMessage] = useState("");
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
-    if (query.get('success')) {
-      setMessage('Order Confirmed! You will receive an email confirmation shortly.');
-    }
-    if (query.get('canceled')) {
+    if (query.get("success")) {
       setMessage(
-        'Order canceled. Proceed to checkout when ready.'
+        "Order Confirmed! You will receive an email confirmation shortly."
       );
     }
+    if (query.get("canceled")) {
+      setMessage("Order canceled. Proceed to checkout when ready.");
+    }
   }, []);
-  return message ? (
-    <Message message={message} />
-  ) : (
-    <ProductDisplay />
-  );
+  return message ? <Message message={message} /> : <ProductDisplay />;
 }
-export default Cart
+export default Cart;
