@@ -77,24 +77,23 @@ function Navbar() {
                       Art By Medium
                     </Link>
                     <Link
-                      to="/cart"
+                      to="/checkout"
                       className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      Cart
+                      Checkout
                     </Link>
                     <Link
                       to="/orderhistory"
-                      className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium"
                     >
                       Order History
                     </Link>
                     <Link
-                      to=""
+                      to="/"
+                      onClick={() => Auth.logout()}
                       className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      <a href="/" onClick={() => Auth.logout()}>
-                        Logout
-                      </a>
+                      Logout
                     </Link>
                   </>
                 ) : (

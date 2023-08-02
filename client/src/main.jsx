@@ -14,10 +14,9 @@ import Upload from "./pages/Upload";
 import WorkofArt from "./pages/WorkofArt";
 import Artists from "./pages/Artists";
 import ArtByMedium from "./pages/ArtByMedium";
+import Checkout from "./pages/Checkout";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
-import Cart from "./pages/Cart";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -70,8 +69,8 @@ const router = createBrowserRouter([
         element: <NoMatch />,
       },
       {
-        path: "/cart",
-        element: <Cart />,
+        path: "/checkout",
+        element: <Checkout />,
       },
       // {
       //   path: "/orderHistory",
