@@ -13,7 +13,11 @@ import UploadArt from "./pages/UploadArt";
 import Upload from "./pages/Upload";
 import WorkofArt from "./pages/WorkofArt";
 import Artists from "./pages/Artists";
+<<<<<<< HEAD
 import Cart from "./pages/Cart";
+=======
+import ArtByMedium from "./pages/ArtByMedium";
+>>>>>>> c5d7f510d8bde86e439248e99201845a34388257
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 
@@ -49,7 +53,7 @@ const router = createBrowserRouter([
         element: <Upload />,
       },
       {
-        path: "/workofart/:artid",
+        path: "/workofart/:imageId",
         element: <WorkofArt />,
       },
       {
@@ -57,8 +61,17 @@ const router = createBrowserRouter([
         element: <Artists />,
       },
       {
+<<<<<<< HEAD
         path: "/cart",
         element: <Cart />,
+=======
+        path: "/artBymedium",
+        element: <ArtByMedium />,
+      },
+      {
+        path: "*",
+        element: <NoMatch />,
+>>>>>>> c5d7f510d8bde86e439248e99201845a34388257
       },
       // {
       //   path: "/orderHistory",
