@@ -8,9 +8,7 @@ A platform for artists to find inspiration and share their work.
 - Users can also browse artwork that has been uploaded to the app, leave comments, and sell/purchase pieces.
 
 
-
 ## Table of Contents 
-
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -30,6 +28,7 @@ A platform for artists to find inspiration and share their work.
 - Users can browse art by clicking on artist or art by medium.
 ![screenshot of login page](assets/herokuscreenshot.png)
 
+
 ## Credits
 
 - [Profile Page Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile)
@@ -37,16 +36,18 @@ A platform for artists to find inspiration and share their work.
 - [date-fns] (https://date-fns.org/v2.22.1/docs/format)
 - [stripe-docs] (https://stripe.com/docs/checkout/quickstart)
 
-
-### Vite PWA:
-
 - The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
-- I used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
-- I learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
+- Used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
+- Learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
 - The following site helped me convert an image into a favicon with all the necessary files: https://favicon.io/favicon-converter/.
 - I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
-// List your collaborators, if any, with links to their GitHub profiles.
+Collaborators
+- 
+- 
+- 
+- 
+- 
 
 Third-party assets  
 - Tailwind Elements: https://www.npmjs.com/package/tw-elements
@@ -59,6 +60,7 @@ Thank you to the following tutorials which helped with our project:
 ## License
 
 - MIT License
+
 
 ## Badges
 
