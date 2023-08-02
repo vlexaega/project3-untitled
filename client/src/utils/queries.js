@@ -1,3 +1,5 @@
+// This file is adapted from module 22 activity 24
+
 import { gql } from "@apollo/client";
 
 export const QUERY_PRODUCTS = gql`
@@ -7,10 +9,9 @@ export const QUERY_PRODUCTS = gql`
       name
       description
       price
-      quantity
-      image
-      category {
+      artwork {
         _id
+        image
       }
     }
   }
