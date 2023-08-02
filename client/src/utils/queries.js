@@ -109,3 +109,15 @@ export const QUERY_SINGLE_IMAGE_COMMENTS = gql `
     }
   }
 `;
+
+export const QUERY_USERS_WITH_IMAGES = gql `
+  query UsersWithImages {
+    usersWithImages {
+      _id
+      images {
+        _id
+        image
+      }
+    }
+  }
+`;
