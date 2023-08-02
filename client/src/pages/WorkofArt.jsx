@@ -126,7 +126,9 @@ const WorkofArt = () => {
                         <strong>{comment.user.userName}: </strong>
                         {comment.comment}
                       </p>
-                      <p>Posted on: {Date(comment.createdAt * 1000)}</p>
+                      <p className="mb-3">
+                        Posted on: {Date(comment.createdAt * 1000)}
+                      </p>
                     </div>
                   ))}
                 </>
