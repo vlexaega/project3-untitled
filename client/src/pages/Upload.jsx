@@ -78,37 +78,24 @@ function ImageUpload() {
 return (
     <div>
         <Navbar />
-        {/* Sets the background styling of the form section */}
-        <section className="relative block" style={{ height: "300px" }}>
-          <div className="absolute top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
+        {/* Sets the background styling and header of the form section */}
+        <section className="flex block" style={{ height: "300px" }}>
+          <div className="top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
             <h1 className="text-6xl text-center p-8">Add New Artwork</h1>
           </div>
-
         </section>
-        <section className="relative py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
+
+        <section className=" py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-              <div className="px-6">
-                <div className="flex flex-wrap justify-center">
-                  <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                    <div className="relative"></div>
-                  </div>
-                  <div className="w-full lg:w-4/12 xl:w-1/6 px-4 lg:order-3 lg:text-right lg:self-center">
-                    <div className="py-6 px-3 mt-32 sm:mt-0"></div>
-                  </div>
-
-                  <div className="w-full flex justify-center text-center items-center">
-                    <div className="flex justify-center py-4 lg:pt-4 pt-8 flex-wrap items-center text-center">
-                      <div className="mr-4 p-3 text-center">
-                        <div className="flex flex-wrap justify-center">
-                          <div className="w-full lg:w-9/12 px-4">
+                    <div className="w-full flex justify-center items-center py-6">
         <div className="mx-5">
 
         <form>   
         <div className="mt-10 space-y-10">
             <fieldset>
               <legend className="text-sm font-semibold leading-6 text-gray-900">Declaration</legend>
-              <div className="mt-6 space-y-6">
+             
                 <div className="relative flex gap-x-3">
                   <div className="flex h-6 items-center">
                     <input
@@ -124,7 +111,6 @@ return (
                     </label>
                   </div>
                 </div>
-              </div>
             </fieldset>
         </div>
 
@@ -297,12 +283,6 @@ return (
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
 
