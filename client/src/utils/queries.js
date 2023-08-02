@@ -1,3 +1,5 @@
+// This file is adapted from module 22 activity 24
+
 import { gql } from "@apollo/client";
 
 export const QUERY_PRODUCTS = gql`
