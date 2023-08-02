@@ -20,9 +20,8 @@ const CommentForm = ({ thoughtId }) => {
       // eslint-disable-next-line no-unused-vars
       const { data } = await addComment({
         variables: {
-          thoughtId,
-          commentText,
-          commentAuthor: Auth.getProfile().data.username,
+          imageId: thoughtId,
+          comment: commentText,
         },
       });
 

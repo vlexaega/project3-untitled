@@ -12,7 +12,7 @@ import cartIcon from "../assets/icon-cart.svg";
 
 const WorkofArt = () => {
   let { imageId } = useParams();
-  // console.log(imageId);
+  console.log(imageId);
 
   const { loading, data } = useQuery(QUERY_SINGLE_IMAGE, {
     variables: { imageId: imageId },
@@ -41,9 +41,9 @@ const WorkofArt = () => {
     }
   };
 
-  const checkforCritique = (critique) => {
-    if (artinfo.critique === true) {
-      return <CommentForm imageId={imageId} />;
+  const checkforCritique = (critique, imageId) => {
+    if (artinfo && artinfo.critique === true) {
+      return <CommentForm thoughtId={imageId} />;
     } else {
       return <p>Critique disabled</p>;
     }
@@ -95,7 +95,7 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div>
-            <div className="block">{checkforCritique(critique)}</div>
+            <div className="block">{checkforCritique(critique, imageId)}</div>
           </div>
         </div>
       </main>
