@@ -2,7 +2,11 @@
 
 ## Description
 
-A platform for artists to find inspiration and share their work.
+A platform for artists to find inspiration and share their work. 
+
+- Users can create a profile and upload a work of art to share it with the world. 
+- Users can also browse artwork that has been uploaded to the app, leave comments, and sell/purchase pieces.
+
 
 
 ## Table of Contents (Optional)
