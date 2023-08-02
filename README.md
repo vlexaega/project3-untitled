@@ -76,5 +76,3 @@ Thank you to the following tutorials which helped with our project:
 - Artists has the ability to have comment section disabled if they choose.
 - Users can go to their profile to upload new pieces of art once they login.
 - Users can browse art by clicking on artist or art by medium.
-
-
