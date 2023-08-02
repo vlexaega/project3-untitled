@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { UPLOAD_IMAGE } from "../utils/mutations";
 import Auth from "../utils/auth";
