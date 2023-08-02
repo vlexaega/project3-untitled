@@ -89,12 +89,11 @@ function Navbar() {
                       Order History
                     </Link>
                     <Link
-                      to=""
+                      to="/"
+                      onClick={() => Auth.logout()}
                       className="text-zinc-950 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     >
-                      <a href="/" onClick={() => Auth.logout()}>
-                        Logout
-                      </a>
+                      Logout
                     </Link>
                   </>
                 ) : (
