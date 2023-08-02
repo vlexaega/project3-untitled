@@ -25,6 +25,9 @@ const typeDefs = `
     declaration: Boolean!
     critique: Boolean
     price: Float
+    canPurchase: Boolean
+    purchasePrice: Float
+    canDownload: Boolean
     selectedMedium: String!
     user: User
     comments: [Comment]
@@ -47,7 +50,7 @@ const typeDefs = `
   type Mutation {
     addUser(userName: String!, bio: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, selectedMedium: String!): ImageDetails!
+    uploadImage(userId: ID!, image: String, title: String!, description: String!, declaration: Boolean!, critique: Boolean, price: Float!, canDownload: Boolean, purchasePrice: Float!, canPurchase: Boolean, selectedMedium: String!): ImageDetails!
     addComment(imageId: ID!, comment: String!): ImageDetails
   }
   `;
