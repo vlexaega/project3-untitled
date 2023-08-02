@@ -1,23 +1,16 @@
 import { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
-import { useQuery } from "@apollo/client";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import CartItem from "../CartItem";
 import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
-import { QUERY_SINGLE_IMAGE } from "../../utils/queries";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-const { data: imageData } = useQuery(QUERY_SINGLE_IMAGE, {
-  variables: { imageId: imageId },
-});
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
-const artinfo = imageData?.image;
-const artPrice = artinfo.price;
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
@@ -65,7 +58,7 @@ const Cart = () => {
         products: [...state.cart],
       },
     });
-  }
+ }
 
   if (!state.cartOpen) {
     return (
@@ -78,10 +71,13 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart">
-      <div className="close" onClick={toggleCart}>
-        [close]
-      </div>
+    <div className="items-center">
+      <button
+        className="bg-transparent hover:bg-logo-pink text-logo-black font-semibold hover:text-white px-4 border border-logo-pink hover:border-transparent rounded"
+        onClick={toggleCart}
+      >
+        Close
+      </button>
       <h2>Cart</h2>
       {state.cart.length ? (
         <div>
@@ -90,7 +86,7 @@ const Cart = () => {
           ))}
 
           <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal(artPrice)}</strong>
+            <strong>Total: ${calculateTotal()}</strong>
 
             {/* Check to see if the user is logged in. If so render a button to check out */}
             {Auth.loggedIn() ? (
