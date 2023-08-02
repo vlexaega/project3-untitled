@@ -50,7 +50,6 @@ function ImageUpload() {
         return;
       }
 
-
       const { data } = await uploadImageMutation({
         variables: { 
             userId: Auth.getProfile().data._id,
@@ -79,32 +78,12 @@ function ImageUpload() {
 return (
     <div>
         <Navbar />
-        <section className="relative block" style={{ height: "500px" }}>
+        {/* Sets the background styling of the form section */}
+        <section className="relative block" style={{ height: "300px" }}>
           <div className="absolute top-0 w-full h-full bg-center bg-cover bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
-
-            <span
-              id="LogoPinkOverlay"
-              className="w-full h-full absolute opacity-10 bg-logo-pink"
-            >
-
-            </span>
             <h1 className="text-6xl text-center p-8">Add New Artwork</h1>
           </div>
 
-          <div
-            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-            style={{ height: "70px" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            ></svg>
-          </div>
         </section>
         <section className="relative py-16 bg-gradient-to-r from-indigo-300 via-logo-pink to-red-200">
           <div className="container mx-auto px-4">
