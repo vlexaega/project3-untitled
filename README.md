@@ -20,7 +20,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+- If writing locally, run npm i and then run npm run develop. The app should then launch to localhost300.
 
 ## Usage
 
