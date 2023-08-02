@@ -27,7 +27,7 @@ const Home = () => {
         {images.length > 0 ? ( // Check if there are images available
             <Carousel>
               {images.map((image) => (
-                <img src={image.image} alt="Slide" key={image._id} />
+                <img src={image.image} alt="Slide" key={image._id} className="object-cover"/>
               ))}
             </Carousel>
           ) : (

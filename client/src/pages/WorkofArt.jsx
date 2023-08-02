@@ -163,7 +163,7 @@ const WorkofArt = () => {
           <div className="image md:basis-1/2 md:flex md:flex-col md:justify-between">
             <div className="md:block large-image">
               <img
-                className="object-cover mx-auto rounded-xl w-[400px] h-[400px]"
+                className="object-contain mx-auto rounded-xl w-[400px] h-[400px]"
                 src={artImgSrc}
                 alt="artwork image"
               />
