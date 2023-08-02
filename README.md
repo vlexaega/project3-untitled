@@ -37,9 +37,9 @@ A platform for artists to find inspiration and share their work.
 
 - The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
 - Used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
-- Learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
+- We learned about favicons from an article titled 'What Is a Favicon, Why Is It Important, and How Do I Add One?' by Jay Kang, available here: https://www.seoptimer.com/blog/what-is-a-favicon/.
 - The following site helped me convert an image into a favicon with all the necessary files: https://favicon.io/favicon-converter/.
-- I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
+- We were able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
 Collaborators
 - Calvin Roberts 
@@ -64,30 +64,17 @@ Thank you to the following tutorials which helped with our project:
 ## License
 
 - MIT License
-
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+    - https://mit-license.org/
+        - The MIT License is a permissive free software license originating at the Massachusetts Institute of Technology. As a permissive license, it puts only very limited restriction on reuse and has, therefore, an excellent license compatibility.
 
 
 ## Features
 
-- Artist can easily share their work through creating their own personal profile / signing up.
+- Artists can easily share their work through creating their own personal profile / signing up.
 - Artists have the ability to upload their work and sell it.
 - Artists can recieve feedback within the form of "comments" per each piece of art.
-- Artist has the ability to have comment section disabled if they choose.
+- Artists has the ability to have comment section disabled if they choose.
 - Users can go to their profile to upload new pieces of art once they login.
 - Users can browse art by clicking on artist or art by medium.
 
 
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-
-## Tests
-
-- If writing locally, run npm i and then run npm run develop. The app should then launch to localhost3000.
