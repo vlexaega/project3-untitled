@@ -35,7 +35,7 @@ const Message = ({ message }) => (
     }
     if (query.get('canceled')) {
       setMessage(
-        'Order canceled -- continue to shop around and checkout when you\'re ready.'
+        'Order canceled. Proceed to checkout when ready.'
       );
     }
   }, []);
