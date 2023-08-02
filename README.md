@@ -3,7 +3,6 @@
 ## Description
 
 A platform for artists to find inspiration and share their work. 
-
 - Users can create a profile and upload a work of art to share it with the world. 
 - Users can also browse artwork that has been uploaded to the app, leave comments, and sell/purchase pieces.
 
@@ -43,11 +42,16 @@ A platform for artists to find inspiration and share their work.
 - I was able to make an image with a transparent background through Adobe Express: https://www.adobe.com/express/feature/image/transparent-background.
 
 Collaborators
-- 
-- 
-- 
-- 
-- 
+- Calvin Roberts 
+    - https://github.com/croberts27
+- Alex Vega
+    - https://github.com/vlexaega
+- LeAnne Branch
+    - https://github.com/branchwag
+- Danielle Cavallo
+    - https://github.com/daniellecavallo
+- Samantha Shrauner
+    - https://github.com/Flying-S-Ranch
 
 Third-party assets  
 - Tailwind Elements: https://www.npmjs.com/package/tw-elements
@@ -75,6 +79,8 @@ Badges aren't necessary, but they demonstrate street cred. Badges let other deve
 - Artists have the ability to upload their work and sell it.
 - Artists can recieve feedback within the form of "comments" per each piece of art.
 - Artist has the ability to have comment section disabled if they choose.
+- Users can go to their profile to upload new pieces of art once they login.
+- Users can browse art by clicking on artist or art by medium.
 
 
 ## How to Contribute
