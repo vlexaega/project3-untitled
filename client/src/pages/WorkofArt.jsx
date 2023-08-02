@@ -141,6 +141,14 @@ const WorkofArt = () => {
     if (artinfo.canDownload) {
       return <p>Download Price: {artPrice}</p>;
     } else {
+      return <p>digital download not available</p>;
+    }
+  };
+
+  const checkPurchase = () => {
+    if (artinfo.canPurchase) {
+      return <p>Artwork Price: {purchasePrice}</p>;
+    } else {
       return <p>piece not for sale</p>;
     }
   };
@@ -189,6 +197,26 @@ const WorkofArt = () => {
             </div>
 
             {canDownload ? (
+              <div className="buttons-container flex flex-col md:flex-row mt-8">
+                <button
+                  className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
+                  onClick={addToCart}
+                >
+                  <img
+                    className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
+                    src={cartIcon}
+                    alt="cart-icon"
+                  />
+                  &nbsp;Add to cart
+                </button>
+              </div>
+            ) : null}
+
+<div className="price flex items-center">
+              <span className="font-[700] mr-4">{checkPurchase(purchasePrice)}</span>
+            </div>
+
+            {canPurchase ? (
               <div className="buttons-container flex flex-col md:flex-row mt-8">
                 <button
                   className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
