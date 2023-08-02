@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import { QUERY_IMAGE_BY_MEDIUM } from "../utils/queries";
 
 const ArtByMedium = () => {
   return (

@@ -80,19 +80,6 @@ export const QUERY_ALL_IMAGES = gql`
   }
 `;
 
-export const QUERY_IMAGE_BY_MEDIUM = gql`
-  query Query($medium: String!) {
-    image(medium: $medium) {
-      _id
-      image
-      title
-      user {
-        userName
-      }
-    }
-  }
-`;
-
 export const QUERY_SINGLE_IMAGE = gql`
   query Query($imageId: ID!) {
     image(imageId: $imageId) {
