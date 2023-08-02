@@ -76,6 +76,7 @@ export const QUERY_ALL_IMAGES = gql`
     images {
       _id
       image
+      selectedMedium
     }
   }
 `;
@@ -89,6 +90,7 @@ export const QUERY_SINGLE_IMAGE = gql`
       description
       critique
       canDownload
+      selectedMedium
       price
       canPurchase
       purchasePrice
