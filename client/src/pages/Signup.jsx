@@ -25,8 +25,8 @@ function Signup(props) {
     });
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
-    localStorage.setItem("userName", formState.userName);
-    localStorage.setItem("bio", formState.bio);
+    // localStorage.setItem("userName", formState.userName);
+    // localStorage.setItem("bio", formState.bio);
   };
 
   const handleChange = (event) => {
@@ -42,6 +42,7 @@ function Signup(props) {
       <Link to="/">← Go to Login</Link>
 
       <h2 className="text-6xl text-center p-8">Signup</h2>
+      
       <div className="w-full max-w-xs block">
         <form
           onSubmit={handleFormSubmit}
