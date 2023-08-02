@@ -22,12 +22,17 @@ const typeDefs = `
     purchaseDate: String
     products: [Product]
   }
-  
+
   type User {
     _id: ID
     userName: String
     email: String
     bio: String
+    orders: [Order]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type UserWithImages {
