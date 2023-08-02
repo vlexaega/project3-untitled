@@ -127,7 +127,7 @@ const WorkofArt = () => {
                         {comment.comment}
                       </p>
                       <p className="mb-3">
-                        Posted on: {Date(comment.createdAt * 1000)}
+                        Posted on: {(Date(comment.createdAt * 1000)).toString().slice(0, 15)}
                       </p>
                     </div>
                   ))}
