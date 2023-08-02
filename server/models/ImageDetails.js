@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+const CommentSchema = require('./Comments');
+
 const ImageDetailsSchema = new Schema({
     image: {
         type: String,
@@ -35,7 +37,8 @@ const ImageDetailsSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true,
-    }
+    },
+    comments: [CommentSchema],
 }
     
 );
