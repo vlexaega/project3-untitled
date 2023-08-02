@@ -31,7 +31,7 @@ const Message = ({ message }) => (
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
     if (query.get('success')) {
-      setMessage('Order placed! You will receive an email confirmation.');
+      setMessage('Order Confirmed! You will receive an email confirmation shortly.');
     }
     if (query.get('canceled')) {
       setMessage(
