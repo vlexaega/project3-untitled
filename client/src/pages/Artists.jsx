@@ -35,6 +35,7 @@ function Artists() {
     <>
       <main>
         <Navbar />
+        <h1 className="text-6xl text-center p-8">Artists</h1>
         <section className="container my-12 mx-auto px-4 md:px-12">
           <div className="flex flex-wrap -mx-1 lg:-mx-4">
             {profileData.usersWithImages.map((user) => (
