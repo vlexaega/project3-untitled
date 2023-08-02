@@ -40,7 +40,7 @@ function Artists() {
             {profileData.usersWithImages.map((user) => (
               <div
                 key={user._id}
-                className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300 mx-3"
+                className="box-border rounded-lg bg-gradient-to-r text-center from-logo-pink via-red-400 to-blue-300 mx-3 my-3"
               >
                 <h2 className="text-center p-1">{user.userName}</h2>
                 {user.images.length > 0 ? (
