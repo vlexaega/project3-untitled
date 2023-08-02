@@ -87,6 +87,9 @@ const resolvers = {
       }
     },
     addComment: async (parent, { imageId, comment }, context) => {
+      console.log("User ID:", context.user ? context.user._id : "Not logged in");
+      console.log("Image ID:", imageId);
+      console.log("Comment:", comment);
       if (!context.user) {
         throw new AuthenticationError("Please log in to leave a critique");
       }
@@ -108,7 +111,7 @@ const resolvers = {
         await image.save();
         return image;
       } catch (error) {
-        throw new Error("Failed to add critique: ", error.message);
+        throw new Error("Failed to add comment: ", error.message);
       }
     },
   },
