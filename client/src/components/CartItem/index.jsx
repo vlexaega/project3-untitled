@@ -33,13 +33,15 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex-row">
-      <div>
+      <h2 className="text-2xl flex justify-center">Cart</h2>
+
+      {/* <div>
         <img src={`/images/${item.image}`} alt="" />
-      </div>
+      </div> */}
       <div>
-        <div>
+        {/* <div>
           {item.name}, ${item.price}
-        </div>
+        </div> */}
         <div>
           <span>Qty:</span>
           <input
