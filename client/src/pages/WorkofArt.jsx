@@ -118,7 +118,7 @@ const WorkofArt = () => {
   const comments = commentsData?.image?.comments;
 
   // console.log(loading, artinfo);
-  console.log(artinfo)
+  console.log(artinfo);
   // console.log(artinfo.critique);
   // console.log(artinfo.description);
   const artTitle = artinfo.title;
@@ -129,8 +129,7 @@ const WorkofArt = () => {
   const critique = artinfo.critique;
   const canDownload = artinfo.canDownload;
   const canPurchase = artinfo.canPurchase;
-  const purchasePrice = artinfo.purchasePrice
-
+  const purchasePrice = artinfo.purchasePrice;
 
   // const checkPrice = (artPrice) => {
   //   if (artinfo.price === undefined || artinfo.price === null) {
@@ -140,11 +139,11 @@ const WorkofArt = () => {
 
   const checkDownload = () => {
     if (artinfo.canDownload) {
-      return <p>Download Price: {artPrice}</p>
+      return <p>Download Price: {artPrice}</p>;
     } else {
-      return <p>piece not for sale</p>
+      return <p>piece not for sale</p>;
     }
-  }
+  };
 
   const checkforCritique = (critique, imageId) => {
     if (artinfo && artinfo.critique === true) {
@@ -186,23 +185,24 @@ const WorkofArt = () => {
             </p>
 
             <div className="price flex items-center">
-              <span className="font-[700] mr-4">
-                {checkDownload(artPrice)}
-              </span>
+              <span className="font-[700] mr-4">{checkDownload(artPrice)}</span>
             </div>
 
             {canDownload ? (
-                    <div className="buttons-container flex flex-col md:flex-row mt-8">
-                    <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50">
-                      <img
-                        className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
-                        src={cartIcon}
-                        alt="cart-icon"
-                      />
-                      &nbsp;Add to cart
-                    </button>
-                  </div>
-                  ) : null}
+              <div className="buttons-container flex flex-col md:flex-row mt-8">
+                <button
+                  className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
+                  onClick={addToCart}
+                >
+                  <img
+                    className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
+                    src={cartIcon}
+                    alt="cart-icon"
+                  />
+                  &nbsp;Add to cart
+                </button>
+              </div>
+            ) : null}
             {/* <div className="buttons-container flex flex-col md:flex-row mt-8">
               <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                 <img
