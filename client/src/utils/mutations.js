@@ -97,15 +97,18 @@ export const ADD_COMMENT = gql`
 //   }`;
 
   export const UPLOAD_IMAGE = gql `
-  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!, $critique: Boolean, $price: Float!, $selectedMedium: String!) {
-      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration, critique: $critique, price: $price, selectedMedium: $selectedMedium) {
+  mutation uploadImage($userId: ID!, $image: String!, $title: String!, $description: String!, $declaration: Boolean!, $critique: Boolean, $price: Float!, $selectedMedium: String!, $purchasePrice: Float!, $canDownload: Boolean, $canPurchase: Boolean) {
+      uploadImage(userId: $userId, image: $image, title: $title, description: $description, declaration: $declaration, critique: $critique, price: $price, selectedMedium: $selectedMedium, canDownload: $canDownload, canPurchase: $canPurchase, purchasePrice: $purchasePrice) {
         _id
         image
         title
         description
         declaration
         critique
+        canDownload
         price
+        canPurchase
+        purchasePrice
         selectedMedium
         user {
           _id

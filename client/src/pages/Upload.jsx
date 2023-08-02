@@ -36,6 +36,9 @@ function ImageUpload() {
     const price = parseFloat(document.getElementById("price").value.replace("$", ""));
     const medium = document.querySelector('#medium')
     const selectedMedium = medium.options[medium.selectedIndex].text
+    const canDownload = document.getElementById("canDownload").checked
+    const canPurchase = document.getElementById("canPurchase").checked
+    const purchasePrice = parseFloat(document.getElementById("purchasePrice").value.replace("$", ""))
     console.log(typeof image );
     console.log(description);
     console.log(declaration);
@@ -58,7 +61,10 @@ function ImageUpload() {
             description,
             declaration: declaration,
             critique: critique,
+            canDownload: canDownload,
             price,
+            canPurchase: canPurchase,
+            purchasePrice,
             selectedMedium: selectedMedium,
         },
         context: {
@@ -281,8 +287,8 @@ return (
                             <h2 className="text-3x1 font-semibold leading-6 text-gray-900">Purchase Price</h2>
                               <div className="mt-2">
                                 <textarea
-                                  id="price"
-                                  name="price"
+                                  id="purchasePrice"
+                                  name="purchasePrice"
                                   rows={1}
                                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                   defaultValue={"$" + ''}
