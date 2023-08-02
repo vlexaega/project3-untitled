@@ -9,9 +9,10 @@ export const QUERY_PRODUCTS = gql`
       name
       description
       price
-      artwork {
+      quantity
+      image
+      category {
         _id
-        image
       }
     }
   }
