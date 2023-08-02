@@ -20,7 +20,8 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-- If writing locally, run npm i and then run npm run develop. The app should then launch to localhost300.
+- If writing locally, run npm i and then run npm run develop. The app should then launch to localhost3000.
+- If accessing via Heroku, follow this link https://untitled-art-app-b560d4f5fa59.herokuapp.com/
 
 ## Usage
 
@@ -70,7 +71,7 @@ https://www.youtube.com/watch?v=VqAFrHdOA0w&ab_channel=Dojcinovic
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+- MIT License
 
 ---
 
@@ -84,7 +85,11 @@ Badges aren't necessary, but they demonstrate street cred. Badges let other deve
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Artist can easily share their work through creating their own personal profile / signing up.
+- Artists have the ability to upload their work and sell it.
+- Artists can recieve feedback within the form of "comments" per each piece of art.
+- Artist has the ability to have comment section disabled if they choose.
+
 
 ## How to Contribute
 
