@@ -99,11 +99,12 @@ const resolvers = {
         if (!image) {
           throw new Error("Image does not exist");
         }
-        image.comments.push({
+        const newComment = {
           user: context.user._id,
           comment,
           createdAt: new Date(),
-        });
+        };
+        image.comments.push(newComment);
         await image.save();
         return image;
       } catch (error) {
