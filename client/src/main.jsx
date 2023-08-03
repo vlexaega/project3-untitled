@@ -15,6 +15,7 @@ import WorkofArt from "./pages/WorkofArt";
 import Artists from "./pages/Artists";
 import ArtByMedium from "./pages/ArtByMedium";
 import Checkout from "./pages/Checkout";
+import Medium from "./pages/Medium"
 import ArtistProfile from "./pages/ArtistsProfile";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/artbymedium",
         element: <ArtByMedium />,
+      },
+      {
+        path: "/mediums",
+        element: <Medium />,
       },
       {
         path: "*",
