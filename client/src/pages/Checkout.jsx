@@ -45,12 +45,10 @@ function Checkout() {
                   <div className="w-full flex justify-center text-center items-center">
                     <div className="flex justify-center py-4 lg:pt-4 pt-8 flex-wrap items-center text-center">
                       <div className="mr-4 p-3 text-center">
-                        <div className="flex flex-wrap justify-center">
+                        <div className="flex  justify-center">
                           <div className="w-full lg:w-9/12 px-4">
-                            <h2 className="text-2xl font-semibold shadow-current text-logo-black mb-4">
-                              
-                            </h2>
-                            <br></br>
+                            <h2 className="text-2xl font-semibold shadow-current text-logo-black mb-4">CHECKOUT BELOW</h2>
+                            
                           
                             <div className="text-center mt-12">
                               <h3 className="text-4xl font-semibold leading-normal text-gray-800 mb-2"></h3>
