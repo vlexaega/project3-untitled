@@ -7,7 +7,7 @@ import { ADD_COMMENT } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 // eslint-disable-next-line react/prop-types
-const CommentForm = ({ thoughtId }) => {
+const CommentForm = () => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
