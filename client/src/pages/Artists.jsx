@@ -46,7 +46,7 @@ function Artists() {
                 <h2 className="text-center p-1">{user.userName}</h2>
                 {user.images.length > 0 ? (
                   <Link
-                    to={`/profile/${user._id}`}
+                    to={`/artistsprofile/${user._id}`}
                     target="_blank"
                     rel="noreferrer"
                   >
