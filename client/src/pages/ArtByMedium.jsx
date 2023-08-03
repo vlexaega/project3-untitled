@@ -12,7 +12,6 @@ const ArtByMedium = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   const images = data?.images || [];
-  console.log(images)
 
   // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
 
@@ -22,12 +21,19 @@ const ArtByMedium = () => {
 
   let digitalImg = images.find(image => getDigital(image))
 
-  console.log(digitalImg)
+  function getPhotography(image) {
+    return image.selectedMedium === "Photography"
+  }
+
+  let photoImg = images.find(image => getPhotography(image))
+
 
   return (
     <div>
       <Navbar />
       <h1 className="text-6xl text-center p-8">Art by Medium</h1>
+
+      {/* This div is a card for paintings */}
       <div className="container my-12 mx-auto px-4 md:px-12">
         <div className="flex flex-wrap -mx-1 lg:-mx-4">
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -159,7 +165,7 @@ const ArtByMedium = () => {
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
                       src={digitalImg.image}
-                      alt="photography artword"
+                      alt="digital artwork"
                     />
                   </Link>
 
@@ -236,14 +242,14 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
+                    to={`/workofart/${photoImg._id}`} key={photoImg._id}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
-                      src={digitalImg.image}
-                      alt="photography artword"
+                      src={photoImg.image}
+                      alt="photography artwork"
                     />
                   </Link>
 
