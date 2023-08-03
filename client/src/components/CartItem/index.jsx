@@ -5,13 +5,13 @@ import { idbPromise } from "../../utils/helpers";
 const CartItem = ({ item }) => {
   const [, dispatch] = useStoreContext();
 
-  const removeFromCart = (item) => {
-    dispatch({
-      type: REMOVE_FROM_CART,
-      _id: item._id,
-    });
-    idbPromise("cart", "delete", { ...item });
-  };
+  // const removeFromCart = (item) => {
+  //   dispatch({
+  //     type: REMOVE_FROM_CART,
+  //     _id: item._id,
+  //   });
+  //   idbPromise("cart", "delete", { ...item });
+  // };
 
   const onChange = (e) => {
     const value = e.target.value;
@@ -33,13 +33,15 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex-row">
-      <div>
+      <h2 className="text-2xl flex justify-center">Cart</h2>
+
+      {/* <div>
         <img src={`/images/${item.image}`} alt="" />
-      </div>
+      </div> */}
       <div>
-        <div>
+        {/* <div>
           {item.name}, ${item.price}
-        </div>
+        </div> */}
         <div>
           <span>Qty:</span>
           <input
@@ -48,13 +50,13 @@ const CartItem = ({ item }) => {
             value={item.purchaseQuantity}
             onChange={onChange}
           />
-          <span
+          {/* <span
             role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
             🗑️
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

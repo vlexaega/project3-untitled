@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
@@ -58,7 +59,7 @@ const Cart = () => {
         products: [...state.cart],
       },
     });
- }
+  }
 
   if (!state.cartOpen) {
     return (
@@ -71,40 +72,31 @@ const Cart = () => {
   }
 
   return (
-    <div className="items-center">
-      <button
-        className="bg-transparent hover:bg-logo-pink text-logo-black font-semibold hover:text-white px-4 border border-logo-pink hover:border-transparent rounded"
-        onClick={toggleCart}
-      >
-        Close
-      </button>
-      <h2>Cart</h2>
-      {state.cart.length ? (
-        <div>
-          {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
-          ))}
+    <>
+      <div className="flex fixed end-40 flex-col justify-center items-center bg-logo-pink border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+        {state.cart.length ? (
+          <div>
+            {state.cart.map((item) => (
+              <CartItem key={item._id} item={item} />
+            ))}
 
-          <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
+            <div className="flex-row space-between">
+              <strong>Total: ${calculateTotal()}</strong>
 
-            {/* Check to see if the user is logged in. If so render a button to check out */}
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
-            ) : (
-              <span>(log in to check out)</span>
-            )}
+              {/* Check to see if the user is logged in. If so render a button to check out */}
+         
+            </div>
           </div>
-        </div>
-      ) : (
-        <h3>
-          <span role="img" aria-label="shocked">
-            😱
-          </span>
-          You haven't added anything to your cart yet!
-        </h3>
-      )}
-    </div>
+        ) : (
+          <h3>
+            <span role="img" aria-label="shocked">
+              😱
+            </span>
+            You haven't added anything to your cart yet!
+          </h3>
+        )}
+      </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import CommentForm from "../components/CommentForm";
 import { Navigate, useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import Cart from "../components/Cart";
+import CartItem from "../components/CartItem";
 import { useStoreContext } from "../utils/GlobalState";
 import {
   REMOVE_FROM_CART,
@@ -32,6 +33,14 @@ const WorkofArt = () => {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   const { products, cart } = state;
+
+  // const removeFromCart = (item) => {
+  //   dispatch({
+  //     type: REMOVE_FROM_CART,
+  //     _id: item._id,
+  //   });
+  //   idbPromise("cart", "delete", { ...item });
+  // };
   useEffect(() => {
     // already in global store
     if (products.length) {
@@ -212,8 +221,10 @@ const WorkofArt = () => {
               </div>
             ) : null}
 
-<div className="price flex items-center">
-              <span className="font-[700] mr-4">{checkPurchase(purchasePrice)}</span>
+            <div className="price flex items-center">
+              <span className="font-[700] mr-4">
+                {checkPurchase(purchasePrice)}
+              </span>
             </div>
 
             {canPurchase ? (
@@ -241,7 +252,19 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div> */}
-
+            <div className="float-right">
+              <button
+                className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
+                onClick={() => removeFromCart(currentProduct)}
+              >
+                <img
+                  className="inline-block -translate-x-2 -translate-y-[2px] h-[15px]"
+                  src={cartIcon}
+                  alt="cart-icon"
+                />
+                &nbsp;Remove from cart
+              </button>
+            </div>
             <div className="block">
               {checkforCritique(critique, imageId)}
               {comments && (
