@@ -14,6 +14,8 @@ const ArtByMedium = () => {
   const images = data?.images || [];
   console.log(images)
 
+  // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
+
   function getDigital(image) {
     return image.selectedMedium === "Digital"
   }

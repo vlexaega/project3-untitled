@@ -60,6 +60,7 @@ Third-party assets
 Thank you to the following tutorials which helped with our project:
 - Image Carousel: https://www.youtube.com/watch?v=XJSOgV4VELk&ab_channel=YourCodeLab
 - Product Display: https://www.youtube.com/watch?v=VqAFrHdOA0w&ab_channel=Dojcinovic
+- Array.find() method, used in the ArtByMedium.jsx file: https://www.freecodecamp.org/news/javascript-array-find-tutorial-how-to-iterate-through-elements-in-an-array/
 
 
 ## License
