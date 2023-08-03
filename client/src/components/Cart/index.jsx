@@ -73,7 +73,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center bg-logo-pink border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+      <div className="flex fixed end-40 flex-col justify-center items-center bg-logo-pink border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
         {state.cart.length ? (
           <div>
             {state.cart.map((item) => (
@@ -84,17 +84,7 @@ const Cart = () => {
               <strong>Total: ${calculateTotal()}</strong>
 
               {/* Check to see if the user is logged in. If so render a button to check out */}
-              {Auth.loggedIn() ? (
-                <button className="bg-transparent hover:bg-logo-pink text-logo-black font-semibold hover:text-white px-4 border border-logo-pink hover:border-transparent rounded flex justify-center" onClick={submitCheckout}>Checkout</button>
-              ) : (
-                <span>(log in to check out)</span>
-              )}
-              <button
-                className="bg-transparent hover:bg-logo-pink text-logo-black font-semibold hover:text-white px-4 border border-logo-pink hover:border-transparent rounded flex justify-center "
-                onClick={toggleCart}
-              >
-                Close
-              </button>
+         
             </div>
           </div>
         ) : (
