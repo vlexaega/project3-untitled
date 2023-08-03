@@ -176,7 +176,7 @@ const WorkofArt = () => {
       <h1 className="text-6xl text-center p-8">Work of Art</h1>
       <main>
         <Cart />
-        <div className="main-wrapper flex flex-col md:flex-row md:px-[200px] md:py-[100px] relative">
+        <div className="main-wrapper container mx-auto px-4 flex flex-col md:flex-row md:px-[200px] md:py-[100px] relative">
           <div className="image md:basis-1/2 md:flex md:flex-col md:justify-between">
             <div className="md:block large-image">
               <img
@@ -186,7 +186,6 @@ const WorkofArt = () => {
               />
             </div>
           </div>
-
           <div className="description p-6 md:basis-1/2 md:py-[40px]">
             <p className="text-[14px] tracking-widest uppercase font-[700] mb-6">
               {artUserName}
@@ -266,6 +265,13 @@ const WorkofArt = () => {
                 />
                 &nbsp;Remove from cart
               </button>
+            </div>
+            <div className="absolute left-3/4 mx-20">
+              <Link to="/checkout">
+                <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50">
+                  Checkout
+                </button>
+              </Link>
             </div>
             <div className="block">
               {checkforCritique(critique, imageId)}
