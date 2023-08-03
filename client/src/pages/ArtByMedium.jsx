@@ -12,17 +12,35 @@ const ArtByMedium = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   const images = data?.images || [];
-  console.log(images)
+  console.log(images);
 
   // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
 
   function getDigital(image) {
-    return image.selectedMedium === "Digital"
+    return image.selectedMedium === "Digital";
   }
 
-  let digitalImg = images.find(image => getDigital(image))
+  let digitalImg = images.find((image) => getDigital(image));
 
-  console.log(digitalImg)
+  console.log(digitalImg);
+
+  function checkImgId() {
+    if (digitalImg._id === undefined || digitalImg._id === null) {
+      return "";
+    } else {
+      return digitalImg._id;
+    }
+  }
+
+  function checkImg() {
+    if (digitalImg.image === undefined || digitalImg.image === null) {
+      return "https://picsum.photos/600/400/?random";
+    } else {
+      return "digitalImg.image";
+    }
+  }
+
+  // console.log(checkImg);
 
   return (
     <div>
@@ -49,16 +67,13 @@ const ArtByMedium = () => {
                     Paintings
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
@@ -89,15 +104,13 @@ const ArtByMedium = () => {
                     Drawings
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
@@ -128,16 +141,13 @@ const ArtByMedium = () => {
                     Mixed Media
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
@@ -151,17 +161,18 @@ const ArtByMedium = () => {
 
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
-            <Link
-                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      className="p-2 rounded max-h-96 max-w-sm"
-                      src={digitalImg.image}
-                      alt="photography artword"
-                    />
-                  </Link>
+              <Link
+                to={`/workofart/${checkImgId}`}
+                key={checkImgId}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="p-2 rounded max-h-96 max-w-sm"
+                  src="https://picsum.photos/600/400/?random"
+                  alt="photography artwork"
+                />
+              </Link>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                 <h1 className="text-3xl">
@@ -172,16 +183,13 @@ const ArtByMedium = () => {
                     Digital
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
@@ -212,16 +220,13 @@ const ArtByMedium = () => {
                     Fabric
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
@@ -235,17 +240,18 @@ const ArtByMedium = () => {
 
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
-            <Link
-                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      className="p-2 rounded max-h-96 max-w-sm"
-                      src={digitalImg.image}
-                      alt="photography artword"
-                    />
-                  </Link>
+              <Link
+                to={`/workofart/${checkImgId}`}
+                key={checkImgId}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="p-2 rounded max-h-96 max-w-sm"
+                  src="https://picsum.photos/600/400/?random"
+                  alt="photography artwork"
+                />
+              </Link>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                 <h1 className="text-3xl">
@@ -256,16 +262,13 @@ const ArtByMedium = () => {
                     Photography
                   </a>
                 </h1>
-                
               </header>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
-                >
-
-                </a>
+                ></a>
                 <a
                   className="no-underline text-grey-darker hover:text-red-dark"
                   href="#"
