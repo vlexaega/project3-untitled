@@ -73,7 +73,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex fixed end-40 flex-col justify-center items-center bg-logo-pink border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+      <div className="flex fixed end-40 flex-col mt-10 mr-12 bg-gradient-to-r from-red-300 via-logo-pink to-indigo-300 border border-white rounded-lg shadow md:flex-row md:max-w-xl">
         {state.cart.length ? (
           <div>
             {state.cart.map((item) => (
@@ -81,10 +81,9 @@ const Cart = () => {
             ))}
 
             <div className="flex-row space-between">
-              <strong>Total: ${calculateTotal()}</strong>
+              <strong>Total: ${}</strong>
 
               {/* Check to see if the user is logged in. If so render a button to check out */}
-         
             </div>
           </div>
         ) : (
