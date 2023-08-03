@@ -121,6 +121,7 @@ export const QUERY_USERS_WITH_IMAGES = gql `
     usersWithImages {
       _id
       userName
+      bio
       images {
         _id
         image

@@ -15,6 +15,7 @@ import WorkofArt from "./pages/WorkofArt";
 import Artists from "./pages/Artists";
 import ArtByMedium from "./pages/ArtByMedium";
 import Checkout from "./pages/Checkout";
+import ArtistProfile from "./pages/ArtistsProfile";
 // import Success from "./pages/Success";
 // import OrderHistory from "./pages/OrderHistory";
 const router = createBrowserRouter([
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path:"/profile/:_id",
-        element: <Profile />,
+        path:"/artistsprofile/:_id",
+        element: <ArtistProfile />,
       },
       {
         path: "/uploadart",
