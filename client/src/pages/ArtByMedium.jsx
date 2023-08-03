@@ -12,10 +12,6 @@ const ArtByMedium = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   const images = data?.images || [];
-<<<<<<< HEAD
-=======
-  console.log(images);
->>>>>>> 3ea42d24d79579907553a5f10b1ddf5b00c74130
 
   // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
 
@@ -25,7 +21,6 @@ const ArtByMedium = () => {
 
   let digitalImg = images.find((image) => getDigital(image));
 
-<<<<<<< HEAD
   function getPhotography(image) {
     return image.selectedMedium === "Photography"
   }
@@ -55,27 +50,6 @@ const ArtByMedium = () => {
   }
 
   let fabricImg = images.find(image => getFabric(image))
-=======
-  console.log(digitalImg);
-
-  function checkImgId() {
-    if (digitalImg._id === undefined || digitalImg._id === null) {
-      return "";
-    } else {
-      return digitalImg._id;
-    }
-  }
-
-  function checkImg() {
-    if (digitalImg.image === undefined || digitalImg.image === null) {
-      return "https://picsum.photos/600/400/?random";
-    } else {
-      return "digitalImg.image";
-    }
-  }
-
-  // console.log(checkImg);
->>>>>>> 3ea42d24d79579907553a5f10b1ddf5b00c74130
 
   return (
     <div>
