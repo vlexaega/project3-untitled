@@ -158,7 +158,7 @@ const WorkofArt = () => {
     if (artinfo.canPurchase) {
       return <p>Artwork Price: {purchasePrice}</p>;
     } else {
-      return <p>piece not for sale</p>;
+      return <p className="mb-2">piece not for sale</p>;
     }
   };
 
@@ -251,6 +251,7 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div> */}
+            {canPurchase ? (<div>
             <h3 className="font-[700] mr-4">Remove item from cart</h3>
             <br></br>
             <button
@@ -262,15 +263,17 @@ const WorkofArt = () => {
                 src={cartIcon}
                 alt="cart-icon"
               />
-              &nbsp;Remove from cart
+              Remove from cart
             </button>
-            <div className="absolute left-3/4 mx-20">
+            <div className="">
               <Link to="/checkout">
                 <button className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50">
                   Checkout
                 </button>
               </Link>
             </div>
+            </div>) : null}
+            
             <div className="block">
               {checkforCritique(critique, imageId)}
               {comments && (
