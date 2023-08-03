@@ -252,7 +252,6 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div> */}
-            <div className="float-right">
               <button
                 className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
                 onClick={() => removeFromCart(currentProduct)}
@@ -264,7 +263,6 @@ const WorkofArt = () => {
                 />
                 &nbsp;Remove from cart
               </button>
-            </div>
             <div className="block">
               {checkforCritique(critique, imageId)}
               {comments && (
