@@ -1,6 +1,29 @@
 import Navbar from "../components/Navbar";
+import { Navigate, useParams, Link } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { QUERY_ALL_IMAGES } from "../utils/queries";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
 const ArtByMedium = () => {
+  const { loading, error, data } = useQuery(QUERY_ALL_IMAGES);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  const images = data?.images || [];
+  console.log(images)
+
+  // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
+
+  function getDigital(image) {
+    return image.selectedMedium === "Digital"
+  }
+
+  let digitalImg = images.find(image => getDigital(image))
+
+  console.log(digitalImg)
+
   return (
     <div>
       <Navbar />
@@ -128,13 +151,17 @@ const ArtByMedium = () => {
 
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                <img
-                  alt="Placeholder"
-                  className="block h-auto w-full"
-                  src="https://picsum.photos/600/400/?random"
-                />
-              </a>
+            <Link
+                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="p-2 rounded max-h-96 max-w-sm"
+                      src={digitalImg.image}
+                      alt="photography artword"
+                    />
+                  </Link>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                 <h1 className="text-3xl">
@@ -208,13 +235,17 @@ const ArtByMedium = () => {
 
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                <img
-                  alt="Placeholder"
-                  className="block h-auto w-full"
-                  src="https://picsum.photos/600/400/?random"
-                />
-              </a>
+            <Link
+                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="p-2 rounded max-h-96 max-w-sm"
+                      src={digitalImg.image}
+                      alt="photography artword"
+                    />
+                  </Link>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                 <h1 className="text-3xl">
