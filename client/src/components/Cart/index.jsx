@@ -81,7 +81,7 @@ const Cart = () => {
             ))}
 
             <div className="flex-row space-between">
-              <strong>Total: ${}</strong>
+              <strong>Total: ${calculateTotal()}</strong>
 
               {/* Check to see if the user is logged in. If so render a button to check out */}
             </div>
