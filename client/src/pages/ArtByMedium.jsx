@@ -14,6 +14,14 @@ const ArtByMedium = () => {
   const images = data?.images || [];
   console.log(images)
 
+  function getDigital(image) {
+    return image.selectedMedium === "Digital"
+  }
+
+  let digitalImg = images.find(image => getDigital(image))
+
+  console.log(digitalImg)
+
   return (
     <div>
       <Navbar />
