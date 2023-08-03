@@ -27,6 +27,12 @@ const ArtByMedium = () => {
 
   let photoImg = images.find(image => getPhotography(image))
 
+  function getPainting(image) {
+    return image.selectedMedium === "Painting"
+  }
+
+  let paintingImg = images.find(image => getPainting(image))
+
 
   return (
     <div>
@@ -38,13 +44,17 @@ const ArtByMedium = () => {
         <div className="flex flex-wrap -mx-1 lg:-mx-4">
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                <img
-                  alt="Placeholder"
-                  className="block h-auto w-full"
-                  src="https://picsum.photos/600/400/?random"
-                />
-              </a>
+            <Link
+                    to={`/workofart/${paintingImg._id}`} key={paintingImg._id}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="p-2 rounded max-h-96 max-w-sm"
+                      src={paintingImg.image}
+                      alt="digital artwork"
+                    />
+                  </Link>
 
               <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                 <h1 className="text-3xl">
