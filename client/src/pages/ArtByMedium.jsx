@@ -60,15 +60,15 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${paintingImg._id}`} key={paintingImg._id}
-                    to="/home"
+                    to={`/workofart/${paintingImg._id}`} key={paintingImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
-                      // src={paintingImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={paintingImg.image || "https://picsum.photos/600/400/?random"}
+                      // src="https://picsum.photos/600/400/?random"
                       alt="digital artwork"
                     />
                   </Link>
@@ -103,15 +103,15 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${drawingImg._id}`} key={drawingImg._id}
-                    to="/home"
+                    to={`/workofart/${drawingImg._id}`} key={drawingImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm items-center"
-                      // src={drawingImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={drawingImg.image || "https://picsum.photos/600/400/?random"} 
+                      // src="https://picsum.photos/600/400/?random"
                       alt="digital artwork"
                     />
                   </Link>
@@ -127,7 +127,7 @@ const ArtByMedium = () => {
                 </h1>
               </header>
 
-              <footer className="flex items-center justify-between leading-none p-2 md:p-4">
+              {/* <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                 <a
                   className="flex items-center no-underline hover:underline text-black"
                   href="#"
@@ -139,22 +139,22 @@ const ArtByMedium = () => {
                   <span className="hidden">Like</span>
                   <i className="fa fa-heart"></i>
                 </a>
-              </footer>
+              </footer> */}
             </article>
           </div>
 
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${mixedMediaImg._id}`} key={mixedMediaImg._id}
-                    to="/home"
+                    to={`/workofart/${mixedMediaImg._id}`} key={mixedMediaImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm items-center"
-                      // src={mixedMediaImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={mixedMediaImg.image || "https://picsum.photos/600/400/?random"}
+                      // src="https://picsum.photos/600/400/?random"
                       alt="digital artwork"
                     />
                   </Link>
@@ -189,15 +189,15 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
-                    to="/home"
+                    to={`/workofart/${digitalImg._id}`} key={digitalImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
-                      // src={digitalImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={digitalImg.image || "https://picsum.photos/600/400/?random"}
+                      // src="https://picsum.photos/600/400/?random"
                       alt="digital artwork"
                     />
                   </Link>
@@ -232,15 +232,15 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${fabricImg._id}`} key={fabricImg._id}
-                    to="/home"
+                    to={`/workofart/${fabricImg._id}`} key={fabricImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
-                      // src={fabricImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={fabricImg.image || "https://picsum.photos/600/400/?random"}
+                      // src="https://picsum.photos/600/400/?random"
                       alt="digital artwork"
                     />
                   </Link>
@@ -275,15 +275,15 @@ const ArtByMedium = () => {
           <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article className="overflow-hidden rounded-lg shadow-lg">
             <Link
-                    // to={`/workofart/${photoImg._id}`} key={photoImg._id}
-                    to="/home"
+                    to={`/workofart/${photoImg._id}`} key={photoImg._id}
+                    // to="/home"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <img
                       className="p-2 rounded max-h-96 max-w-sm"
-                      // src={photoImg.image}
-                      src="https://picsum.photos/600/400/?random"
+                      src={photoImg.image || "https://picsum.photos/600/400/?random"}
+                      // src="https://picsum.photos/600/400/?random"
                       alt="photography artwork"
                     />
                   </Link>
