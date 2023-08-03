@@ -13,40 +13,40 @@ const ArtByMedium = () => {
 
   // A very helpful article from freecodecamp.org showed me how to use the array.find() method, please see the README for the link
 
+  // searches finds an image with digital medium and stores it as a variable
   function getDigital(image) {
     return image.selectedMedium === "Digital";
   }
-
   let digitalImg = images.find((image) => getDigital(image));
 
+  // searches finds an image with digital medium and stores it as a variable
   function getPhotography(image) {
     return image.selectedMedium === "Photography"
   }
-
   let photoImg = images.find(image => getPhotography(image))
 
+  // searches finds an image with painting medium and stores it as a variable
   function getPainting(image) {
     return image.selectedMedium === "Painting"
   }
-
   let paintingImg = images.find(image => getPainting(image))
 
+  // searches finds an image with drawing medium and stores it as a variable
   function getDrawing(image) {
     return image.selectedMedium === "Drawing"
   }
-
   let drawingImg = images.find(image => getDrawing(image))
 
+  // searches finds an image with mixed media medium and stores it as a variable
   function getMixedMedia(image) {
     return image.selectedMedium === "Mixed Media"
   }
-
   let mixedMediaImg = images.find(image => getMixedMedia(image))
 
+  // searches finds an image with fabric medium and stores it as a variable
   function getFabric(image) {
     return image.selectedMedium === "Fabric"
   }
-
   let fabricImg = images.find(image => getFabric(image))
 
   return (
