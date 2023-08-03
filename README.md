@@ -32,7 +32,7 @@ A platform for artists to find inspiration and share their work.
 - [useNavigate] (https://www.makeuseof.com/redirect-user-after-login-react/)
 - [date-fns] (https://date-fns.org/v2.22.1/docs/format)
 - [stripe-docs] (https://stripe.com/docs/checkout/quickstart)
-- [npm docs](https://www.npmjs.com/package/@paypal/react-paypal-js)
+- [npm-docs](https://www.npmjs.com/package/@paypal/react-paypal-js)
 
 - The Vite PWA documentation was very helpful to understand how to configure our page into a progressive web app. Here is a link for the webpage: https://vite-pwa-org.netlify.app/guide/.
 - Used the tutorial 'Coding Shorts: Using the Vite PWA Plug-in' by Shawn Wildermuth to get started with the process, available here: https://www.youtube.com/watch?v=YSGLw4T8BgQ.
