@@ -3,6 +3,7 @@ import { Navigate, useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_IMAGES } from "../utils/queries";
 import React, { useState, useEffect } from "react";
+import { min } from "date-fns";
 
 
 const Medium = () => {
@@ -12,12 +13,38 @@ const Medium = () => {
     if (error) return <p>Error: {error.message}</p>;
   
     const images = data?.images || [];
+    console.log(images)
+    let whatMedium = images.map((image) => image.selectedMedium);
+    console.log(whatMedium);
 
-    let whatMedium = images.map(image => image.selectedMedium)
-    console.log(whatMedium)
+    const digitalArr = []
+    const paintArr = []
+    const fabricArr = []
+    const drawArr = []
+    const mixedArr = []
+
+    for (let i = 0; i < images.length; i++) {
+        if (whatMedium[i] === "Digital") {
+            digitalArr.push(images[i])
+        } else if (whatMedium[i] === "Painting") {
+            paintArr.push(images[i])
+        } else if (whatMedium[i] === "Fabric") {
+            fabricArr.push(images[i])
+        } else if (whatMedium[i] === "Drawing") {
+            drawArr.push(images[i])
+        } else if (whatMedium[i] === "Mixed Media") {
+            mixedArr.push(images[i])
+        }
+    }
+
+    const mediumArray = [digitalArr, paintArr, fabricArr, drawArr, mixedArr]
+
+    console.log(mediumArray)
 
     return (
-        <h1>Hello World</h1>
+        <div>
+            <h1>{}</h1>
+        </div>
     )
 }
 
