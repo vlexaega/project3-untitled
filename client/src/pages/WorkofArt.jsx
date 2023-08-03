@@ -252,7 +252,9 @@ const WorkofArt = () => {
                 &nbsp;Add to cart
               </button>
             </div> */}
-            <div className="float-right">
+            <div>
+              <h3 className="font-[700]">Remove item from cart</h3>
+              <br></br>
               <button
                 className="add-btn border-none bg-logo-pink rounded-lg text-black font-[700] py-6 px-6 mb-8 md:text-[14px] transition-all btn-shadow hover:opacity-50"
                 onClick={() => removeFromCart(currentProduct)}
