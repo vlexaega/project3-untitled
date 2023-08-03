@@ -11,19 +11,27 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-
-export const GET_USER_PROFILE = gql `
-  query {
-    getUserProfile {
+export const GET_USER_PROFILE = gql`
+  query GetUserProfile($_id: ID) {
+    getUserProfile(_id: $_id) {
+      _id
       userName
       bio
     }
   }
 `;
-
-export const GET_USER_IMAGES = gql `
-  query {
-    getUserImages {
+// export const GET_USER_PROFILE = gql `
+//   query {
+//     getUserProfile {
+//       _id
+//       userName
+//       bio
+//     }
+//   }
+// `;
+export const GET_USER_IMAGES = gql`
+  query GetUserImages($_id: ID) {
+    getUserImages(_id: $_id) {
       _id
       image
       title
@@ -31,6 +39,16 @@ export const GET_USER_IMAGES = gql `
     }
   }
 `;
+// export const GET_USER_IMAGES = gql `
+//   query {
+//     getUserImages {
+//       _id
+//       image
+//       title
+//       description
+//     }
+//   }
+// `;
 // export const ADD_ORDER = gql`
 //   mutation addOrder($products: [ID]!) {
 //     addOrder(products: $products) {

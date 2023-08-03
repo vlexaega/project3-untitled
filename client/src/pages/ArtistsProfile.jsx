@@ -6,50 +6,66 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { GET_USER_PROFILE } from "../utils/mutations";
-import { GET_USER_IMAGES } from "../utils/mutations";
+// import { GET_USER_PROFILE } from "../utils/mutations";
+import { QUERY_USER, QUERY_USERS_WITH_IMAGES } from "../utils/queries";
 import { useQuery } from "@apollo/client";
 
 // minor updates
-function Profile() {
+function ArtistProfile() {
   const { _id } = useParams();
   console.log(_id);
+  // const {
+  //   loading: profileLoading,
+  //   error: profileError,
+  //   data: profileData,
+  // } = useQuery(GET_USER_PROFILE, {
+  //   variables: { _id },
+  // });
+  // console.log(profileLoading);
+  // console.log(profileError);
+  // console.log(profileData);
   const {
-    loading: profileLoading,
-    error: profileError,
-    data: profileData,
-  } = useQuery(GET_USER_PROFILE);
-  console.log(profileLoading);
-  console.log(profileError);
-  console.log(profileData);
-  const {
-    loading: imagesLoading,
-    error: imagesError,
-    data: imagesData,
-  } = useQuery(GET_USER_IMAGES);
+    loading,
+    error,
+    data,
+  } = useQuery(QUERY_USERS_WITH_IMAGES, {
+    variables: { _id },
+  });
+
+  console.log(_id);
 
   const [userName, setUserName] = useState("");
   const [bio, setUserBio] = useState("");
   const [userImages, setUserImages] = useState([]);
+  console.log(userName);
+  console.log(bio);
+  console.log(userImages);
+
+  // useEffect(() => {
+  //   if (profileData && profileData.getUserProfile) {
+  //     setUserName(profileData.getUserProfile.userName);
+  //     setUserBio(profileData.getUserProfile.bio);
+  //   }
+  // }, [profileData]);
 
   useEffect(() => {
-    if (profileData && profileData.getUserProfile) {
-      setUserName(profileData.getUserProfile.userName);
-      setUserBio(profileData.getUserProfile.bio);
+    if (!loading && data) {
+      const user = data.usersWithImages.find((user) => user._id === _id);
+      console.log(user);
+      setUserName(user.userName);
+      setUserBio(user.bio);
+      setUserImages(user.images);
+      console.log(userName);
+      console.log(bio);
+      console.log(userImages);
     }
-  }, [profileData]);
+  }, [loading, data, _id]);
 
-  useEffect(() => {
-    if (imagesData && imagesData.getUserImages) {
-      setUserImages(imagesData.getUserImages);
-    }
-  }, [imagesData, _id]);
-
-  if (profileLoading || imagesLoading) {
+  if (loading) {
     return <div>Loading..</div>;
   }
-  if (profileError || imagesError) {
-    console.error("Error collecting data", profileError || imagesError);
+  if (error) {
+    console.error("Error collecting data", error);
     return <div>Error collecting data</div>;
   }
 
@@ -154,4 +170,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ArtistProfile;

@@ -7,6 +7,7 @@ const typeDefs = `
     _id: ID
     name: String
   }
+  
   type Product {
     _id: ID
     name: String
@@ -75,8 +76,8 @@ const typeDefs = `
     user: User
     users: [User]
     images: [ImageDetails]
-    getUserImages: [ImageDetails]
-    getUserProfile: User
+    getUserImages(_id: ID): [ImageDetails]
+    getUserProfile(_id: ID): User
     image(imageId: ID!): ImageDetails
     usersWithImages: [UserWithImages]
     categories: [Category]
